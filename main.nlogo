@@ -1,3 +1,5 @@
+__includes ["Factors.nls"]
+
 turtles-own [
   contribution         ; investment into the public fund
   collect              ; extraction from common resource
@@ -24,14 +26,14 @@ turtles-own [
   impact               ; importance of ROI for the heuristic model
   roi                  ; collect/invest; if invest = 0 than roi = 0 or return of investment but as absolute value between extracted and invested rather than extracted/ invested
   wanted               ; parameter affecting extraction
-  ] 
- 
+  ]
+
 globals [
   invest               ; total level of investment in public fund
   pga                  ; available level of common resource
   pg                   ; level of common resource
   datainvest           ; total level of investments in public fund in experiments averaged over 22 groups
-  datainvestperperson  ; investment level per person for each position in experiments averaged over 22 groups 
+  datainvestperperson  ; investment level per person for each position in experiments averaged over 22 groups
   datacollectperperson ; extraction level per person for each position in experiments averaged over 22 groups
   dataginicontribute   ; gini coefficient averaged over rounds of contributions into the public fund averaged over 22 groups
   dataginicollect      ; gini coefficient averaged over rounds of extractions from common resource averaged over 22 groups
@@ -46,13 +48,13 @@ globals [
   listinvpp1 listinvpp2 listinvpp3 listinvpp4 listinvpp5 ; simulated investment for each position
   listcollpp1 listcollpp2 listcollpp3 listcollpp4 listcollpp5 ; simulated extraction for each position
   listginicont         ; list of simulated gini coefficient of investments
-  listginicoll         ; list of simulated gini coefficient of extraction 
+  listginicoll         ; list of simulated gini coefficient of extraction
   correct
-  
-  ;;following lists are same as the above but used to average for all three treatments combined.  
-   t_listinv1   t_listinv2   t_listinv3   t_listinv4   t_listinv5   t_listinv6   t_listinv7   t_listinv8   t_listinv9   t_listinv10   t_listinv11   t_listinv12   t_listinv13   t_listinv14   t_listinv15 
-   t_listinvpp1   t_listinvpp2   t_listinvpp3   t_listinvpp4   t_listinvpp5 
-   t_listcollpp1   t_listcollpp2   t_listcollpp3   t_listcollpp4   t_listcollpp5 
+
+  ;;following lists are same as the above but used to average for all three treatments combined.
+   t_listinv1   t_listinv2   t_listinv3   t_listinv4   t_listinv5   t_listinv6   t_listinv7   t_listinv8   t_listinv9   t_listinv10   t_listinv11   t_listinv12   t_listinv13   t_listinv14   t_listinv15
+   t_listinvpp1   t_listinvpp2   t_listinvpp3   t_listinvpp4   t_listinvpp5
+   t_listcollpp1   t_listcollpp2   t_listcollpp3   t_listcollpp4   t_listcollpp5
    t_listginicont   t_listginicoll
 
   fit1 fit2  fit3  fit4 fit5  ; fit between data and simulations for the 5 metrics
@@ -98,16 +100,16 @@ to setup
   set listsiminvestpp []
   set listsimcollectpp []
   ask turtles [set listcollect [] set listcontribute []]
-  
+
   set treat (list "nlh" "nhl" "lhn")
 
 
-  
+
   reset-ticks
 end
 
 to calibrate
-  ; main procedure that coordinates the calibration process. 
+  ; main procedure that coordinates the calibration process.
 
     if meanbeta > meanalpha [     ; invalid situation leading the model to stop
       set listinv1 [0]
@@ -170,8 +172,8 @@ to calibrate
       set listginicoll [0]
       stop
     ]
-  
-  set pl 0 
+
+  set pl 0
   set listinv1 [] set listinv2 [] set listinv3 [] set listinv4 [] set listinv5 [] set listinv6 [] set listinv7 [] set listinv8 [] set listinv9 [] set listinv10 [] set listinv11 [] set listinv12 [] set listinv13 [] set listinv14 [] set listinv15 []
   set listinvpp1 [] set listinvpp2 [] set listinvpp3 [] set listinvpp4 [] set listinvpp5 []
   set listcollpp1 [] set listcollpp2 [] set listcollpp3 [] set listcollpp4 [] set listcollpp5 []
@@ -180,7 +182,7 @@ to calibrate
   set t_listinvpp1 [] set t_listinvpp2 [] set t_listinvpp3 [] set t_listinvpp4 [] set t_listinvpp5 []
   set t_listcollpp1 [] set t_listcollpp2 [] set t_listcollpp3 [] set t_listcollpp4 [] set t_listcollpp5 []
   set t_listginicont [] set t_listginicoll []
-  set lfit1 []     set lfit2 []    set lfit3 []    set lfit4 []    set lfit5 []    set lfit  []  
+  set lfit1 []     set lfit2 []    set lfit3 []    set lfit4 []    set lfit5 []    set lfit  []
 
   (foreach treat [
 
@@ -188,11 +190,11 @@ to calibrate
   set listinvpp1 [] set listinvpp2 [] set listinvpp3 [] set listinvpp4 [] set listinvpp5 []
   set listcollpp1 [] set listcollpp2 [] set listcollpp3 [] set listcollpp4 [] set listcollpp5 []
   set listginicont [] set listginicoll []
-      
+
 
     set treatment item pl treat
-    let iter 0 
-   
+    let iter 0
+
     if treatment = "nlh" [
     set datainvest [34.33 35.50 34.33 33.33 34.33 35.50 36.17 32.50 33.50 32.00 36.17 33.67 33.83 30.83 32.50]
     set datainvestperperson [7.5  7.71  7.21  5.47  6.01]
@@ -206,7 +208,7 @@ to calibrate
     set datainvest [26.20 26.00 24.80 27.20 26.60 31.20 28.60 24.20 26.60 24.60 23.80 29.40 29.20 25.80 22.80]
     set datainvestperperson [5.97  6.81  4.59  6.35  2.75]
     set datacollectperperson [16.84  8.21  11.68  7.25  3.19]
-    set dataginicontribute 0.32 
+    set dataginicontribute 0.32
     set dataginicollect 0.39
     set numgroup 5
     set fit 0
@@ -220,22 +222,22 @@ to calibrate
     set numgroup 5
     set fit 0
   ]
-       
+
   while [iter < 100]   ; 100 times a fit between simulation and data is calculated for each parameter setting
-  [  
+  [
     set listsimginicont []
     set listsimginicol []
     set listsiminvest [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
     set listsiminvestpp [0 0 0 0 0]
     set listsimcollectpp [0 0 0 0 0]
-    
+
     let groups 0
-    
+
     while [ groups < numgroup]  ; 16 groups are simulated, 6 for treat NLH, 5 for treat NHL and 5 for treat LHN
     [
       reset-ticks        ; ticks are initialized so that first tick is 0
-      ;show "treatment"      ;show treatment      ;show "grounumber"      ;show groups 
-      
+      ;show "treatment"      ;show treatment      ;show "grounumber"      ;show groups
+
       if modeltype = "heuristic" [
         ask turtles [
           set trust random-normal meantrust sdtrust
@@ -246,10 +248,10 @@ to calibrate
           set wanted random-normal meanwanted sdwanted
         ]
       ]
-        
+
       if modeltype = "utilitarian" [
         ask turtles [
-  
+
           ; define the paramaters of the model based on truncated Gaussian distributions
           set correct 0
           while [correct = 0]
@@ -274,7 +276,7 @@ to calibrate
                 set beta random-normal meanbeta stdevbeta
                 if beta <= alpha and (alpha != 0 or beta != 0) [set correct 1]
               ]
-            ]   
+            ]
           ]
           set correct 0
           while [correct = 0]
@@ -299,7 +301,7 @@ to calibrate
           ]
         ]
       ]
-      
+
       if modeltype = "utilitarian2" [
         ask turtles [
         ; define the paramaters of the model based on truncated Gaussian distributions
@@ -314,7 +316,7 @@ to calibrate
             ]
             set correct 0
             while [correct = 0]
-            [ 
+            [
               let prob random-float 1
               ;; if agent is selfish alpha and beta are set to 0
               ifelse prob < pself [
@@ -327,7 +329,7 @@ to calibrate
                   set beta random-normal meanbeta stdevbeta
                   if beta <= alpha and (alpha != 0 or beta != 0) [set correct 1]
                 ]
-              ]   
+              ]
             ]
             set correct 0
             while [correct = 0]
@@ -348,8 +350,8 @@ to calibrate
               set gamma2 random-normal meangamma2 stdevgamma2
               if ((gamma2 <= 1) and (gamma2 >= 0)) [set correct 1]
             ]
-          ]  
-          [ 
+          ]
+          [
             set correct 0
             while [correct = 0]
             [
@@ -359,7 +361,7 @@ to calibrate
             ]
             set correct 0
             while [correct = 0]
-            [ 
+            [
               let prob random-float 1
               ;; if agent is selfish alpha and beta are set to 0
               ifelse prob < pself [
@@ -372,7 +374,7 @@ to calibrate
                   set beta random-normal meanbeta2 stdevbeta2
                   if beta <= alpha and (alpha != 0 or beta != 0) [set correct 1]
                 ]
-              ]   
+              ]
             ]
             set correct 0
             while [correct = 0]
@@ -397,14 +399,14 @@ to calibrate
           ]
         ]
       ]
-            
-     
+
+
       ask turtles [set listcollect [] set listcontribute []]
       while [ticks < 15] [go]  ; simuated the model for 15 timesteps
-      
+
 
       ; define the list of the simulated data in order to compare with actual data
-       
+
       ask turtle 0 [
         set listsiminvestpp replace-item 0 listsiminvestpp (item 0 listsiminvestpp + mean listcontribute)
         set listsimcollectpp replace-item 0 listsimcollectpp (item 0 listsimcollectpp + mean listcollect)
@@ -412,8 +414,8 @@ to calibrate
       ask turtle 1 [
         set listsiminvestpp replace-item 1 listsiminvestpp (item 1 listsiminvestpp + mean listcontribute)
         set listsimcollectpp replace-item 1 listsimcollectpp (item 1 listsimcollectpp + mean listcollect)
-        
-        
+
+
       ]
       ask turtle 2 [
         set listsiminvestpp replace-item 2 listsiminvestpp (item 2 listsiminvestpp + mean listcontribute)
@@ -432,18 +434,18 @@ to calibrate
 
     ]
 
-     
+
     set fit1 1
     set fit2 1
     set fit3 1
     set fit4 1
     set fit5 1
-  
+
     ; define the fitness value of the five different metrics
     let jj 0
     let sumdif 0
     while [jj < 15]
-    [ 
+    [
 
        set sumdif sumdif + abs (((item jj datainvest - (item jj listsiminvest / numgroup)) / 50 ))
        if jj = 0 [set listinv1 fput (item jj listsiminvest / numgroup) listinv1 ]
@@ -464,7 +466,7 @@ to calibrate
        set jj jj + 1
     ]
     set fit1 (1 -  sumdif / 15) ^ 2
-    
+
     set jj 0
     set sumdif 0
     while [jj < 5]
@@ -478,11 +480,11 @@ to calibrate
        set jj jj + 1
     ]
     set fit2 (1 -  sumdif / 5 ) ^ 2
-    
+
     set jj 0
     set sumdif 0
     while [jj < 5]
-    [  
+    [
        set sumdif sumdif + abs (((item jj datacollectperperson - (item jj listsimcollectpp / numgroup)) / 160 ) ) ;;max collection under variability.
        if jj = 0 [set listcollpp1 fput (item jj listsimcollectpp / numgroup) listcollpp1]
        if jj = 1 [set listcollpp2 fput (item jj listsimcollectpp / numgroup) listcollpp2]
@@ -492,22 +494,22 @@ to calibrate
        set jj jj + 1
     ]
     set fit3 (1 -  sumdif / 5 ) ^ 2
-  
+
     let simginicont mean listsimginicont
     let simginicol 0
     if not empty? listsimginicol [set simginicol mean listsimginicol]
     set fit4 (1 - abs (((dataginicontribute - simginicont))))
     set fit5 (1 - abs (((dataginicollect - simginicol))))
-    
+
     set listginicont fput simginicont listginicont
     set listginicoll fput simginicol listginicoll
-        
+
     if fit1 < 0 [set fit1 0]
     if fit2 < 0 [set fit2 0]
     if fit3 < 0 [set fit3 0]
     if fit4 < 0 [set fit4 0]
     if fit5 < 0 [set fit5 0]
-    
+
     if fitnessfunction = "multiplier" [set fit fit + (fit1 * fit2 * fit3 * fit4 * fit5)]
     if fitnessfunction = "average" [ set fit fit + (fit1 + fit2 + fit3 + fit4 + fit5) / 5 ]
     if fitnessfunction = "minimum" [
@@ -517,7 +519,7 @@ to calibrate
       if fit4 < fitmin [set fitmin fit4]
       if fit5 < fitmin [set fitmin fit5]
       set fit fit + fitmin
-      
+
       ;show fit
     ]
     set iter iter + 1
@@ -526,58 +528,58 @@ to calibrate
   ]
 
 
-  set t_listinv1 sentence listinv1 t_listinv1 
-  set t_listinv2 sentence listinv2 t_listinv2 
-  set t_listinv3 sentence listinv3 t_listinv3 
-  set t_listinv4 sentence listinv4 t_listinv4 
-  set t_listinv5 sentence listinv5 t_listinv5 
-  set t_listinv6 sentence listinv6 t_listinv6 
-  set t_listinv7 sentence listinv7 t_listinv7 
-  set t_listinv8 sentence listinv8 t_listinv8 
-  set t_listinv9 sentence listinv9 t_listinv9 
-  set t_listinv10 sentence listinv10 t_listinv10 
-  set t_listinv11 sentence listinv11 t_listinv11 
-  set t_listinv12 sentence listinv12 t_listinv12 
-  set t_listinv13 sentence listinv13 t_listinv13 
-  set t_listinv14 sentence listinv14 t_listinv14 
-  set t_listinv15 sentence listinv15 t_listinv15 
-  set t_listinvpp1 sentence listinvpp1 t_listinvpp1 
-  set t_listinvpp2 sentence listinvpp2 t_listinvpp2  
-  set t_listinvpp3 sentence listinvpp3 t_listinvpp3 
-  set t_listinvpp4 sentence listinvpp4 t_listinvpp4 
-  set t_listinvpp5 sentence listinvpp5 t_listinvpp5 
-  set t_listcollpp1 sentence listcollpp1 t_listcollpp1 
-  set t_listcollpp2 sentence listcollpp2 t_listcollpp2 
+  set t_listinv1 sentence listinv1 t_listinv1
+  set t_listinv2 sentence listinv2 t_listinv2
+  set t_listinv3 sentence listinv3 t_listinv3
+  set t_listinv4 sentence listinv4 t_listinv4
+  set t_listinv5 sentence listinv5 t_listinv5
+  set t_listinv6 sentence listinv6 t_listinv6
+  set t_listinv7 sentence listinv7 t_listinv7
+  set t_listinv8 sentence listinv8 t_listinv8
+  set t_listinv9 sentence listinv9 t_listinv9
+  set t_listinv10 sentence listinv10 t_listinv10
+  set t_listinv11 sentence listinv11 t_listinv11
+  set t_listinv12 sentence listinv12 t_listinv12
+  set t_listinv13 sentence listinv13 t_listinv13
+  set t_listinv14 sentence listinv14 t_listinv14
+  set t_listinv15 sentence listinv15 t_listinv15
+  set t_listinvpp1 sentence listinvpp1 t_listinvpp1
+  set t_listinvpp2 sentence listinvpp2 t_listinvpp2
+  set t_listinvpp3 sentence listinvpp3 t_listinvpp3
+  set t_listinvpp4 sentence listinvpp4 t_listinvpp4
+  set t_listinvpp5 sentence listinvpp5 t_listinvpp5
+  set t_listcollpp1 sentence listcollpp1 t_listcollpp1
+  set t_listcollpp2 sentence listcollpp2 t_listcollpp2
   set t_listcollpp3 sentence listcollpp3 t_listcollpp3
   set t_listcollpp4 sentence listcollpp4 t_listcollpp4
   set t_listcollpp5 sentence listcollpp5 t_listcollpp5
-  set t_listginicont sentence listginicont t_listginicont 
+  set t_listginicont sentence listginicont t_listginicont
   set t_listginicoll sentence listginicoll t_listginicoll
-    
+
     set lfit1 lput fit1 lfit1
     set lfit2 lput fit2 lfit2
     set lfit3 lput fit3 lfit3
     set lfit4 lput fit4 lfit4
     set lfit5 lput fit5 lfit5
     set lfit lput fit lfit
-    
+
   ;show "TREATMENT"
   ;show treatment
   ;show "END TREATMENT"
-  
-     
+
+
   set pl pl + 1
   ])
-  
+
   set fit1 mean lfit1
   set fit2 mean lfit2
-  set fit3 mean lfit3  
+  set fit3 mean lfit3
   set fit4 mean lfit4
-  set fit5 mean lfit5 
+  set fit5 mean lfit5
   set fit mean lfit
-  
-  ;show "FITNESS" ;show fit  
-  
+
+  ;show "FITNESS" ;show fit
+
   set fit fit / 100   ; in order to have a fitness value between 0 and 1
   set done 1
 end
@@ -599,13 +601,13 @@ to go
   ]
    ;show  "STARTING UTILITY CONTRIBUTION PROCEDURE"
   ; calculate the decisions for each tick depending on the modeltype
-  ask turtles [  
+  ask turtles [
     if modeltype = "random" [
         set invest random 11
         set contribution invest
     ]
     if modeltype = "selfish" [
-  
+
         set invest 0
         set contribution invest
     ]
@@ -615,7 +617,7 @@ to go
     ]
     ;;not sure how to make it so that prand < pself < paltr or having condition that all three can be summing 1 at max
     ;; and are mutually exclusive
-    if modeltype = "mixedrsa" [  
+    if modeltype = "mixedrsa" [
         set agt random-float 1
         ifelse agt <= prand [
           set invest random 11
@@ -650,12 +652,12 @@ to go
         ifelse agt <= pself [
           set invest random 5
           set contribution invest
-        ]  
+        ]
         [ set invest random 6 + 5
           set contribution invest
         ]
       ]
-      [ 
+      [
         ifelse impact != 0 [
           set invest ((10 * trust) * (impact ^ roi))
           if invest < 0 [set invest 0]
@@ -668,8 +670,8 @@ to go
         ]
       ]
     ]
-    if modeltype = "utilitarian" or modeltype = "utilitarian2"[ 
-        let i 0     
+    if modeltype = "utilitarian" or modeltype = "utilitarian2"[
+        let i 0
         set utiltot 0
         set utillist []
       ; Calculate the expected utility for each of the 11 possible investment levels
@@ -678,7 +680,7 @@ to go
 
           set invest (4 * 10 * expcoopothers) + i
           set pg calpg invest ; expected public fund for investment level invest
-      
+
         ; expected resource available  NEED TO CHANGE FOR PROBABILITIES, however expected values are all the same!!!
           ifelse ticks = 0 [
             let exponent (2 - expcoopothers)
@@ -688,49 +690,49 @@ to go
           ][
             set pga pg * expshare
             if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
-          ]  
-       
+          ]
+
           set income 10 - i + pga
           set incomeothers (40 - (10 * 4 * expcoopothers) + (pg - pga)) / 4
 
           let dif1 0
           let dif2 0
           ifelse income > incomeothers [
-            set dif1 income - incomeothers 
+            set dif1 income - incomeothers
             set dif2 0
           ][
-            set dif1 0 
+            set dif1 0
             set dif2 incomeothers - income
           ]
-          set utility exp (lambda * (income -  alpha * dif1 + beta * dif2)) 
+          set utility exp (lambda * (income -  alpha * dif1 + beta * dif2))
           set utillist lput utility utillist
           set utiltot utiltot + utility
           set i i + 1
-        ]  
-    
+        ]
+
         ; calculate relative probabilities
         ifelse best [ ; if agents take the option with highest utility
           let utilmax max utillist
           set i 0
           let utilmaxlist []
-          while [i <= 10] 
+          while [i <= 10]
           [
             if item i utillist = utilmax [set utilmaxlist lput i utilmaxlist]
-            set i i + 1 
+            set i i + 1
           ]
           set contribution one-of utilmaxlist
           ][
-          set i 0 
+          set i 0
           set probinvest []
           while [i <= 10]
-          [  
+          [
             ifelse utiltot > 0 [
               set probinvest lput (item i utillist / utiltot) probinvest
             ][
               set probinvest lput 0.2 probinvest
-            ]   
+            ]
             set i i + 1
-          ] 
+          ]
         ; define investment using probabilistic choice
           let rndnr random-float 1.0
           let cump 0
@@ -741,51 +743,51 @@ to go
             set cump cump + item contribution probinvest
             ifelse rndnr < cump [set found? true][set contribution contribution + 1]
           ]
-        ] ;show "FINISHING UTILITY CONTRIBUTION PROCEDURE" 
+        ] ;show "FINISHING UTILITY CONTRIBUTION PROCEDURE"
     ]
   ]
-    
-      
+
+
   ; actual public infrastructure
-  
+
   set invest 0
   ask turtles [set invest invest + contribution]
-  
+
   set pg calpg invest ; this is the resource level in the current round
-  
+
   if modeltype = "utilitarian" [
     ask turtles [
       set expcoopothers expcoopothers * gamma1 + (1 - gamma1) * (invest - contribution) / 40
     ]
   ]
-   
+
   set pga pg
   set equalshare pga / 5
-  
-   
+
+
   calcollect 0
   set pga pga - [collect] of turtle 0
-   
+
   calcollect 1
   set pga pga - [collect] of turtle 1
-   
+
   calcollect 2
   set pga pga - [collect] of turtle 2
 
-    
+
   calcollect 3
   set pga pga - [collect] of turtle 3
 
   calcollect 4
-  
+
   if modeltype = "utilitarian" or modeltype = "utilitarian2" [
     set invest 0
     ask turtles [set invest invest + contribution]
     ask turtles [set expcoopothers expcoopothers * gamma1 + (1 - gamma1) * ((invest - contribution) / 40)]    ; learning on expected level of cooperation of others
   ]
-  
+
   ; calculate metrics for comparison with data and also calculate return of investment or better collect - contribution for each agent
-  
+
   ask turtles [
     set listcontribute lput contribution listcontribute
     set listcollect lput collect listcollect
@@ -794,33 +796,33 @@ to go
   let temp item ticks listsiminvest + invest
   set listsiminvest replace-item ticks listsiminvest temp
   let list1 [who] of turtles
-  let list2 [who] of turtles    
+  let list2 [who] of turtles
   let s 0
-  foreach list1 [
-    let temp2 [contribution] of turtle ?
-    foreach list2 [
-      set s s + abs(temp2 - [contribution] of turtle ?)  
+  foreach list1 [ ?1 ->
+    let temp2 [contribution] of turtle ?1
+    foreach list2 [ ??1 ->
+      set s s + abs(temp2 - [contribution] of turtle ??1)
     ]
-  ]    
+  ]
   ifelse mean [contribution] of turtles > 0 [
     set listsimginicont lput (s / (2 * (mean [contribution] of turtles) * (count turtles) ^ 2)) listsimginicont
   ][
     set listsimginicont lput 0 listsimginicont
   ]
-   
+
   set s 0
-  foreach list1 [
-    let temp2 [collect] of turtle ?
-    foreach list2 [
-      set s s + abs(temp2 - [collect] of turtle ?)
+  foreach list1 [ ?1 ->
+    let temp2 [collect] of turtle ?1
+    foreach list2 [ ??1 ->
+      set s s + abs(temp2 - [collect] of turtle ??1)
     ]
-  ]    
+  ]
   if mean [collect] of turtles > 0 [
   set listsimginicol  lput (s / (2 * (mean [collect] of turtles) * (count turtles) ^ 2)) listsimginicol]
 
   tick
 end
- 
+
 to calcollect [j]
   ask turtle j [
     if modeltype = "random" [
@@ -866,7 +868,7 @@ to calcollect [j]
         set correct 0
         while [correct = 0]
         [ let pos [who] of self + 1
-          let base  1 / (6 - pos) 
+          let base  1 / (6 - pos)
           set collect base ^ wanted
           if pga - collect >= 0 [
             set correct 1
@@ -883,7 +885,7 @@ to calcollect [j]
       ][
         if pg > 0 [set expshare expshare * gamma2 + (1 - gamma2) * (pga / pg)]  ; agents update the expecte share for next round
         if expshare > 1 [set expshare 1]
-        if expshare < 0 [set expshare 0] 
+        if expshare < 0 [set expshare 0]
       ]
       set collect 0
       set utillist []
@@ -895,11 +897,11 @@ to calcollect [j]
         let dif1 0
         let dif2 0
         ifelse income > incomeothers [set dif1 income - incomeothers set dif2 0][set dif1 0 set dif2 incomeothers - income]
-        set utility exp (lambda * (income -  alpha * dif1 + beta * dif2)) 
+        set utility exp (lambda * (income -  alpha * dif1 + beta * dif2))
         set utillist fput utility utillist
-        set utiltot utiltot + utility  
+        set utiltot utiltot + utility
         set collect collect + 1
-      ]      
+      ]
       ifelse best [
         set collect 0
         let utilmax 0
@@ -909,13 +911,13 @@ to calcollect [j]
            set i 0
         ]
         [set utilmax 0]
-      
+
         let utilmaxlist []
-        while [i < pga] 
+        while [i < pga]
         [
           if item i utillist = utilmax [
             set utilmaxlist lput i utilmaxlist]
-            set i i + 1 
+            set i i + 1
         ]
         if pga > 0 [set collect one-of utilmaxlist]
       ][
@@ -929,7 +931,7 @@ to calcollect [j]
           ][
             set probcollect lput 0 probcollect
           ]
-        ] 
+        ]
         let rndnr random-float 1.0
         let cump 0
         let found? false
@@ -941,13 +943,13 @@ to calcollect [j]
         ]
       ]
     ]
-    
+
   ]
-end 
+end
 
-to-report calpg [inv] ;; with probabilities                                                                                         
+to-report calpg [inv] ;; with probabilities
 
-  if variab = 0 [ 
+  if variab = 0 [
     let calcpg 0
     ifelse inv < 10 [set calcpg 0 ][
       ifelse inv < 15 [set calcpg 5][
@@ -957,7 +959,7 @@ to-report calpg [inv] ;; with probabilities
               ifelse inv < 35 [set calcpg 75][
                 ifelse inv < 40 [set calcpg 85][
                   ifelse inv < 45 [set calcpg 95][set calcpg 100]]]]]]]]
-    report calcpg  
+    report calcpg
 
   ]
   if variab = 1 [
@@ -1000,7 +1002,7 @@ to-report calpg [inv] ;; with probabilities
 
   ]
   if variab = 2 [
-    let calcpg 0    
+    let calcpg 0
     let p random-float 1
     if p >= 0.33 and p <= 0.66 [
          ifelse inv < 10 [set calcpg 0 ][
@@ -1033,20 +1035,20 @@ to-report calpg [inv] ;; with probabilities
                   ifelse inv < 35 [set calcpg 75][
                     ifelse inv < 40 [set calcpg 85][
                       ifelse inv < 45 [set calcpg 95][set calcpg 100]]]]]]]]
-        report calcpg    
+        report calcpg
     ]
 
   ]
-    
-end  
+
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 475
 14
-720
-199
-0
-0
+637
+177
+-1
+-1
 154.0
 1
 10
@@ -1093,7 +1095,7 @@ meaneco
 meaneco
 0
 1
-1
+0.369
 0.01
 1
 NIL
@@ -1108,7 +1110,7 @@ stdeveco
 stdeveco
 0
 1
-1
+0.0
 0.01
 1
 NIL
@@ -1123,7 +1125,7 @@ meanalpha
 meanalpha
 -1
 1
-1
+0.864
 0.01
 1
 NIL
@@ -1138,7 +1140,7 @@ stdevalpha
 stdevalpha
 0
 1
-1
+0.0
 0.01
 1
 NIL
@@ -1153,7 +1155,7 @@ meanlambda
 meanlambda
 0
 5
-5
+0.549
 0.01
 1
 NIL
@@ -1168,7 +1170,7 @@ stdevlambda
 stdevlambda
 0
 1
-0.98
+0.0
 0.01
 1
 NIL
@@ -1183,7 +1185,7 @@ meangamma1
 meangamma1
 0
 1
-1
+0.81
 0.01
 1
 NIL
@@ -1198,7 +1200,7 @@ stdevgamma1
 stdevgamma1
 0
 1
-1
+0.0
 0.01
 1
 NIL
@@ -1230,7 +1232,7 @@ meanbeta
 meanbeta
 -1
 1
--1
+0.513
 0.01
 1
 NIL
@@ -1245,7 +1247,7 @@ stdevbeta
 stdevbeta
 0
 1
-0.87
+0.0
 0.01
 1
 NIL
@@ -1271,7 +1273,7 @@ meangamma2
 meangamma2
 0
 1
-1
+0.26
 0.01
 1
 NIL
@@ -1286,7 +1288,7 @@ stdevgamma2
 stdevgamma2
 0
 1
-1
+0.0
 0.01
 1
 NIL
@@ -1311,7 +1313,7 @@ pself
 pself
 0
 1
-0.8
+0.0
 0.01
 1
 NIL
@@ -1336,7 +1338,7 @@ prand
 prand
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1351,7 +1353,7 @@ meaninv
 meaninv
 0
 10
-10
+0.0
 1
 1
 NIL
@@ -1366,7 +1368,7 @@ sdinv
 sdinv
 0
 5
-0
+0.0
 0.1
 1
 NIL
@@ -1381,7 +1383,7 @@ sdnoise
 sdnoise
 0
 5
-0
+0.0
 0.01
 1
 NIL
@@ -1396,7 +1398,7 @@ meanimpact
 meanimpact
 0
 10
-10
+0.0
 0.01
 1
 NIL
@@ -1411,7 +1413,7 @@ sdimpact
 sdimpact
 0
 5
-0
+0.0
 0.01
 1
 NIL
@@ -1426,7 +1428,7 @@ meanwanted
 meanwanted
 -5
 5
-5
+0.0
 0.1
 1
 NIL
@@ -1441,7 +1443,7 @@ sdwanted
 sdwanted
 0
 5
-0
+0.0
 0.01
 1
 NIL
@@ -1456,7 +1458,7 @@ meantrust
 meantrust
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1471,7 +1473,7 @@ sdtrust
 sdtrust
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1486,7 +1488,7 @@ sdnoise2
 sdnoise2
 0
 5
-0
+0.0
 0.01
 1
 NIL
@@ -1501,7 +1503,7 @@ meaneco2
 meaneco2
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1516,7 +1518,7 @@ stdeveco2
 stdeveco2
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1531,7 +1533,7 @@ meanalpha2
 meanalpha2
 -1
 1
-0
+0.0
 0.1
 1
 NIL
@@ -1546,7 +1548,7 @@ meanbeta2
 meanbeta2
 -1
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1561,7 +1563,7 @@ meanlambda2
 meanlambda2
 0
 5
-0
+0.0
 0.01
 1
 NIL
@@ -1576,7 +1578,7 @@ meangamma12
 meangamma12
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1591,7 +1593,7 @@ meangamma22
 meangamma22
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1606,7 +1608,7 @@ stdevalpha2
 stdevalpha2
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1621,7 +1623,7 @@ stdevbeta2
 stdevbeta2
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1636,7 +1638,7 @@ stdevlambda2
 stdevlambda2
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1651,7 +1653,7 @@ stdevgamma12
 stdevgamma12
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1666,7 +1668,7 @@ stdevgamma22
 stdevgamma22
 0
 1
-0
+0.0
 0.01
 1
 NIL
@@ -1960,9 +1962,8 @@ false
 0
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
-
 @#$#@#$#@
-NetLogo 5.0.4
+NetLogo 6.1.1
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -2606,7 +2607,6 @@ true
 0
 Line -7500403 true 150 150 90 180
 Line -7500403 true 150 150 210 180
-
 @#$#@#$#@
 0
 @#$#@#$#@
