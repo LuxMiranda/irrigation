@@ -43,3 +43,27 @@ to-report get-min-one-of [ p reporters]
   let _selection min-one-of p [runresult reporters]
   report _selection
 end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;; Internal functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Probabilize a basic value
+to-report probabilize [o x]
+  ;; Magical 3 here is a k hyperparamter
+  report -1 * (abs ((o - x) / 3)) + 1
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;; Factors ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; run by a farmer-info
+;; reports the probability of a given investment due to selfishness
+;; @EMD @Factor @return-type=comparator
+to-report consider-selfishness
+  report "probabilize 0 investAmount"
+end
+
+;; run by a farmer-info
+;; reports the probability of a given investment due to altruism
+;; @EMD @Factor @return-type=comparator
+to-report consider-altruism
+  report "probabilize 10 investAmount"
+end

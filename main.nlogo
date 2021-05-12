@@ -1,5 +1,10 @@
 __includes ["Factors.nls"]
 
+; Data structure for passing info to EMD
+farmer-infos-own [
+  investAmount         ; A possible investment amount; an integer on [0,10]
+]
+
 turtles-own [
   contribution         ; investment into the public fund
   collect              ; extraction from common resource
@@ -607,7 +612,6 @@ to go
         set contribution invest
     ]
     if modeltype = "selfish" [
-
         set invest 0
         set contribution invest
     ]
