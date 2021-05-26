@@ -1,5 +1,7 @@
 __includes ["Factors.nls"]
 
+breed [ farmer-infos farmer-info ]
+
 ; Data structure for passing info to EMD
 farmer-infos-own [
   investAmount         ; A possible investment amount; an integer on [0,10]
@@ -604,9 +606,31 @@ to go
     ifelse ticks < 5 [set variab 1][
       ifelse ticks < 10 [set variab 2][set variab 0]]
   ]
-   ;show  "STARTING UTILITY CONTRIBUTION PROCEDURE"
-  ; calculate the decisions for each tick depending on the modeltype
+
+  ; Here begins the EMD code
+
+  ; Create the set of possible investment amounts
+  create-farmer-infos 1 [ set investAmount 0 ]
+  create-farmer-infos 1 [ set investAmount 1 ]
+  create-farmer-infos 1 [ set investAmount 2 ]
+  create-farmer-infos 1 [ set investAmount 3 ]
+  create-farmer-infos 1 [ set investAmount 4 ]
+  create-farmer-infos 1 [ set investAmount 5 ]
+  create-farmer-infos 1 [ set investAmount 6 ]
+  create-farmer-infos 1 [ set investAmount 7 ]
+  create-farmer-infos 1 [ set investAmount 8 ]
+  create-farmer-infos 1 [ set investAmount 9 ]
+  create-farmer-infos 1 [ set investAmount 10 ]
+
   ask turtles [
+    set invest
+        ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-value
+        random 11
+    set contribution invest
+  ]
+
+  ; Here ends the EMD code
+   ask turtles [
     if modeltype = "random" [
         set invest random 11
         set contribution invest
@@ -1189,7 +1213,7 @@ meangamma1
 meangamma1
 0
 1
-0.81
+0.0
 0.01
 1
 NIL
@@ -1277,7 +1301,7 @@ meangamma2
 meangamma2
 0
 1
-0.26
+0.0
 0.01
 1
 NIL
@@ -1331,7 +1355,7 @@ CHOOSER
 modeltype
 modeltype
 "utilitarian2" "utilitarian" "heuristic" "mixedrsa" "pseudorandom" "random" "selfish" "altruistic"
-1
+5
 
 SLIDER
 175
@@ -1967,7 +1991,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.1.1
+NetLogo 6.0.2
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@

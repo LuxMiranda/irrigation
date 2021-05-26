@@ -28,7 +28,7 @@ end
 ;; The callback reporters are the composite of the factors in the investment value
 ;; decision by the player.
 ;; Gets the potential investment value with the max produced by the factor subscores
-;; @EMD @Factor @return-type=investment @parameter-type=investments @parameter-type=comparator
+;; @EMD @Factor @return-type=investment-value @parameter-type=investments @parameter-type=comparator
 to-report get-max-one-of [ p reporters]
   let _selection max-one-of p [runresult reporters]
   report _selection
@@ -38,7 +38,7 @@ end
 ;; The callback reporters are the composite of the factors in the investment value
 ;; decision by the player.
 ;; Gets the potential investment value with the min produced by the factor subscores
-;; @EMD @Factor @return-type=investment @parameter-type=investments @parameter-type=comparator
+;; @EMD @Factor @return-type=investment-value @parameter-type=investments @parameter-type=comparator
 to-report get-min-one-of [ p reporters]
   let _selection min-one-of p [runresult reporters]
   report _selection
