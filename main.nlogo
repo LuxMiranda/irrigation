@@ -1,3 +1,5 @@
+__includes ["factors.nls"]
+
 turtles-own [
   contribution         ; investment into the public fund
   collect              ; extraction from common resource
@@ -597,14 +599,19 @@ to go
     ifelse ticks < 5 [set variab 1][
       ifelse ticks < 10 [set variab 2][set variab 0]]
   ]
-   ;show  "STARTING UTILITY CONTRIBUTION PROCEDURE"
-  ; calculate the decisions for each tick depending on the modeltype
+
+  ;;;;;;;;;;;;;;;;;;
+  ; Begin EMD code ;
+  ;;;;;;;;;;;;;;;;;;
   ask turtles [
     set invest
+       ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-amount
        random 11
     set contribution invest
   ]
-
+  ;;;;;;;;;;;;;;;;
+  ; End EMD code ;
+  ;;;;;;;;;;;;;;;;
 
   ; actual public infrastructure
 

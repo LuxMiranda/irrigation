@@ -1,0 +1,33 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;; Internal functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Probabilize a basic value
+to-report probabilize [o x]
+  ;; Magical 3 here is a k hyperparamter
+  report -1 * (abs ((o - x) / 3)) + 1
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;; Operators ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; run by a ?
+;; takes two subscore reporters and concats them with an addition operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report combine [a b]
+  report (word "(" a " + " b ")")
+end
+;; run by a ?
+;; takes two subscore reporters and concats them with an addition operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report subtract [a b]
+  report (word "(" a " - " b ")")
+end
+;; run by a ?
+;; takes two subscore reporters and concats them with a division operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report divide [a b]
+  report (word "(" a " / (0.0000000001 + " b "))")
+end
+;; run by a ?
+;; takes two subscore reporters and concats them with a multiplication operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report multiply [a b]
+  report (word "(" a " * " b ")")
+end
+
