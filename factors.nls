@@ -24,6 +24,7 @@ end
 to-report divide [a b]
   report (word "(" a " / (0.0000000001 + " b "))")
 end
+
 ;; run by a ?
 ;; takes two subscore reporters and concats them with a multiplication operator
 ;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
