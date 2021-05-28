@@ -1,4 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;; Internal functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; Probabilize a basic value
 to-report probabilize [o x]
   ;; Magical 3 here is a k hyperparamter
@@ -6,29 +7,67 @@ to-report probabilize [o x]
 end
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;; Operators ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; run by a ?
+
 ;; takes two subscore reporters and concats them with an addition operator
 ;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
 to-report combine [a b]
   report (word "(" a " + " b ")")
 end
-;; run by a ?
 ;; takes two subscore reporters and concats them with an addition operator
 ;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
 to-report subtract [a b]
   report (word "(" a " - " b ")")
 end
-;; run by a ?
+
 ;; takes two subscore reporters and concats them with a division operator
 ;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
 to-report divide [a b]
   report (word "(" a " / (0.0000000001 + " b "))")
 end
 
-;; run by a ?
 ;; takes two subscore reporters and concats them with a multiplication operator
 ;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
 to-report multiply [a b]
   report (word "(" a " * " b ")")
 end
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;; Generators ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Generator for decision-infos
+;; @EMD @Factor @return-type=decision-infos
+to-report possible-decisions 
+  report 0
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;; Combiners ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; @EMD @Factor @return-type=decision-info @parameter-type=decision-infos @parameter-type=comparator
+to-report get-max-one-of [ p reporters]
+  let _selection max-one-of p [runresult reporters]
+  report _selection
+end
+
+;; @EMD @Factor @return-type=decision-info @parameter-type=decision-infos @parameter-type=comparator
+to-report get-min-one-of [ p reporters]
+  let _selection min-one-of p [runresult reporters]
+  report _selection
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;; Factors ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; @EMD @Factor @return-type=comparator
+to-report consider-selfishness
+  report "probabilize 0 investAmount"
+end
+
+;; @EMD @Factor @return-type=comparator
+to-report consider-altruism
+  report "probabilize 10 investAmount"
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;; Faucet ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; @EMD @Factor @return-type=investment-amount @parameter-type=decision-info
+to-report decision-invest-amount [ decisionInfo ]
+  report 0
+end
