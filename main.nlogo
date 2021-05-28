@@ -1,5 +1,11 @@
 __includes ["factors.nls"]
 
+breed [ decision-infos decision-info ]
+
+decision-infos-own [
+  investAmount         ; The decided amount to invest
+]
+
 turtles-own [
   contribution         ; investment into the public fund
   collect              ; extraction from common resource
@@ -1192,7 +1198,7 @@ CHOOSER
 modeltype
 modeltype
 "utilitarian2" "utilitarian" "heuristic" "mixedrsa" "pseudorandom" "random" "selfish" "altruistic"
-5
+7
 
 SLIDER
 175
