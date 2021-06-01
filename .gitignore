@@ -1,2 +1,4 @@
 **.tmp.nlogo
 **.tmp**
+**.EMD.nlogo
+__pycache__/**
