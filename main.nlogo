@@ -1,11 +1,4 @@
-__includes ["Factors.nls"]
-
-breed [ farmer-infos farmer-info ]
-
-; Data structure for passing info to EMD
-farmer-infos-own [
-  investAmount         ; A possible investment amount; an integer on [0,10]
-]
+__includes ["factors.nls"]
 
 turtles-own [
   contribution         ; investment into the public fund
@@ -607,174 +600,18 @@ to go
       ifelse ticks < 10 [set variab 2][set variab 0]]
   ]
 
-  ; Here begins the EMD code
-
-  ; Create the set of possible investment amounts
-  create-farmer-infos 1 [ set investAmount 0 ]
-  create-farmer-infos 1 [ set investAmount 1 ]
-  create-farmer-infos 1 [ set investAmount 2 ]
-  create-farmer-infos 1 [ set investAmount 3 ]
-  create-farmer-infos 1 [ set investAmount 4 ]
-  create-farmer-infos 1 [ set investAmount 5 ]
-  create-farmer-infos 1 [ set investAmount 6 ]
-  create-farmer-infos 1 [ set investAmount 7 ]
-  create-farmer-infos 1 [ set investAmount 8 ]
-  create-farmer-infos 1 [ set investAmount 9 ]
-  create-farmer-infos 1 [ set investAmount 10 ]
-
+  ;;;;;;;;;;;;;;;;;;
+  ; Begin EMD code ;
+  ;;;;;;;;;;;;;;;;;;
   ask turtles [
     set invest
-        ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-value
-        random 11
+       ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-amount
+       random 11
     set contribution invest
   ]
-
-  ; Here ends the EMD code
-   ask turtles [
-    if modeltype = "random" [
-        set invest random 11
-        set contribution invest
-    ]
-    if modeltype = "selfish" [
-        set invest 0
-        set contribution invest
-    ]
-    if modeltype = "altruistic" [
-      set invest 10
-      set contribution invest
-    ]
-    ;;not sure how to make it so that prand < pself < paltr or having condition that all three can be summing 1 at max
-    ;; and are mutually exclusive
-    if modeltype = "mixedrsa" [
-        set agt random-float 1
-        ifelse agt <= prand [
-          set invest random 11
-          set contribution invest
-        ]
-        [ ifelse agt <= pself [
-          set invest 0
-          set contribution invest
-        ]
-        [ set invest 10
-          set contribution invest
-        ]
-        ]
-    ]
-    if modeltype = "pseudorandom" [
-        ifelse ticks = 0 [
-          set baseinvest random-normal meaninv sdinv
-          if baseinvest < 0 [set invest 0]
-          if baseinvest > 10 [set invest 10]
-          set invest baseinvest
-          set contribution invest
-        ]
-        [ set invest baseinvest + (random-normal 0 sdnoise)
-          if invest < 0 [set invest 0]
-          if invest > 0 [set invest 10]
-          set contribution invest
-        ]
-    ]
-    if modeltype = "heuristic" [
-      ifelse ticks = 0 [
-        set agt random-float 1
-        ifelse agt <= pself [
-          set invest random 5
-          set contribution invest
-        ]
-        [ set invest random 6 + 5
-          set contribution invest
-        ]
-      ]
-      [
-        ifelse impact != 0 [
-          set invest ((10 * trust) * (impact ^ roi))
-          if invest < 0 [set invest 0]
-          if invest > 10 [set invest 10]
-          set contribution invest
-        ]
-        [
-          set invest 0
-          set contribution invest
-        ]
-      ]
-    ]
-    if modeltype = "utilitarian" or modeltype = "utilitarian2"[
-        let i 0
-        set utiltot 0
-        set utillist []
-      ; Calculate the expected utility for each of the 11 possible investment levels
-        while [i <= 10]
-        [
-
-          set invest (4 * 10 * expcoopothers) + i
-          set pg calpg invest ; expected public fund for investment level invest
-
-        ; expected resource available  NEED TO CHANGE FOR PROBABILITIES, however expected values are all the same!!!
-          ifelse ticks = 0 [
-            let exponent (2 - expcoopothers)
-            set pga pg * (1 - (who / 5) ^ exponent)
-            ifelse pg > 0 [set expshare pga / pg][set expshare 0]
-            if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
-          ][
-            set pga pg * expshare
-            if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
-          ]
-
-          set income 10 - i + pga
-          set incomeothers (40 - (10 * 4 * expcoopothers) + (pg - pga)) / 4
-
-          let dif1 0
-          let dif2 0
-          ifelse income > incomeothers [
-            set dif1 income - incomeothers
-            set dif2 0
-          ][
-            set dif1 0
-            set dif2 incomeothers - income
-          ]
-          set utility exp (lambda * (income -  alpha * dif1 + beta * dif2))
-          set utillist lput utility utillist
-          set utiltot utiltot + utility
-          set i i + 1
-        ]
-
-        ; calculate relative probabilities
-        ifelse best [ ; if agents take the option with highest utility
-          let utilmax max utillist
-          set i 0
-          let utilmaxlist []
-          while [i <= 10]
-          [
-            if item i utillist = utilmax [set utilmaxlist lput i utilmaxlist]
-            set i i + 1
-          ]
-          set contribution one-of utilmaxlist
-          ][
-          set i 0
-          set probinvest []
-          while [i <= 10]
-          [
-            ifelse utiltot > 0 [
-              set probinvest lput (item i utillist / utiltot) probinvest
-            ][
-              set probinvest lput 0.2 probinvest
-            ]
-            set i i + 1
-          ]
-        ; define investment using probabilistic choice
-          let rndnr random-float 1.0
-          let cump 0
-          let found? false
-          set contribution 0
-          while [contribution < 10 and found? = false]
-          [
-            set cump cump + item contribution probinvest
-            ifelse rndnr < cump [set found? true][set contribution contribution + 1]
-          ]
-        ] ;show "FINISHING UTILITY CONTRIBUTION PROCEDURE"
-    ]
-  ]
-
+  ;;;;;;;;;;;;;;;;
+  ; End EMD code ;
+  ;;;;;;;;;;;;;;;;
 
   ; actual public infrastructure
 
@@ -1123,7 +960,7 @@ meaneco
 meaneco
 0
 1
-0.369
+1.0
 0.01
 1
 NIL
@@ -1138,7 +975,7 @@ stdeveco
 stdeveco
 0
 1
-0.0
+1.0
 0.01
 1
 NIL
@@ -1153,7 +990,7 @@ meanalpha
 meanalpha
 -1
 1
-0.864
+1.0
 0.01
 1
 NIL
@@ -1168,7 +1005,7 @@ stdevalpha
 stdevalpha
 0
 1
-0.0
+1.0
 0.01
 1
 NIL
@@ -1183,7 +1020,7 @@ meanlambda
 meanlambda
 0
 5
-0.549
+5.0
 0.01
 1
 NIL
@@ -1213,7 +1050,7 @@ meangamma1
 meangamma1
 0
 1
-0.0
+1.0
 0.01
 1
 NIL
@@ -1228,7 +1065,7 @@ stdevgamma1
 stdevgamma1
 0
 1
-0.0
+1.0
 0.01
 1
 NIL
@@ -1260,7 +1097,7 @@ meanbeta
 meanbeta
 -1
 1
-0.513
+-1.0
 0.01
 1
 NIL
@@ -1301,7 +1138,7 @@ meangamma2
 meangamma2
 0
 1
-0.0
+1.0
 0.01
 1
 NIL
@@ -1316,7 +1153,7 @@ stdevgamma2
 stdevgamma2
 0
 1
-0.0
+1.0
 0.01
 1
 NIL
@@ -1355,7 +1192,7 @@ CHOOSER
 modeltype
 modeltype
 "utilitarian2" "utilitarian" "heuristic" "mixedrsa" "pseudorandom" "random" "selfish" "altruistic"
-5
+7
 
 SLIDER
 175
@@ -1381,7 +1218,7 @@ meaninv
 meaninv
 0
 10
-0.0
+10.0
 1
 1
 NIL
@@ -1426,7 +1263,7 @@ meanimpact
 meanimpact
 0
 10
-0.0
+10.0
 0.01
 1
 NIL
@@ -1456,7 +1293,7 @@ meanwanted
 meanwanted
 -5
 5
-0.0
+5.0
 0.1
 1
 NIL

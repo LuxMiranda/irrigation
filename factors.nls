@@ -1,0 +1,104 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;; Internal functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Probabilize a basic value
+to-report probabilize [o x]
+  ;; Magical 3 here is a k hyperparamter
+  report -1 * (abs ((o - x) / 3)) + 1
+end
+
+;; Retrieve the index of the largest item in a list
+to-report max-index [xs] 
+  ;; Indices
+  let maxIndex 0
+  let i 0
+  ;; Fetch the first element
+  let maxElem (item 0 xs)
+  ;; For each item in the list
+  foreach xs [ [x] ->
+    ;; If the current item is larger than the last seen maxElem, set a new maxElem & maxIndex
+    if (x > maxElem) [
+      set maxElem x
+      set maxIndex i
+    ]
+    set i (i + 1)
+  ]
+  report maxIndex
+end
+
+;; Retrieve the index of the smallest item in a list
+to-report min-index [xs]
+  ;; Indices
+  let minIndex 0
+  let i 0
+  ;; Fetch the first element
+  let minElem (item 0 xs)
+  ;; For each item in the list
+  foreach xs [ [x] ->
+    ;; If the current item is smaller than the last seen minElem, set a new minElem & minIndex
+    if (x < minElem) [
+      set minElem x
+      set minIndex i
+    ]
+    set i (i + 1)
+  ]
+  report minIndex
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;; Operators ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; takes two subscore reporters and concats them with an addition operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report combine [a b]
+  report (word "(" a " + " b ")")
+end
+;; takes two subscore reporters and concats them with an addition operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report subtract [a b]
+  report (word "(" a " - " b ")")
+end
+
+;; takes two subscore reporters and concats them with a division operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report divide [a b]
+  report (word "(" a " / (0.0000000001 + " b "))")
+end
+
+;; takes two subscore reporters and concats them with a multiplication operator
+;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+to-report multiply [a b]
+  report (word "(" a " * " b ")")
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;; Generators ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Generator for possible-investments
+;; @EMD @Factor @return-type=possible-investments
+to-report possible-decisions 
+  report [0 1 2 3 4 5 6 7 8 9 10 11]
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;; Combiners ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; @EMD @Factor @return-type=investment-amount @parameter-type=possible-investments @parameter-type=comparator
+to-report get-max-one-of [ possible-invests factor-function ]
+  let _selection max-index (map (runresult (word "[[x] -> " factor-function "]")) possible-invests)
+  report _selection
+end
+
+;; @EMD @Factor @return-type=investment-amount @parameter-type=possible-investments @parameter-type=comparator
+to-report get-min-one-of [ possible-invests factor-function ]
+  let _selection min-index (map (runresult (word "[[x] -> " factor-function "]")) possible-invests)
+  report _selection
+end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;; Factors ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; @EMD @Factor @return-type=comparator
+to-report consider-selfishness
+  report "(probabilize 0 x)"
+end
+
+;; @EMD @Factor @return-type=comparator
+to-report consider-altruism
+  report "(probabilize 10 x)"
+end
