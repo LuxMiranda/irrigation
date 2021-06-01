@@ -1,34 +1,4 @@
-Okay, so we need to create a turtle-info-set. It'll be called like this:
-
-get-max-one-of (turtle-info-set) <mutated factor>
-
-
-Turtle infos will need to be replicated 11 times for each of the 11 possible investment numbers
-
-e.g.
-
-my-contribution                        : 0
-last-upstream-neighbor-contibution     : 2
-last-downstream-neighbor-contribution  : 1
-
-my-contribution                        : 1
-last-upstream-neighbor-contibution     : 2
-last-downstream-neighbor-contribution  : 1
-
-my-contribution                        : 2
-last-upstream-neighbor-contibution     : 2
-last-downstream-neighbor-contribution  : 1
-
-etc
-
-Factor will take in a turtle-info, calculate the [0,1] number based on it.
-
-It's kind of janky... But it'll work. 
-
-
-OR
-
-
-Could we run by a turtle???
-
-Then each factor takes in the turtle plus just the standard range... might be easier
+Things to update documentation with:
+  Additional parameter in EMD intialization
+  Fix the setObjectiveFunction line with the right function name
+  Also its set_objective_function now
