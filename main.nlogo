@@ -29,6 +29,13 @@ turtles-own [
   ]
 
 globals [
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;; Begin EMD-related globals ;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  probabilization-obtuseness      ; The obtuseness (width) of the probabilization function.
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;  End EMD-related globals  ;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   invest               ; total level of investment in public fund
   pga                  ; available level of common resource
   pg                   ; level of common resource
@@ -103,8 +110,13 @@ to setup
 
   set treat (list "nlh" "nhl" "lhn")
 
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Begin EMD-related code ;;
 
+  set probabilization-obtuseness 3
 
+  ;;   End EMD-related code ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   reset-ticks
 end
 
