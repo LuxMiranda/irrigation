@@ -6,6 +6,7 @@ netlogoPath = '/home/lux/netlogo-6.0.2/'
 # Model path. Note that the "./" is necessary. 
 modelPath = './main.nlogo'
 # Setup commands
+# TODO: Randomly initialize hyperparameters according to Ancestral Pueblo paper
 setup = ['setup']
 # Measurement reporters
 measurements = ['fit']
