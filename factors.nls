@@ -2,10 +2,19 @@
 
 ;; Probabilize a basic value
 to-report probabilize [o x]
-  ;; Magical 3 here is a k hyperparamter
-  report -1 * (abs ((o - x) / 3)) + 1
+  report -1 * (abs ((o - x) / probabilization-obtuseness)) + 1
 end
 
+
+;; A standard normal probability density function
+;; Mu - mean (expected)
+;; Sd - standard deviation
+to-report normal-probability-density [ mu sd x ]
+  let coeff 1 / (sd * (sqrt (2 * pi)))
+  let power -0.5 * (((x - mu) / sd) ^ 2)
+  report coeff * (exp power)
+end
+ 
 ;; Retrieve the index of the largest item in a list
 to-report max-index [xs] 
   ;; Indices
@@ -93,18 +102,33 @@ end
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;; Factors ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Probabilization of the "selfish" investment (0 tokens)
 ;; @EMD @Factor @return-type=comparator
 to-report consider-selfishness
   report "(probabilize 0 x)"
 end
 
+;; Probabilization of the "altruistic" investment (10 tokens)
 ;; @EMD @Factor @return-type=comparator
 to-report consider-altruism
   report "(probabilize 10 x)"
 end
 
+;; A random comparator amount with two decimals precision
 ;; @EMD @Factor @return-type=comparator
-to-report consider-randomness
-;; lol im so random rawr xD
-  report "(random 11)"
+to-report consider-random
+  ;; lol im so random rawr xD
+  report "(random 101 / 100)"
+end
+
+;; Comparator with importance defined on a normal destribution with a pseudorandomly selected mean
+;; @EMD @Factor @return-type=comparator
+to-report consider-pseudorandom
+  if ticks = 0 [
+    set baseinvest random-normal meaninv sdinv
+    if baseinvest < 0 [ set baseinvest 0 ]
+    if baseinvest > 10 [ set baseinvest 10 ]
+  ]
+  ;; Return a normal probability density with mean=baseinvest and sd=sdnoise
+  report "(normal-probability-density baseinvest sdnoise x)"
 end
