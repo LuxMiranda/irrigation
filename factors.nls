@@ -102,3 +102,9 @@ end
 to-report consider-altruism
   report "(probabilize 10 x)"
 end
+
+;; @EMD @Factor @return-type=comparator
+to-report consider-randomness
+;; lol im so random rawr xD
+  report "(random 11)"
+end
