@@ -600,9 +600,9 @@ to go
       ifelse ticks < 10 [set variab 2][set variab 0]]
   ]
 
-  ;;;;;;;;;;;;;;;;;;
-  ; Begin EMD code ;
-  ;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; Begin code modified for EMD ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ask turtles [
     set invest
        ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-amount
