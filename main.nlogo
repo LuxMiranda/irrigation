@@ -972,7 +972,7 @@ meaneco
 meaneco
 0
 1
-1.0
+0.36
 0.01
 1
 NIL
@@ -987,7 +987,7 @@ stdeveco
 stdeveco
 0
 1
-1.0
+0.48
 0.01
 1
 NIL
@@ -1002,7 +1002,7 @@ meanalpha
 meanalpha
 -1
 1
-1.0
+-0.07
 0.01
 1
 NIL
@@ -1017,7 +1017,7 @@ stdevalpha
 stdevalpha
 0
 1
-1.0
+0.6
 0.01
 1
 NIL
@@ -1032,7 +1032,7 @@ meanlambda
 meanlambda
 0
 5
-4.83
+2.23
 0.01
 1
 NIL
@@ -1047,7 +1047,7 @@ stdevlambda
 stdevlambda
 0
 1
-0.0
+0.46
 0.01
 1
 NIL
@@ -1062,7 +1062,7 @@ meangamma1
 meangamma1
 0
 1
-1.0
+0.54
 0.01
 1
 NIL
@@ -1077,7 +1077,7 @@ stdevgamma1
 stdevgamma1
 0
 1
-1.0
+0.49
 0.01
 1
 NIL
@@ -1109,7 +1109,7 @@ meanbeta
 meanbeta
 -1
 1
--1.0
+0.36
 0.01
 1
 NIL
@@ -1124,7 +1124,7 @@ stdevbeta
 stdevbeta
 0
 1
-0.0
+0.42
 0.01
 1
 NIL
@@ -1137,7 +1137,7 @@ SWITCH
 236
 best
 best
-1
+0
 1
 -1000
 
@@ -1150,7 +1150,7 @@ meangamma2
 meangamma2
 0
 1
-1.0
+0.47
 0.01
 1
 NIL
@@ -1165,7 +1165,7 @@ stdevgamma2
 stdevgamma2
 0
 1
-1.0
+0.54
 0.01
 1
 NIL
@@ -1215,7 +1215,7 @@ prand
 prand
 0
 1
-0.0
+0.52
 0.01
 1
 NIL
@@ -1230,7 +1230,7 @@ meaninv
 meaninv
 0
 10
-10.0
+5.0
 1
 1
 NIL
@@ -1245,7 +1245,7 @@ sdinv
 sdinv
 0
 5
-0.0
+2.5
 0.1
 1
 NIL
@@ -1258,9 +1258,9 @@ SLIDER
 550
 sdnoise
 sdnoise
-0
+0.01
 5
-0.0
+4.27
 0.01
 1
 NIL
@@ -1275,7 +1275,7 @@ meanimpact
 meanimpact
 0
 10
-10.0
+4.97
 0.01
 1
 NIL
@@ -1290,7 +1290,7 @@ sdimpact
 sdimpact
 0
 5
-0.0
+1.94
 0.01
 1
 NIL
@@ -1305,7 +1305,7 @@ meanwanted
 meanwanted
 -5
 5
-5.0
+0.1
 0.1
 1
 NIL
@@ -1320,7 +1320,7 @@ sdwanted
 sdwanted
 0
 5
-0.0
+2.93
 0.01
 1
 NIL
@@ -1335,7 +1335,7 @@ meantrust
 meantrust
 0
 1
-0.0
+0.54
 0.01
 1
 NIL
@@ -1350,7 +1350,7 @@ sdtrust
 sdtrust
 0
 1
-0.0
+0.45
 0.01
 1
 NIL
@@ -1365,7 +1365,7 @@ sdnoise2
 sdnoise2
 0
 5
-0.0
+2.64
 0.01
 1
 NIL
@@ -1380,7 +1380,7 @@ meaneco2
 meaneco2
 0
 1
-0.0
+0.58
 0.01
 1
 NIL
@@ -1395,7 +1395,7 @@ stdeveco2
 stdeveco2
 0
 1
-0.0
+0.55
 0.01
 1
 NIL
@@ -1425,7 +1425,7 @@ meanbeta2
 meanbeta2
 -1
 1
-0.0
+0.05
 0.01
 1
 NIL
@@ -1440,7 +1440,7 @@ meanlambda2
 meanlambda2
 0
 5
-0.0
+3.26
 0.01
 1
 NIL
@@ -1455,7 +1455,7 @@ meangamma12
 meangamma12
 0
 1
-0.0
+0.38
 0.01
 1
 NIL
@@ -1470,7 +1470,7 @@ meangamma22
 meangamma22
 0
 1
-0.0
+0.53
 0.01
 1
 NIL
@@ -1485,7 +1485,7 @@ stdevalpha2
 stdevalpha2
 0
 1
-0.0
+0.45
 0.01
 1
 NIL
@@ -1500,7 +1500,7 @@ stdevbeta2
 stdevbeta2
 0
 1
-0.0
+0.5
 0.01
 1
 NIL
@@ -1515,7 +1515,7 @@ stdevlambda2
 stdevlambda2
 0
 1
-0.0
+0.26
 0.01
 1
 NIL
@@ -1530,7 +1530,7 @@ stdevgamma12
 stdevgamma12
 0
 1
-0.0
+0.48
 0.01
 1
 NIL
@@ -1545,7 +1545,7 @@ stdevgamma22
 stdevgamma22
 0
 1
-0.0
+0.53
 0.01
 1
 NIL
