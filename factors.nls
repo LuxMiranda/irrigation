@@ -145,18 +145,13 @@ to-report consider-heuristic
     set agt random-float 1
     ifelse agt <= pself [
       ;; Return a uniform random comparator if x <= 5, or 0 otherwise
-      report "(ifelse x <= 5 [ random-float 1 ] [ 0 ])"
+      report "(ifelse-value (x <= 5) [ random-float 1 ] [ 0 ])"
     ]
     ;; Else agt > pself
     [
       ;; Return a uniform random comparator if x > 5, or 0 otherwise
-      report "(ifelse x > 5 [ random-float 1 ] [ 0 ])"
+      report "(ifelse-value (x > 5) [ random-float 1 ] [ 0 ])"
     ]
   ]
-  ;; Dear Future Lux,
-  ;; You are not totally satisfied with this function as a probabilization. Please sleep on it.
-  ;; You are beautiful and strong, send love to yourself.
-  ;; Sincerely,
-  ;; Past Lux 
   report "(probabilize (truncate ((10 * trust) * (impact ^ roi))) x)"
 end
