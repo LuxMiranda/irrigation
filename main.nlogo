@@ -1032,7 +1032,7 @@ meanlambda
 meanlambda
 0
 5
-5.0
+4.83
 0.01
 1
 NIL
@@ -1190,7 +1190,7 @@ pself
 pself
 0
 1
-0.0
+0.43
 0.01
 1
 NIL

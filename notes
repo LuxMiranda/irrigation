@@ -1,3 +1,8 @@
+TODO:
+  Make sure that calibration parameters (like trust, impact, etc.) are being set ALWAYS and not just when the model type is selected
+  Should different probabilizations have different obtusenesses?
+
+
 Things to update documentation with:
   Additional parameter in EMD intialization
   Fix the setObjectiveFunction line with the right function name

@@ -15,6 +15,13 @@ to-report normal-probability-density [ mu sd x ]
   report coeff * (exp power)
 end
  
+;; Truncate an investment if it exceeds possible investment boundaries
+to-report truncate [ investment ]
+  if investment < 0 [ report 0 ]
+  if investment > 10 [ report 10 ]
+  report investment
+end
+
 ;; Retrieve the index of the largest item in a list
 to-report max-index [xs] 
   ;; Indices
@@ -114,21 +121,42 @@ to-report consider-altruism
   report "(probabilize 10 x)"
 end
 
-;; A random comparator amount with two decimals precision
+;; A random comparator 
 ;; @EMD @Factor @return-type=comparator
 to-report consider-random
   ;; lol im so random rawr xD
-  report "(random 101 / 100)"
+  report "(random-float 1)"
 end
 
 ;; Comparator with importance defined on a normal destribution with a pseudorandomly selected mean
 ;; @EMD @Factor @return-type=comparator
 to-report consider-pseudorandom
+  ;; At the zeroth tick, set the base investment
   if ticks = 0 [
-    set baseinvest random-normal meaninv sdinv
-    if baseinvest < 0 [ set baseinvest 0 ]
-    if baseinvest > 10 [ set baseinvest 10 ]
+    set baseinvest truncate (random-normal meaninv sdinv)
   ]
   ;; Return a normal probability density with mean=baseinvest and sd=sdnoise
   report "(normal-probability-density baseinvest sdnoise x)"
+end
+
+;; @EMD @Factor @return-type=comparator
+to-report consider-heuristic
+  if ticks = 0 [
+    set agt random-float 1
+    ifelse agt <= pself [
+      ;; Return a uniform random comparator if x <= 5, or 0 otherwise
+      report "(ifelse x <= 5 [ random-float 1 ] [ 0 ])"
+    ]
+    ;; Else agt > pself
+    [
+      ;; Return a uniform random comparator if x > 5, or 0 otherwise
+      report "(ifelse x > 5 [ random-float 1 ] [ 0 ])"
+    ]
+  ]
+  ;; Dear Future Lux,
+  ;; You are not totally satisfied with this function as a probabilization. Please sleep on it.
+  ;; You are beautiful and strong, send love to yourself.
+  ;; Sincerely,
+  ;; Past Lux 
+  report "(probabilize (truncate ((10 * trust) * (impact ^ roi))) x)"
 end
