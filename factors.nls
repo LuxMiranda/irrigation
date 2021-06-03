@@ -90,7 +90,7 @@ end
 ;; Generator for possible-investments
 ;; @EMD @Factor @return-type=possible-investments
 to-report possible-decisions 
-  report [0 1 2 3 4 5 6 7 8 9 10 11]
+  report [0 1 2 3 4 5 6 7 8 9 10]
 end
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;; Combiners ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -139,6 +139,7 @@ to-report consider-pseudorandom
   report "(normal-probability-density baseinvest sdnoise x)"
 end
 
+;; Comparator that simply probabilizes the heuristic model
 ;; @EMD @Factor @return-type=comparator
 to-report consider-heuristic
   if ticks = 0 [
@@ -154,4 +155,59 @@ to-report consider-heuristic
     ]
   ]
   report "(probabilize (truncate ((10 * trust) * (impact ^ roi))) x)"
+end
+
+;; Comparator considering the other-regarding preference model. This code is largly unchanged,
+;; as the model is already formulated as a probability distribution! We simply report the 
+;; distribution rather than picking from it. 
+;; @EMD @Factor @return-type=comparator
+to-report consider-utilitarian
+  let i 0     
+  set utiltot 0
+  set utillist []
+  ; Calculate the expected utility for each of the 11 possible investment levels
+  while [i <= 10]
+  [
+    set invest (4 * 10 * expcoopothers) + i
+    set pg calpg invest 
+    ifelse ticks = 0 [
+      let exponent (2 - expcoopothers)
+      set pga pg * (1 - (who / 5) ^ exponent)
+      ifelse pg > 0 [set expshare pga / pg][set expshare 0]
+      if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
+    ][
+      set pga pg * expshare
+      if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
+    ]  
+    set income 10 - i + pga
+    set incomeothers (40 - (10 * 4 * expcoopothers) + (pg - pga)) / 4
+
+    let dif1 0
+    let dif2 0
+    ifelse income > incomeothers [
+      set dif1 income - incomeothers 
+      set dif2 0
+    ][
+      set dif1 0 
+      set dif2 incomeothers - income
+    ]
+    set utility exp (lambda * (income -  alpha * dif1 + beta * dif2)) 
+    set utillist lput utility utillist
+    set utiltot utiltot + utility
+    set i i + 1
+  ]  
+  set i 0 
+  set probinvest []
+  while [i <= 10]
+  [  
+    ifelse utiltot > 0 [
+      set probinvest lput (item i utillist / utiltot) probinvest
+    ][
+      set probinvest lput 0.2 probinvest
+    ]   
+    set i i + 1
+  ] 
+  ;; The one key insertion!
+  show probinvest
+  report "(item x probinvest)"
 end
