@@ -208,6 +208,5 @@ to-report consider-utilitarian
     set i i + 1
   ] 
   ;; The one key insertion!
-  show probinvest
   report "(item x probinvest)"
 end
