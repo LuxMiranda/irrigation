@@ -109,6 +109,8 @@ end
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;; Factors ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;;;;;;;;;;;; Rational factors ;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; Probabilization of the "selfish" investment (0 tokens)
 ;; @EMD @Factor @return-type=comparator
 to-report consider-selfishness
@@ -156,6 +158,8 @@ to-report consider-heuristic
   ]
   report "(probabilize (truncate ((10 * trust) * (impact ^ roi))) x)"
 end
+
+;;;;;;;;;;;;; Social factors ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Comparator considering the other-regarding preference model. This code is largly unchanged,
 ;; as the model is already formulated as a probability distribution! We simply report the 
@@ -209,4 +213,20 @@ to-report consider-utilitarian
   ] 
   ;; The one key insertion!
   report "(item x probinvest)"
+end
+
+;;;;;;;;;;;;; Emotional factors ;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Comparator considering low investments for lower-than-average earners
+;; and high investments for higher-than-average earners
+;; @EMD @Factor @return-type=comparator
+to-report consider-relative-income
+  ;; If my income is less than average
+  ifelse income < (mean incomeothers) [
+    ;; Put a greater weight on investing less
+    report consider-selfishness
+  ][;; Otherwise
+    ;; Put a greater weight on investing more
+    report consider-altruism
+  ]
 end
