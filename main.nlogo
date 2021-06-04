@@ -993,7 +993,7 @@ meanalpha
 meanalpha
 -1
 1
--0.07
+0.55
 0.01
 1
 NIL
@@ -1100,7 +1100,7 @@ meanbeta
 meanbeta
 -1
 1
-0.36
+0.22
 0.01
 1
 NIL
@@ -1180,7 +1180,7 @@ CHOOSER
 modeltype
 modeltype
 "utilitarian2" "utilitarian" "heuristic" "mixedrsa" "pseudorandom" "random" "selfish" "altruistic"
-7
+5
 
 SLIDER
 175
@@ -1386,7 +1386,7 @@ meanalpha2
 meanalpha2
 -1
 1
-0.0
+0.3
 0.1
 1
 NIL
@@ -1534,7 +1534,7 @@ SWITCH
 332
 debug
 debug
-1
+0
 1
 -1000
 
