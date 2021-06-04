@@ -245,8 +245,10 @@ end
 ;; and high investments for higher-than-average earners
 ;; @EMD @Factor @return-type=comparator
 to-report consider-relative-income
+  ;; No one knows their income yet on the first tick
+  if ticks = 0 [ report "(0)" ]
   ;; If my income is less than average
-  ifelse income < (mean incomeothers) [
+  ifelse income < (incomeothers) [
     ;; Put a greater weight on investing less
     report consider-selfishness
   ][;; Otherwise

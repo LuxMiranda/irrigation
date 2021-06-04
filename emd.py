@@ -60,7 +60,9 @@ setup = [
     # Probabilization obtuseness
     'set probabilization-obtuseness {}'.format(rng.uniform(1,10)),
     # -- Setup commands -- 
+    'set modeltype "utilitarian"',
     'set debug False',
+    'set best False',
     'setup'
 ]
 # Measurement reporters

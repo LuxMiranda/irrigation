@@ -993,7 +993,7 @@ meanalpha
 meanalpha
 -1
 1
-0.55
+0.83
 0.01
 1
 NIL
@@ -1128,7 +1128,7 @@ SWITCH
 236
 best
 best
-0
+1
 1
 -1000
 
@@ -1180,7 +1180,7 @@ CHOOSER
 modeltype
 modeltype
 "utilitarian2" "utilitarian" "heuristic" "mixedrsa" "pseudorandom" "random" "selfish" "altruistic"
-5
+1
 
 SLIDER
 175
@@ -1311,7 +1311,7 @@ meantrust
 meantrust
 0
 1
-0.54
+0.52
 0.01
 1
 NIL
