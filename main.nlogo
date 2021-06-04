@@ -1245,7 +1245,7 @@ sdinv
 sdinv
 0
 5
-2.5
+3.0
 0.1
 1
 NIL
@@ -1425,7 +1425,7 @@ meanbeta2
 meanbeta2
 -1
 1
-0.05
+0.01
 0.01
 1
 NIL
@@ -1500,7 +1500,7 @@ stdevbeta2
 stdevbeta2
 0
 1
-0.5
+0.45
 0.01
 1
 NIL
@@ -1515,7 +1515,7 @@ stdevlambda2
 stdevlambda2
 0
 1
-0.26
+0.36
 0.01
 1
 NIL
