@@ -47,12 +47,14 @@ setup = [
     paramCommand('stdevgamma1',       0.00), # tau_1
     paramCommand('meangamma2',        0.26), # tau_2
     paramCommand('stdevgamma2',       0.00), # tau_2
+    # Probabilization obtuseness
+    'set probabilization-obtuseness {}'.format(rng.uniform(1,10)),
     # --- Setup commands ---
     'set debug False',
     'setup'
 ]
 # Measurement reporters
-measurements = ['fit', 'fit1', 'fit2', 'fit3', 'fit4', 'fit5']
+measurements = ['fit', 'fit1', 'fit2', 'fit3', 'fit4', 'fit5','probabilization-obtuseness']
 # Number of ticks to run each simulation for
 ticks = 15
 
@@ -60,9 +62,10 @@ ticks = 15
 emd = EvolutionaryModelDiscovery(netlogoPath, modelPath, setup, measurements,\
         ticks, go_command='calibrate')
 
-# The fitness function, defined simply as "fit" in the literature
 def fitness(results):
+    print('RESULTS')
     print(results)
+    print('END RESULTS')
     return results.mean()[0]
 
 # Minimal hyperparameters
@@ -79,6 +82,4 @@ emd.set_objective_function(fitness)
 
 if __name__ == '__main__':
     print(emd.evolve())
-    print('Here the thing!')
-
     emd.shutdown()
