@@ -1,3 +1,13 @@
+# EMD, when halted before it is allowed to shutdown, can leave behind temporary
+# files that interfere with future runs. 
+def cleanUpTemporaryFiles():
+    import os
+    thisdir = os.listdir('./')
+    for file in thisdir:
+        if file.endswith('.EMD.nlogo'):
+            os.remove(os.path.join('./', file))
+
+cleanUpTemporaryFiles()
 from EvolutionaryModelDiscovery import EvolutionaryModelDiscovery
 from scoop import futures
 from numpy.random import default_rng; rng = default_rng()
@@ -18,6 +28,8 @@ def paramCommand(param, value):
 
 # Setup commands
 setup = [
+    'set debug False',
+    'setup',
     # Randomly initialize hyperparameters to a set nudge about
     # their optimal values reported in Baggio & Jannsen 2013, Table 3
     # --- pseudorandom ---
@@ -49,12 +61,12 @@ setup = [
     paramCommand('stdevgamma2',       0.00), # tau_2
     # Probabilization obtuseness
     'set probabilization-obtuseness {}'.format(rng.uniform(1,10)),
-    # --- Setup commands ---
-    'set debug False',
-    'setup'
 ]
 # Measurement reporters
-measurements = ['fit', 'fit1', 'fit2', 'fit3', 'fit4', 'fit5','probabilization-obtuseness']
+measurements = [
+        'fit', 'fit1', 'fit2', 'fit3', 'fit4', 'fit5',
+        'probabilization-obtuseness'
+]
 # Number of ticks to run each simulation for
 ticks = 15
 
@@ -63,10 +75,9 @@ emd = EvolutionaryModelDiscovery(netlogoPath, modelPath, setup, measurements,\
         ticks, go_command='calibrate')
 
 def fitness(results):
-    print('RESULTS')
-    print(results)
-    print('END RESULTS')
-    return results.mean()[0]
+    # 'fit' is a rolling measure of the entire fit, so pull the fit from the 
+    # final timestep (14)
+    return results.at[14, 'fit']
 
 # Minimal hyperparameters
 emd.set_replications(1)

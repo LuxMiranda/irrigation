@@ -144,7 +144,7 @@ end
 to-report consider-heuristic
   if ticks = 0 [
     set agt random-float 1
-    ifelse agt <= pself [
+    ifelse agt <= pself-heuristic [
       ;; Return a uniform random comparator if x <= 5, or 0 otherwise
       report "(ifelse-value (x <= 5) [ random-float 1 ] [ 0 ])"
     ]
