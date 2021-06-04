@@ -215,6 +215,30 @@ to-report consider-utilitarian
   report "(item x probinvest)"
 end
 
+;; Comparator considering closeness to the last investment of the upstream neighbor
+;; @EMD @Factor @return-type=comparator
+to-report upstream-homophily
+  ;; If its the first tick, there are no prior neighbor investments to consider
+  if ticks = 0 [ report "(0)" ]
+  ;; Get my position
+  let myPos [who] of self
+  ;; If I am the most upstream turtle, there is no upstream homophily
+  if myPos = 0 [ report "(0)" ]
+  report "(probabilize (last [listcontribute] of turtle (([who] of self) - 1)) x)"
+end
+
+;; Comparator considering closeness to the last investment of the downstream neighbor
+;; @EMD @Factor @return-type=comparator
+to-report downstream-homophily
+  ;; If it is the first tick, there are no prior neighbor investments to consider
+  if ticks = 0 [ report "(0)" ]
+  ;; Get my position
+  let myPos [who] of self
+  ;; If I am the most downstream turtle, there is no downstream homophily
+  if myPos = 4 [ report "(0)" ]
+  report "(probabilize (last [listcontribute] of turtle (([who] of self) + 1)) x)"
+end
+
 ;;;;;;;;;;;;; Emotional factors ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Comparator considering low investments for lower-than-average earners
