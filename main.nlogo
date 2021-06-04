@@ -29,13 +29,15 @@ turtles-own [
   ]
 
 globals [
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;;; Begin EMD-related globals ;;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  probabilization-obtuseness      ; The obtuseness (width) of the probabilization function.
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;;;  End EMD-related globals  ;;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;';;;;;;;;;;;
+  ;;; Begin EMD-modified globals ;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  probabilization-obtuseness       ; The obtuseness (width) of the probabilization function.
+  pself-heuristic                  ; A separate pself for the heuristic model
+  pself-utilitarian                ; A separate pself for the utilitarian model
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;  End EMD-modified globals  ;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   invest               ; total level of investment in public fund
   pga                  ; available level of common resource
   pg                   ; level of common resource
@@ -108,15 +110,19 @@ to setup
   set listsimcollectpp []
   ask turtles [set listcollect [] set listcontribute []]
 
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;; Begin EMD-related code ;;;
+  ; If the debug flag is true, set some values for the new globals
+  ; that EMD would otherwise initialize for us.
+  if debug [
+    set probabilization-obtuseness 3
+    set pself-heuristic 0.4
+    set pself-utilitarian 0
+  ]
+  ;;; End EMD-related code ;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
   set treat (list "nlh" "nhl" "lhn")
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; Begin EMD-related code ;;
-
-  set probabilization-obtuseness 3
-
-  ;;   End EMD-related code ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   reset-ticks
 end
 
@@ -277,7 +283,7 @@ to calibrate
           [             ;show "setting selfish alpha and beta"
             let prob random-float 1
             ;; if agent is selfish alpha and beta are set to 0
-            ifelse prob < pself [
+            ifelse prob < pself-utilitarian [
               set alpha 0
               set beta 0
               set correct 1
@@ -331,7 +337,7 @@ to calibrate
             [
               let prob random-float 1
               ;; if agent is selfish alpha and beta are set to 0
-              ifelse prob < pself [
+              ifelse prob < pself-utilitarian [
                 set alpha 0
                 set beta 0
                 set correct 1
@@ -376,7 +382,7 @@ to calibrate
             [
               let prob random-float 1
               ;; if agent is selfish alpha and beta are set to 0
-              ifelse prob < pself [
+              ifelse prob < pself-utilitarian [
                 set alpha 0
                 set beta 0
                 set correct 1
@@ -710,21 +716,6 @@ to calcollect [j]
     ]
     if modeltype = "altruistic" [
       set collect equalshare
-    ]
-    if modeltype = "mixedrsa" [
-      ifelse agt <= prand [
-        set collect random pga
-      ]
-      [ifelse agt <= pself [
-        set collect pga
-      ]
-      [ifelse pga > equalshare [
-         set collect equalshare
-      ]
-      [ set collect pga / (5 - [who] of self)
-      ]
-      ]
-      ]
     ]
     if modeltype = "pseudorandom" [
       ifelse pga != 0[
@@ -1181,21 +1172,6 @@ fitnessfunction
 "multiplier" "average" "minimum"
 0
 
-SLIDER
--1
-478
-171
-511
-pself
-pself
-0
-1
-0.43
-0.01
-1
-NIL
-HORIZONTAL
-
 CHOOSER
 184
 13
@@ -1550,6 +1526,17 @@ stdevgamma22
 1
 NIL
 HORIZONTAL
+
+SWITCH
+491
+299
+594
+332
+debug
+debug
+0
+1
+-1000
 
 @#$#@#$#@
 This is a Netlogo implementation of the model described in Baggio J.A. and M.A. Janssen (2013). “Comparing agent-based models on experimental data of irrigation games”. In Proceedings of the 2013 Winter Simulation Conference Edited by. R. Pasupathy, S.-H. Kim, A. Tolk, R. Hill, and M. E. Kuhl.
