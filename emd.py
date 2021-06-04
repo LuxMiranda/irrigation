@@ -28,8 +28,6 @@ def paramCommand(param, value):
 
 # Setup commands
 setup = [
-    'set debug False',
-    'setup',
     # Randomly initialize hyperparameters to a set nudge about
     # their optimal values reported in Baggio & Jannsen 2013, Table 3
     # --- pseudorandom ---
@@ -61,6 +59,9 @@ setup = [
     paramCommand('stdevgamma2',       0.00), # tau_2
     # Probabilization obtuseness
     'set probabilization-obtuseness {}'.format(rng.uniform(1,10)),
+    # -- Setup commands -- 
+    'set debug False',
+    'setup'
 ]
 # Measurement reporters
 measurements = [

@@ -256,7 +256,7 @@ to calibrate
       reset-ticks        ; ticks are initialized so that first tick is 0
       ;show "treatment"      ;show treatment      ;show "grounumber"      ;show groups
 
-      if modeltype = "heuristic" [
+;;      if modeltype = "heuristic" [
         ask turtles [
           set trust random-normal meantrust sdtrust
           if trust > 1 [set trust 1]
@@ -265,9 +265,9 @@ to calibrate
           if impact < 0 [set impact 0]
           set wanted random-normal meanwanted sdwanted
         ]
-      ]
+;;      ]
 
-      if modeltype = "utilitarian" [
+;;      if modeltype = "utilitarian" [
         ask turtles [
 
           ; define the paramaters of the model based on truncated Gaussian distributions
@@ -318,105 +318,105 @@ to calibrate
             if ((gamma2 <= 1) and (gamma2 >= 0)) [set correct 1]
           ]
         ]
-      ]
+;;      ]
 
-      if modeltype = "utilitarian2" [
-        ask turtles [
-        ; define the paramaters of the model based on truncated Gaussian distributions
-          set agt random-float 1
-          ifelse agt < prand [
-            set correct 0
-            while [correct = 0]
-            [
-              ; show "setting Excop"
-              set expcoopothers random-normal meaneco stdeveco
-              if ((expcoopothers <= 1) and (expcoopothers >= 0)) [set correct 1]
-            ]
-            set correct 0
-            while [correct = 0]
-            [
-              let prob random-float 1
-              ;; if agent is selfish alpha and beta are set to 0
-              ifelse prob < pself-utilitarian [
-                set alpha 0
-                set beta 0
-                set correct 1
-              ]
-              [set alpha random-normal meanalpha stdevalpha
-                if alpha <= 1 [
-                  set beta random-normal meanbeta stdevbeta
-                  if beta <= alpha and (alpha != 0 or beta != 0) [set correct 1]
-                ]
-              ]
-            ]
-            set correct 0
-            while [correct = 0]
-            [
-              set lambda random-normal meanlambda stdevlambda
-              if lambda >= 0 [set correct 1]
-            ]
-            while [correct = 0]
-            [
-            ; show "setting gamma 1"
-              set gamma1 random-normal meangamma1 stdevgamma1
-              if ((gamma1 <= 1) and (gamma1 >= 0)) [set correct 1]
-            ]
-            set correct 0
-            while [correct = 0]
-            [
-              ; show "setting gamma 2"
-              set gamma2 random-normal meangamma2 stdevgamma2
-              if ((gamma2 <= 1) and (gamma2 >= 0)) [set correct 1]
-            ]
-          ]
-          [
-            set correct 0
-            while [correct = 0]
-            [
-            ; show "setting Excop"
-             set expcoopothers random-normal meaneco stdeveco
-             if ((expcoopothers <= 1) and (expcoopothers >= 0)) [set correct 1]
-            ]
-            set correct 0
-            while [correct = 0]
-            [
-              let prob random-float 1
-              ;; if agent is selfish alpha and beta are set to 0
-              ifelse prob < pself-utilitarian [
-                set alpha 0
-                set beta 0
-                set correct 1
-              ]
-              [set alpha random-normal meanalpha2 stdevalpha2
-                if alpha <= 1 [
-                  set beta random-normal meanbeta2 stdevbeta2
-                  if beta <= alpha and (alpha != 0 or beta != 0) [set correct 1]
-                ]
-              ]
-            ]
-            set correct 0
-            while [correct = 0]
-            [
-              set lambda random-normal meanlambda2 stdevlambda2
-              if lambda >= 0 [set correct 1]
-            ]
-            set correct 0
-            while [correct = 0]
-            [
-            ; show "setting gamma 1"
-              set gamma1 random-normal meangamma12 stdevgamma12
-              if ((gamma1 <= 1) and (gamma1 >= 0)) [set correct 1]
-            ]
-            set correct 0
-            while [correct = 0]
-            [
-            ; show "setting gamma 2"2
-              set gamma2 random-normal meangamma22 stdevgamma22
-              if ((gamma2 <= 1) and (gamma2 >= 0)) [set correct 1]
-            ]
-          ]
-        ]
-      ]
+;;      if modeltype = "utilitarian2" [
+;;        ask turtles [
+;;        ; define the paramaters of the model based on truncated Gaussian distributions
+;;          set agt random-float 1
+;;          ifelse agt < prand [
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;              ; show "setting Excop"
+;;              set expcoopothers random-normal meaneco stdeveco
+;;              if ((expcoopothers <= 1) and (expcoopothers >= 0)) [set correct 1]
+;;            ]
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;              let prob random-float 1
+;;              ;; if agent is selfish alpha and beta are set to 0
+;;              ifelse prob < pself-utilitarian [
+;;                set alpha 0
+;;                set beta 0
+;;                set correct 1
+;;              ]
+;;              [set alpha random-normal meanalpha stdevalpha
+;;                if alpha <= 1 [
+;;                  set beta random-normal meanbeta stdevbeta
+;;                  if beta <= alpha and (alpha != 0 or beta != 0) [set correct 1]
+;;                ]
+;;              ]
+;;            ]
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;              set lambda random-normal meanlambda stdevlambda
+;;              if lambda >= 0 [set correct 1]
+;;            ]
+;;            while [correct = 0]
+;;            [
+;;            ; show "setting gamma 1"
+;;              set gamma1 random-normal meangamma1 stdevgamma1
+;;              if ((gamma1 <= 1) and (gamma1 >= 0)) [set correct 1]
+;;            ]
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;              ; show "setting gamma 2"
+;;              set gamma2 random-normal meangamma2 stdevgamma2
+;;              if ((gamma2 <= 1) and (gamma2 >= 0)) [set correct 1]
+;;            ]
+;;          ]
+;;          [
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;            ; show "setting Excop"
+;;             set expcoopothers random-normal meaneco stdeveco
+;;             if ((expcoopothers <= 1) and (expcoopothers >= 0)) [set correct 1]
+;;            ]
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;              let prob random-float 1
+;;              ;; if agent is selfish alpha and beta are set to 0
+;;              ifelse prob < pself-utilitarian [
+;;                set alpha 0
+;;                set beta 0
+;;                set correct 1
+;;              ]
+;;              [set alpha random-normal meanalpha2 stdevalpha2
+;;                if alpha <= 1 [
+;;                  set beta random-normal meanbeta2 stdevbeta2
+;;                  if beta <= alpha and (alpha != 0 or beta != 0) [set correct 1]
+;;                ]
+;;              ]
+;;            ]
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;              set lambda random-normal meanlambda2 stdevlambda2
+;;              if lambda >= 0 [set correct 1]
+;;            ]
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;            ; show "setting gamma 1"
+;;              set gamma1 random-normal meangamma12 stdevgamma12
+;;              if ((gamma1 <= 1) and (gamma1 >= 0)) [set correct 1]
+;;            ]
+;;            set correct 0
+;;            while [correct = 0]
+;;            [
+;;            ; show "setting gamma 2"2
+;;              set gamma2 random-normal meangamma22 stdevgamma22
+;;              if ((gamma2 <= 1) and (gamma2 >= 0)) [set correct 1]
+;;            ]
+;;          ]
+;;        ]
+;;      ]
 
 
       ask turtles [set listcollect [] set listcontribute []]
@@ -638,11 +638,11 @@ to go
 
   set pg calpg invest ; this is the resource level in the current round
 
-  if modeltype = "utilitarian" [
+;;  if modeltype = "utilitarian" [
     ask turtles [
       set expcoopothers expcoopothers * gamma1 + (1 - gamma1) * (invest - contribution) / 40
     ]
-  ]
+;;  ]
 
   set pga pg
   set equalshare pga / 5
@@ -663,11 +663,11 @@ to go
 
   calcollect 4
 
-  if modeltype = "utilitarian" or modeltype = "utilitarian2" [
+;;  if modeltype = "utilitarian" or modeltype = "utilitarian2" [
     set invest 0
     ask turtles [set invest invest + contribution]
     ask turtles [set expcoopothers expcoopothers * gamma1 + (1 - gamma1) * ((invest - contribution) / 40)]    ; learning on expected level of cooperation of others
-  ]
+;;  ]
 
   ; calculate metrics for comparison with data and also calculate return of investment or better collect - contribution for each agent
 
