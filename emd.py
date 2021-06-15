@@ -80,15 +80,14 @@ emd = EvolutionaryModelDiscovery(netlogoPath, modelPath, setup, measurements,\
 def fitness(results):
     # 'fit' is a rolling measure of the entire fit, so pull the fit from the 
     # final timestep (14)
-    return results.at[14, 'fit']
+    return results['fit'].mean()
 
 # Minimal hyperparameters
-emd.set_replications(1)
-emd.set_mutation_rate(0.1)
+emd.set_replications(2)
+emd.set_mutation_rate(0.6)
 emd.set_crossover_rate(0.8)
-emd.set_generations(1)
-#emd.set_generations(20)
-emd.set_is_minimize(True)
+emd.set_generations(30)
+emd.set_depth(4,10)
 
 
 # Set the objective function

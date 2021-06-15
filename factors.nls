@@ -2,7 +2,7 @@
 
 ;; Probabilize a basic value
 to-report probabilize [o x]
-  report -1 * (abs ((o - x) / probabilization-obtuseness)) + 1
+  report -1 * (abs ((o - x) / 5)) + 1
 end
 
 
@@ -74,7 +74,7 @@ to-report subtract [a b]
 end
 
 ;; takes two subscore reporters and concats them with a division operator
-;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+;; Commented out factor!
 to-report divide [a b]
   report (word "(" a " / (0.0000000001 + " b "))")
 end
