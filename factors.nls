@@ -25,16 +25,15 @@ to-report _sub [a b]
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report _mlt [a b]
+to-report _div [a b]
   report a / (0.0000000001 +  b )
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report _div [a b]
+to-report _mlt [a b]
   report a * b
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _abs [ a ]
   report abs a
 end
@@ -54,7 +53,6 @@ to-report _exp [ a ]
   report exp a
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _nlog [ a ]
   report log E a
 end
@@ -64,12 +62,10 @@ to-report _sin [ a ]
   report sin a
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _cos [ a ]
   report cos a
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _tan [ a ]
   report tan a
 end
@@ -79,7 +75,6 @@ end
 ;;==============================================;;
 
 ;; Retrieve the index of the largest item in a list
-;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report max-index [xs] 
   ;; Indices
   let maxIndex 0
@@ -100,7 +95,6 @@ to-report max-index [xs]
 end
 
 ;; Retrieve the index of the smallest item in a list
-;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report min-index [xs]
   ;; Indices
   let minIndex 0
@@ -183,7 +177,6 @@ to-report _equal [a b]
   report 0
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report _notequal [a b]
   if a != b [ report 1 ]
   report 0
@@ -194,9 +187,10 @@ end
 ;;=============< Probabilizations >=============;;
 ;;==============================================;;
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report linear-dist [o x]
-  report -1 * (abs ((o - x) / 5)) + 1
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
+to-report linear-dist [o s x]
+  if s = 0 [ report 0 ]
+  report -1 * (abs ((o - x) / s)) + 1
 end
 
 ;; A standard normal probability density function
@@ -204,6 +198,7 @@ end
 ;; Sd - standard deviation
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
 to-report normal-dist [ mu sd x ]
+  if sd = 0 [ report 0 ]
   let coeff 1 / (sd * (sqrt (2 * pi)))
   let power -0.5 * (((x - mu) / sd) ^ 2)
   report coeff * (exp power)
@@ -217,6 +212,7 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
 to-report logistic-dist [ mu s x ]
+  if s = 0 [ report 0 ]
   report 1 / ((1 + exp (-1 * (x - mu) / s)) + 0.0000000001)
 end
  

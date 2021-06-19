@@ -86,10 +86,11 @@ def fitness(results):
 
 # Minimal hyperparameters
 emd.set_replications(1)
+emd.set_population_size(20)
 emd.set_mutation_rate(0.6)
 emd.set_crossover_rate(0.8)
-emd.set_generations(1)
-emd.set_depth(1,10)
+emd.set_generations(4)
+emd.set_depth(2,8)
 
 
 # Set the objective function
@@ -97,4 +98,9 @@ emd.set_objective_function(fitness)
 
 if __name__ == '__main__':
     print(emd.evolve())
+    fi = emd.get_factor_importances_calculator("FactorScores.csv")
+    GI = fi.get_gini_importances(interactions=True)
+    PI = fi.get_permutation_accuracy_importances(interactions=True)
+    print(GI)
+    print(PI)
     emd.shutdown()

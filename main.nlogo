@@ -1556,17 +1556,6 @@ stdevgamma22
 NIL
 HORIZONTAL
 
-SWITCH
-491
-299
-594
-332
-debug
-debug
-0
-1
--1000
-
 @#$#@#$#@
 This is a Netlogo implementation of the model described in Baggio J.A. and M.A. Janssen (2013). “Comparing agent-based models on experimental data of irrigation games”. In Proceedings of the 2013 Winter Simulation Conference Edited by. R. Pasupathy, S.-H. Kim, A. Tolk, R. Hill, and M. E. Kuhl.
 
