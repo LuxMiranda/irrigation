@@ -29,15 +29,6 @@ turtles-own [
   ]
 
 globals [
-  ;;;;;;;;;;;;;;;;;;;;;;';;;;;;;;;;;
-  ;;; Begin EMD-modified globals ;;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  probabilization-obtuseness       ; The obtuseness (width) of the probabilization function.
-  pself-heuristic                  ; A separate pself for the heuristic model
-  pself-utilitarian                ; A separate pself for the utilitarian model
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;;;  End EMD-modified globals  ;;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   invest               ; total level of investment in public fund
   pga                  ; available level of common resource
   pg                   ; level of common resource
@@ -109,18 +100,6 @@ to setup
   set listsiminvestpp []
   set listsimcollectpp []
   ask turtles [set listcollect [] set listcontribute []]
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;;; Begin -related code ;;;
-  ; If the debug flag is true, set some values for the new globals
-  ; that EMD would otherwise initialize for us.
-  if debug [
-    set probabilization-obtuseness 3
-    set pself-heuristic 0.4
-    set pself-utilitarian 0
-  ]
-  ;;; End EMD-related code ;;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   set treat (list "nlh" "nhl" "lhn")
   reset-ticks
@@ -670,8 +649,8 @@ to go
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ask turtles [
     compute-svo-variables
-    set invest
-       ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-amount
+    set invest truncate
+       ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=num
        random 11
     set contribution invest
   ]
