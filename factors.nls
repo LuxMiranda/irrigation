@@ -1,5 +1,3 @@
-;; Parameter types: num
-
 ;;==============================================;;
 ;;==============< Misc. functions >=============;;
 ;;==============================================;;
@@ -340,4 +338,9 @@ end
 ;; @EMD @Factor @return-type=num
 to-report _roi
   report roi
+end
+
+;; @EMD @Factor @return-type=num
+to-report _real-invest
+  report real-invest
 end

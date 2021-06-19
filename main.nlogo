@@ -30,6 +30,7 @@ turtles-own [
 
 globals [
   invest               ; total level of investment in public fund
+  real-invest          ; actual level of investment in public fund
   pga                  ; available level of common resource
   pg                   ; level of common resource
   datainvest           ; total level of investments in public fund in experiments averaged over 22 groups
@@ -262,7 +263,7 @@ to calibrate
           [             ;show "setting selfish alpha and beta"
             let prob random-float 1
             ;; if agent is selfish alpha and beta are set to 0
-            ifelse prob < pself-utilitarian [
+            ifelse prob < 0 [
               set alpha 0
               set beta 0
               set correct 1
@@ -662,6 +663,7 @@ to go
 
   set invest 0
   ask turtles [set invest invest + contribution]
+  set real-invest invest
 
   set pg calpg invest ; this is the resource level in the current round
 
@@ -1263,7 +1265,7 @@ sdnoise
 sdnoise
 0.01
 5
-4.27
+4.16
 0.01
 1
 NIL

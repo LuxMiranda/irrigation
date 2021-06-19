@@ -61,14 +61,12 @@ setup = [
     'set probabilization-obtuseness {}'.format(rng.uniform(1,10)),
     # -- Setup commands -- 
     'set modeltype "utilitarian"',
-    'set debug False',
     'set best False',
     'setup'
 ]
 # Measurement reporters
 measurements = [
-        'fit', 'fit1', 'fit2', 'fit3', 'fit4', 'fit5',
-        'probabilization-obtuseness'
+        'fit', 'fit1', 'fit2', 'fit3', 'fit4', 'fit5'
 ]
 # Number of ticks to run each simulation for
 ticks = 15
@@ -84,8 +82,6 @@ emd = EvolutionaryModelDiscovery(
         )
 
 def fitness(results):
-    # 'fit' is a rolling measure of the entire fit, so pull the fit from the 
-    # final timestep (14)
     return results['fit'].mean()
 
 # Minimal hyperparameters
@@ -93,7 +89,7 @@ emd.set_replications(1)
 emd.set_mutation_rate(0.6)
 emd.set_crossover_rate(0.8)
 emd.set_generations(1)
-emd.set_depth(1,3)
+emd.set_depth(1,10)
 
 
 # Set the objective function
