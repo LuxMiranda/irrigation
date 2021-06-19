@@ -1,0 +1,11 @@
+,Run,Gen,Rule,Fitness,combine,consider_altruism,consider_heuristic,consider_pseudorandom,consider_random,consider_relative_income,consider_selfishness,consider_utilitarian,divide,downstream_homophily,get_max_one_of,get_min_one_of,multiply,possible_decisions,subtract,upstream_homophily
+301,1,29.0,( get-max-one-of (( possible-decisions  ) ) (( divide (( consider-heuristic  ) ) (( multiply (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.5458596946215452,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,1.0
+109,0,21.0,( get-max-one-of (( possible-decisions  ) ) (( consider-random  ) )  ) ,0.5009472805856815,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0
+283,1,25.0,( get-min-one-of (( possible-decisions  ) ) (( consider-random  ) )  ) ,0.5007501326430929,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
+49,0,9.0,( get-min-one-of (( possible-decisions  ) ) (( divide (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) ,0.4923018005062305,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0
+159,1,0.0,( get-min-one-of (( possible-decisions  ) ) (( subtract (( divide (( consider-random  ) ) (( subtract (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.4621460916451692,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,2.0,1.0
+22,0,4.0,( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4562131215813695,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0
+87,0,17.0,( get-max-one-of (( possible-decisions  ) ) (( consider-utilitarian  ) )  ) ,0.4501313587222273,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0
+298,1,28.0,( get-max-one-of (( possible-decisions  ) ) (( consider-utilitarian  ) )  ) ,0.4492708770338468,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0
+199,1,8.0,( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4206744983001009,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
+197,1,8.0,( get-min-one-of (( possible-decisions  ) ) (( consider-utilitarian  ) )  ) ,0.4203974122129143,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
