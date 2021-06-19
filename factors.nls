@@ -1,17 +1,87 @@
 ;; Parameter types: num
 
 ;;==============================================;;
-;;============< Internal functions >============;;
+;;==============< Misc. functions >=============;;
 ;;==============================================;;
 
 ;; Truncate an investment if it exceeds possible investment boundaries
+;; @EMD @Factor @return-type=num @parameter-type=num
 to-report truncate [ investment ]
   if investment < 0 [ report 0 ]
   if investment > 10 [ report 10 ]
   report investment
 end
 
+;;==============================================;;
+;;=============< Scalar operators >=============;;
+;;==============================================;;
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _add [a b]
+  report a + b
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _sub [a b]
+  report a - b
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _mlt [a b]
+  report a / (0.0000000001 +  b )
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _div [a b]
+  report a * b
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _abs [ a ]
+  report abs a
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _sqr [ a ]
+  report a * a
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _sqrt [ a ]
+  report sqrt a
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _exp [ a ]
+  report exp a
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _nlog [ a ]
+  report log E a
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _sin [ a ]
+  report sin a
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _cos [ a ]
+  report cos a
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num
+to-report _tan [ a ]
+  report tan a
+end
+
+;;==============================================;;
+;;=============< Vector operators >=============;;
+;;==============================================;;
+
 ;; Retrieve the index of the largest item in a list
+;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report max-index [xs] 
   ;; Indices
   let maxIndex 0
@@ -20,7 +90,8 @@ to-report max-index [xs]
   let maxElem (item 0 xs)
   ;; For each item in the list
   foreach xs [ [x] ->
-    ;; If the current item is larger than the last seen maxElem, set a new maxElem & maxIndex
+    ;; If the current item is larger than the last seen maxElem, 
+    ;; set a new maxElem & maxIndex
     if (x > maxElem) [
       set maxElem x
       set maxIndex i
@@ -31,6 +102,7 @@ to-report max-index [xs]
 end
 
 ;; Retrieve the index of the smallest item in a list
+;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report min-index [xs]
   ;; Indices
   let minIndex 0
@@ -39,7 +111,8 @@ to-report min-index [xs]
   let minElem (item 0 xs)
   ;; For each item in the list
   foreach xs [ [x] ->
-    ;; If the current item is smaller than the last seen minElem, set a new minElem & minIndex
+    ;; If the current item is smaller than the last seen minElem,
+    ;; set a new minElem & minIndex
     if (x < minElem) [
       set minElem x
       set minIndex i
@@ -49,44 +122,82 @@ to-report min-index [xs]
   report minIndex
 end
 
-;;==============================================;;
-;;=============< Scalar operators >=============;;
-;;==============================================;;
-
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report combine [a b]
-  report (word "(" a " + " b ")")
+;; @EMD @Factor @return-type=num @parameter-type=num-list
+to-report _sum [xs] 
+  report sum xs
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report subtract [a b]
-  report (word "(" a " - " b ")")
+;; @EMD @Factor @return-type=num @parameter-type=num-list
+to-report _mean [xs] 
+  report mean xs
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report divide [a b]
-  report (word "(" a " / (0.0000000001 + " b "))")
+;; @EMD @Factor @return-type=num @parameter-type=num-list
+to-report _max [xs] 
+  report max xs
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report multiply [a b]
-  report (word "(" a " * " b ")")
+;; @EMD @Factor @return-type=num @parameter-type=num-list
+to-report _min [xs] 
+  report min xs
 end
 
-;;==============================================;;
-;;=============< Vector operators >=============;;
-;;==============================================;;
+;; @EMD @Factor @return-type=num @parameter-type=num-list
+to-report _first [xs] 
+  report first xs
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num-list
+to-report _last [xs] 
+  report last xs
+end
+
+;; @EMD @Factor @return-type=num-list @parameter-type=num-list @parameter-type=num
+to-report append [xs x]
+  report lput xs x
+end
+
+;; @EMD @Factor @return-type=num-list @parameter-type=num-list @parameter-type=num
+to-report prepend [xs x]
+  report fput xs x
+end
+
 
 ;;==============================================;;
 ;;=============< Iverson booleans >=============;;
 ;;==============================================;;
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _less [a b]
+  if a < b [ report 1 ]
+  report 0
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _greater [a b]
+  if a > b [ report 1 ]
+  report 0
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _equal [a b]
+  if a = b [ report 1 ]
+  report 0
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report _notequal [a b]
+  if a != b [ report 1 ]
+  report 0
+end
+
 
 ;;==============================================;;
 ;;=============< Probabilizations >=============;;
 ;;==============================================;;
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report probabilize-linear [o x]
+to-report linear-dist [o x]
   report -1 * (abs ((o - x) / 5)) + 1
 end
 
@@ -94,178 +205,139 @@ end
 ;; Mu - mean (expected)
 ;; Sd - standard deviation
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
-to-report normal-probability-density [ mu sd x ]
+to-report normal-dist [ mu sd x ]
   let coeff 1 / (sd * (sqrt (2 * pi)))
   let power -0.5 * (((x - mu) / sd) ^ 2)
   report coeff * (exp power)
 end
- 
-;;==============================================;;
-;;=============< Domain variables >=============;;
-;;==============================================;;
 
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report exponential-dist [ lam x ] 
+  if x < 0 [ report 0 ] 
+  report lam * exp (-1 * lam * x)
+end
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
+to-report logistic-dist [ mu s x ]
+  report 1 / ((1 + exp (-1 * (x - mu) / s)) + 0.0000000001)
+end
+ 
 ;;==============================================;;
 ;;================< Generators >================;;
 ;;==============================================;;
 
-;; Generator for possible-investments
 ;; @EMD @Factor @return-type=num-list
 to-report possible-decisions 
   report [0 1 2 3 4 5 6 7 8 9 10]
 end
 
+;; @EMD @Factor @return-type=num-list
+to-report empty-list
+  report []
+end
+
+;; @EMD @Factor @return-type=num
+to-report _random-float
+  report random-float 1
+end
+
+;; @EMD @Factor @return-type=num
+to-report random-invest
+  report random 11
+end
 
 ;;==============================================;;
-;;==================< Casts >===================;;
+;;=============< Domain variables >=============;;
 ;;==============================================;;
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;; Factors ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;; Rational factors ;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Probabilization of the "selfish" investment (0 tokens)
-;; @EMD @Factor @return-type=comparator
-to-report consider-selfishness
-  report "(probabilize 0 x)"
-end
-
-;; Probabilization of the "altruistic" investment (10 tokens)
-;; @EMD @Factor @return-type=comparator
-to-report consider-altruism
-  report "(probabilize 10 x)"
-end
-
-;; A random comparator 
-;; @EMD @Factor @return-type=comparator
-to-report consider-random
-  ;; lol im so random rawr xD
-  report "(random-float 1)"
-end
-
-;; Comparator with importance defined on a normal destribution with a pseudorandomly selected mean
-;; @EMD @Factor @return-type=comparator
-to-report consider-pseudorandom
-  ;; At the zeroth tick, set the base investment
-  if ticks = 0 [
-    set baseinvest truncate (random-normal meaninv sdinv)
-  ]
-  ;; Return a normal probability density with mean=baseinvest and sd=sdnoise
-  report "(normal-probability-density baseinvest sdnoise x)"
-end
-
-;; Comparator that simply probabilizes the heuristic model
-;; @EMD @Factor @return-type=comparator
-to-report consider-heuristic
-  if ticks = 0 [
-    set agt random-float 1
-    ifelse agt <= pself-heuristic [
-      ;; Return a uniform random comparator if x <= 5, or 0 otherwise
-      report "(ifelse-value (x <= 5) [ random-float 1 ] [ 0 ])"
-    ]
-    ;; Else agt > pself
-    [
-      ;; Return a uniform random comparator if x > 5, or 0 otherwise
-      report "(ifelse-value (x > 5) [ random-float 1 ] [ 0 ])"
-    ]
-  ]
-  report "(probabilize (truncate ((10 * trust) * (impact ^ roi))) x)"
-end
-
-;;;;;;;;;;;;; Social factors ;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Comparator considering the other-regarding preference model. This code is largly unchanged,
-;; as the model is already formulated as a probability distribution! We simply report the 
-;; distribution rather than picking from it. 
-;; @EMD @Factor @return-type=comparator
-to-report consider-utilitarian
-  let i 0     
-  set utiltot 0
-  set utillist []
-  ; Calculate the expected utility for each of the 11 possible investment levels
-  while [i <= 10]
-  [
-    set invest (4 * 10 * expcoopothers) + i
-    set pg calpg invest 
-    ifelse ticks = 0 [
-      let exponent (2 - expcoopothers)
-      set pga pg * (1 - (who / 5) ^ exponent)
-      ifelse pg > 0 [set expshare pga / pg][set expshare 0]
-      if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
-    ][
-      set pga pg * expshare
-      if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
-    ]  
-    set income 10 - i + pga
-    set incomeothers (40 - (10 * 4 * expcoopothers) + (pg - pga)) / 4
-
-    let dif1 0
-    let dif2 0
-    ifelse income > incomeothers [
-      set dif1 income - incomeothers 
-      set dif2 0
-    ][
-      set dif1 0 
-      set dif2 incomeothers - income
-    ]
-    set utility exp (lambda * (income -  alpha * dif1 + beta * dif2)) 
-    set utillist lput utility utillist
-    set utiltot utiltot + utility
-    set i i + 1
-  ]  
-  set i 0 
-  set probinvest []
-  while [i <= 10]
-  [  
-    ifelse utiltot > 0 [
-      set probinvest lput (item i utillist / utiltot) probinvest
-    ][
-      set probinvest lput 0.2 probinvest
-    ]   
-    set i i + 1
-  ] 
-  ;; The one key insertion!
-  report "(item x probinvest)"
-end
-
-;; Comparator considering closeness to the last investment of the upstream neighbor
-;; @EMD @Factor @return-type=comparator
-to-report upstream-homophily
+;; @EMD @Factor @return-type=num
+to-report upstream-neighbors-last-investment
   ;; If its the first tick, there are no prior neighbor investments to consider
-  if ticks = 0 [ report "(0)" ]
+  if ticks = 0 [ report 0 ]
   ;; Get my position
   let myPos [who] of self
   ;; If I am the most upstream turtle, there is no upstream homophily
-  if myPos = 0 [ report "(0)" ]
-  report "(probabilize (last [listcontribute] of turtle (([who] of self) - 1)) x)"
+  if myPos = 0 [ report 0 ]
+  report last [listcontribute] of turtle (myPos - 1)
 end
 
-;; Comparator considering closeness to the last investment of the downstream neighbor
-;; @EMD @Factor @return-type=comparator
-to-report downstream-homophily
-  ;; If it is the first tick, there are no prior neighbor investments to consider
-  if ticks = 0 [ report "(0)" ]
+;; @EMD @Factor @return-type=num
+to-report downstream-neighbors-last-investment
+  ;; If its the first tick, there are no prior neighbor investments to consider
+  if ticks = 0 [ report 0 ]
   ;; Get my position
   let myPos [who] of self
   ;; If I am the most downstream turtle, there is no downstream homophily
-  if myPos = 4 [ report "(0)" ]
-  report "(probabilize (last [listcontribute] of turtle (([who] of self) + 1)) x)"
+  if myPos = 4 [ report 0 ]
+  report last [listcontribute] of turtle (myPos + 1)
 end
 
-;;;;;;;;;;;;; Emotional factors ;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; @EMD @Factor @return-type=num
+to-report _pga
+  report pga
+end
 
-;; Comparator considering low investments for lower-than-average earners
-;; and high investments for higher-than-average earners
-;; @EMD @Factor @return-type=comparator
-to-report consider-relative-income
-  ;; No one knows their income yet on the first tick
-  if ticks = 0 [ report "(0)" ]
-  ;; If my income is less than average
-  ifelse income < (incomeothers) [
-    ;; Put a greater weight on investing less
-    report consider-selfishness
-  ][;; Otherwise
-    ;; Put a greater weight on investing more
-    report consider-altruism
-  ]
+;; @EMD @Factor @return-type=num
+to-report _pg
+  report pg
+end
+
+;; @EMD @Factor @return-type=num
+to-report _income
+  report income
+end
+
+;; @EMD @Factor @return-type=num
+to-report _incomeothers
+  report incomeothers
+end
+
+;; @EMD @Factor @return-type=num
+to-report _expincome
+  report expincome
+end
+
+;; @EMD @Factor @return-type=num
+to-report _expshare
+  report expshare
+end
+
+;; @EMD @Factor @return-type=num
+to-report _utility
+  report utility
+end
+
+;; @EMD @Factor @return-type=num-list
+to-report _utillist
+  report utillist
+end
+
+;; @EMD @Factor @return-type=num
+to-report _utiltot
+  report utiltot
+end
+
+;; @EMD @Factor @return-type=num
+to-report _probinvest
+  report probinvest
+end
+
+;; @EMD @Factor @return-type=num
+to-report _exppg
+  report exppg
+end
+
+;; @EMD @Factor @return-type=num-list
+to-report _listcollect
+  report listcollect
+end
+
+;; @EMD @Factor @return-type=num-list
+to-report _listcontribute
+  report listcontribute
+end
+
+;; @EMD @Factor @return-type=num
+to-report _roi
+  report roi
 end
