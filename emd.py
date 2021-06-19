@@ -74,8 +74,14 @@ measurements = [
 ticks = 15
 
 # Initialize EMD
-emd = EvolutionaryModelDiscovery(netlogoPath, modelPath, setup, measurements,\
-        ticks, go_command='calibrate')
+emd = EvolutionaryModelDiscovery(
+        netlogo_path=netlogoPath,
+        model_path=modelPath,
+        setup_commands=setup,
+        measurement_reporters=measurements,
+        ticks_to_run=ticks,
+        go_command='calibrate'
+        )
 
 def fitness(results):
     # 'fit' is a rolling measure of the entire fit, so pull the fit from the 
@@ -83,11 +89,11 @@ def fitness(results):
     return results['fit'].mean()
 
 # Minimal hyperparameters
-emd.set_replications(2)
+emd.set_replications(1)
 emd.set_mutation_rate(0.6)
 emd.set_crossover_rate(0.8)
-emd.set_generations(30)
-emd.set_depth(4,10)
+emd.set_generations(1)
+emd.set_depth(1,3)
 
 
 # Set the objective function
