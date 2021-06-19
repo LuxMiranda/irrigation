@@ -1,20 +1,9 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;; Internal functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Parameter types: num
 
-;; Probabilize a basic value
-to-report probabilize [o x]
-  report -1 * (abs ((o - x) / 5)) + 1
-end
+;;==============================================;;
+;;============< Internal functions >============;;
+;;==============================================;;
 
-
-;; A standard normal probability density function
-;; Mu - mean (expected)
-;; Sd - standard deviation
-to-report normal-probability-density [ mu sd x ]
-  let coeff 1 / (sd * (sqrt (2 * pi)))
-  let power -0.5 * (((x - mu) / sd) ^ 2)
-  report coeff * (exp power)
-end
- 
 ;; Truncate an investment if it exceeds possible investment boundaries
 to-report truncate [ investment ]
   if investment < 0 [ report 0 ]
@@ -60,52 +49,76 @@ to-report min-index [xs]
   report minIndex
 end
 
-;;;;;;;;;;;;;;;;;;;;;;;;;; Operators ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;==============================================;;
+;;=============< Scalar operators >=============;;
+;;==============================================;;
 
-;; takes two subscore reporters and concats them with an addition operator
-;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report combine [a b]
   report (word "(" a " + " b ")")
 end
-;; takes two subscore reporters and concats them with an addition operator
-;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report subtract [a b]
   report (word "(" a " - " b ")")
 end
 
-;; takes two subscore reporters and concats them with a division operator
-;; Commented out factor!
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report divide [a b]
   report (word "(" a " / (0.0000000001 + " b "))")
 end
 
-;; takes two subscore reporters and concats them with a multiplication operator
-;; @EMD @Factor @return-type=comparator @parameter-type=comparator @parameter-type=comparator
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report multiply [a b]
   report (word "(" a " * " b ")")
 end
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;; Generators ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;==============================================;;
+;;=============< Vector operators >=============;;
+;;==============================================;;
+
+;;==============================================;;
+;;=============< Iverson booleans >=============;;
+;;==============================================;;
+
+;;==============================================;;
+;;=============< Probabilizations >=============;;
+;;==============================================;;
+
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
+to-report probabilize-linear [o x]
+  report -1 * (abs ((o - x) / 5)) + 1
+end
+
+;; A standard normal probability density function
+;; Mu - mean (expected)
+;; Sd - standard deviation
+;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
+to-report normal-probability-density [ mu sd x ]
+  let coeff 1 / (sd * (sqrt (2 * pi)))
+  let power -0.5 * (((x - mu) / sd) ^ 2)
+  report coeff * (exp power)
+end
+ 
+;;==============================================;;
+;;=============< Domain variables >=============;;
+;;==============================================;;
+
+;;==============================================;;
+;;================< Generators >================;;
+;;==============================================;;
 
 ;; Generator for possible-investments
-;; @EMD @Factor @return-type=possible-investments
+;; @EMD @Factor @return-type=num-list
 to-report possible-decisions 
   report [0 1 2 3 4 5 6 7 8 9 10]
 end
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;; Combiners ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; @EMD @Factor @return-type=investment-amount @parameter-type=possible-investments @parameter-type=comparator
-to-report get-max-one-of [ possible-invests factor-function ]
-  let _selection max-index (map (runresult (word "[[x] -> " factor-function "]")) possible-invests)
-  report _selection
-end
+;;==============================================;;
+;;==================< Casts >===================;;
+;;==============================================;;
 
-;; @EMD @Factor @return-type=investment-amount @parameter-type=possible-investments @parameter-type=comparator
-to-report get-min-one-of [ possible-invests factor-function ]
-  let _selection min-index (map (runresult (word "[[x] -> " factor-function "]")) possible-invests)
-  report _selection
-end
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;; Factors ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
