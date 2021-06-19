@@ -1,14 +1,14 @@
 __includes ["factors.nls"]
 
 turtles-own [
-  contribution         ; investment into the public fund
-  collect              ; extraction from common resource
-  expcoopothers        ; expected level of cooperation of others
-  alpha                ; Strength aversion to exploiting others
-  beta                 ; Degree of altruistic tendency
-  lambda               ; Parameter to define probabilities
-  gamma1               ; Learning rate investments
-  gamma2               ; Learning rate extraction
+  contribution         ; int- investment into the public fund
+  collect              ; int - extraction from common resource
+  expcoopothers        ; float - expected level of cooperation of others
+  alpha                ; float - Strength aversion to exploiting others
+  beta                 ; float - Degree of altruistic tendency
+  lambda               ; float - Parameter to define probabilities
+  gamma1               ; float - Learning rate investments
+  gamma2               ; float - Learning rate extraction
   income               ; earning of agent
   incomeothers         ; earnings of other agents
   expincome            ; expected income
@@ -111,7 +111,7 @@ to setup
   ask turtles [set listcollect [] set listcontribute []]
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;;; Begin EMD-related code ;;;
+  ;;; Begin -related code ;;;
   ; If the debug flag is true, set some values for the new globals
   ; that EMD would otherwise initialize for us.
   if debug [
@@ -602,6 +602,53 @@ to calibrate
   set done 1
 end
 
+to compute-svo-variables
+ ;;; Run the social-value orientation model to collect its related variables
+  let i 0
+  set utiltot 0
+  set utillist []
+  while [i <= 10]
+  [
+    set invest (4 * 10 * expcoopothers) + i
+    set pg calpg invest
+    ifelse ticks = 0 [
+      let exponent (2 - expcoopothers)
+      set pga pg * (1 - (who / 5) ^ exponent)
+      ifelse pg > 0 [set expshare pga / pg][set expshare 0]
+      if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
+    ][
+      set pga pg * expshare
+      if (1 - alpha) * (1 - beta) < 1 [set pga pga * (1 - alpha) * (1 - beta)]
+    ]
+    set income 10 - i + pga
+    set incomeothers (40 - (10 * 4 * expcoopothers) + (pg - pga)) / 4
+
+    let dif1 0
+    let dif2 0
+    ifelse income > incomeothers [
+      set dif1 income - incomeothers
+      set dif2 0
+    ][
+      set dif1 0
+      set dif2 incomeothers - income
+    ]
+    set utility exp (lambda * (income -  alpha * dif1 + beta * dif2))
+    set utillist lput utility utillist
+    set utiltot utiltot + utility
+    set i i + 1
+  ]
+  set i 0
+  set probinvest []
+  while [i <= 10]
+  [
+    ifelse utiltot > 0 [
+      set probinvest lput (item i utillist / utiltot) probinvest
+    ][
+      set probinvest lput 0.2 probinvest
+    ]
+    set i i + 1
+  ]
+end
 
 to go
   ;;  for calculating returns from investment -> variability as in the data sequences depending on treatment and round.
@@ -622,6 +669,7 @@ to go
   ; Begin code modified for EMD ;
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ask turtles [
+    compute-svo-variables
     set invest
        ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-amount
        random 11
