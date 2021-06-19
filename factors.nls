@@ -116,42 +116,48 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report _sum [xs] 
+  if xs = [] [ report 0 ]
   report sum xs
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report _mean [xs] 
+  if xs = [] [ report 0 ]
   report mean xs
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report _max [xs] 
+  if xs = [] [ report 0 ]
   report max xs
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report _min [xs] 
+  if xs = [] [ report 0 ]
   report min xs
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report _first [xs] 
+  if xs = [] [ report 0 ]
   report first xs
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num-list
 to-report _last [xs] 
+  if xs = [] [ report 0 ]
   report last xs
 end
 
 ;; @EMD @Factor @return-type=num-list @parameter-type=num-list @parameter-type=num
 to-report append [xs x]
-  report lput xs x
+  report lput x xs
 end
 
 ;; @EMD @Factor @return-type=num-list @parameter-type=num-list @parameter-type=num
 to-report prepend [xs x]
-  report fput xs x
+  report fput x xs
 end
 
 
@@ -303,6 +309,7 @@ end
 
 ;; @EMD @Factor @return-type=num-list
 to-report _utillist
+  if utillist = 0 [ report [] ]
   report utillist
 end
 
@@ -311,7 +318,7 @@ to-report _utiltot
   report utiltot
 end
 
-;; @EMD @Factor @return-type=num
+;; @EMD @Factor @return-type=num-list
 to-report _probinvest
   report probinvest
 end
@@ -323,11 +330,13 @@ end
 
 ;; @EMD @Factor @return-type=num-list
 to-report _listcollect
+  if listcollect = 0 [ report [] ]
   report listcollect
 end
 
 ;; @EMD @Factor @return-type=num-list
 to-report _listcontribute
+  if listcontribute = 0 [ report [] ]
   report listcontribute
 end
 
