@@ -16,22 +16,30 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report _add [a b]
-  report a + b
+  let ret 0 
+  carefully [ set ret a + b ] [ ]
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report _sub [a b]
-  report a - b
+  let ret 0 
+  carefully [ set ret a - b ] [ ]
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report _div [a b]
-  report a / (0.0000000001 +  b )
+  let ret 0
+  carefully [ set ret a / (0.0000000001 +  b ) ] [ ]
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report _mlt [a b]
-  report a * b
+  let ret 0 
+  carefully [ set ret a * b ] [ ]
+  report ret
 end
 
 to-report _abs [ a ]
@@ -40,7 +48,9 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _sqr [ a ]
-  report a * a
+  let ret 0
+  carefully [ set ret a * a ] [ ]
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num
@@ -50,7 +60,9 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _exp [ a ]
-  report exp a
+  let ret 0
+  carefully [ set ret exp a ] [ ]
+  report ret
 end
 
 to-report _nlog [ a ]
@@ -195,8 +207,10 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
 to-report linear-dist [o s x]
+  let ret 0
   if s = 0 [ report 0 ]
-  report -1 * (abs ((o - x) / s)) + 1
+  carefully [ set ret -1 * (abs ((o - x) / s)) + 1 ] [ ]
+  report ret
 end
 
 ;; A standard normal probability density function
@@ -204,22 +218,30 @@ end
 ;; Sd - standard deviation
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
 to-report normal-dist [ mu sd x ]
+  let ret 0
   if sd = 0 [ report 0 ]
-  let coeff 1 / (sd * (sqrt (2 * pi)))
-  let power -0.5 * (((x - mu) / sd) ^ 2)
-  report coeff * (exp power)
+  carefully [ 
+    let coeff 1 / (sd * (sqrt (2 * pi)))
+    let power -0.5 * (((x - mu) / sd) ^ 2)
+    set ret coeff * (exp power)
+  ] []
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
 to-report exponential-dist [ lam x ] 
+  let ret 0
   if x < 0 [ report 0 ] 
-  report lam * exp (-1 * lam * x)
+  carefully [ set ret lam * exp (-1 * lam * x) ] [ ]
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
 to-report logistic-dist [ mu s x ]
+  let ret 0
   if s = 0 [ report 0 ]
-  report 1 / ((1 + exp (-1 * (x - mu) / s)) + 0.0000000001)
+  carefully [ set ret 1 / ((1 + exp (-1 * (x - mu) / s)) + 0.0000000001) ] [ ]
+  report ret
 end
  
 ;;==============================================;;
