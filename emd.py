@@ -89,8 +89,8 @@ emd.set_replications(1)
 emd.set_population_size(20)
 emd.set_mutation_rate(0.6)
 emd.set_crossover_rate(0.8)
-emd.set_generations(4)
-emd.set_depth(2,8)
+emd.set_generations(10)
+emd.set_depth(2,10)
 
 
 # Set the objective function
