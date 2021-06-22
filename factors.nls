@@ -55,7 +55,9 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _sqrt [ a ]
-  report sqrt a
+  let ret 0
+  carefully [ set ret sqrt a ] [ ]
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num
@@ -87,6 +89,7 @@ end
 ;;==============================================;;
 
 ;; Retrieve the index of the largest item in a list
+;; @EMD @Factor @return-type=investment @parameter-type=dist
 to-report max-index [xs] 
   ;; Indices
   let maxIndex 0
@@ -107,6 +110,7 @@ to-report max-index [xs]
 end
 
 ;; Retrieve the index of the smallest item in a list
+;; @EMD @Factor @return-type=investment @parameter-type=dist
 to-report min-index [xs]
   ;; Indices
   let minIndex 0
@@ -162,12 +166,10 @@ to-report _last [xs]
   report last xs
 end
 
-;; @EMD @Factor @return-type=num-list @parameter-type=num-list @parameter-type=num
 to-report append [xs x]
   report lput x xs
 end
 
-;; @EMD @Factor @return-type=num-list @parameter-type=num-list @parameter-type=num
 to-report prepend [xs x]
   report fput x xs
 end
@@ -205,45 +207,64 @@ end
 ;;=============< Probabilizations >=============;;
 ;;==============================================;;
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
-to-report linear-dist [o s x]
-  let ret 0
-  if s = 0 [ report 0 ]
-  carefully [ set ret -1 * (abs ((o - x) / s)) + 1 ] [ ]
+;; @EMD @Factor @return-type=dist @parameter-type=num @parameter-type=num 
+to-report linear-dist [o s]
+  let ret [0 0 0 0 0 0 0 0 0 0 0 0]
+  if s = 0 [ report ret ]
+  carefully [ set ret map [ x ->
+    -1 * (abs ((o - x) / s)) + 1 
+    ] [ 0 1 2 3 4 5 6 8 9 10 ]
+  ] [ ]
   report ret
 end
 
 ;; A standard normal probability density function
 ;; Mu - mean (expected)
 ;; Sd - standard deviation
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
-to-report normal-dist [ mu sd x ]
-  let ret 0
-  if sd = 0 [ report 0 ]
+;; @EMD @Factor @return-type=dist @parameter-type=num @parameter-type=num
+to-report normal-dist [ mu sd ]
+  let ret [0 0 0 0 0 0 0 0 0 0 0 0]
+  if sd = 0 [ report ret ]
   carefully [ 
     let coeff 1 / (sd * (sqrt (2 * pi)))
-    let power -0.5 * (((x - mu) / sd) ^ 2)
-    set ret coeff * (exp power)
+    set ret map [x ->
+      coeff * (exp (-0.5 * (((x - mu) / sd) ^ 2)))
+    ] [ 0 1 2 3 4 5 6 8 9 10 ]
   ] []
   report ret
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num
-to-report exponential-dist [ lam x ] 
-  let ret 0
-  if x < 0 [ report 0 ] 
-  carefully [ set ret lam * exp (-1 * lam * x) ] [ ]
+;; @EMD @Factor @return-type=dist @parameter-type=num
+to-report exponential-dist [ lam ]
+  let ret [0 0 0 0 0 0 0 0 0 0 0 0]
+  carefully [ set ret map [x ->
+    lam * exp (-1 * lam * x) 
+    ] [ 0 1 2 3 4 5 6 7 8 9 10 ]
+  ] []
   report ret
 end
 
-;; @EMD @Factor @return-type=num @parameter-type=num @parameter-type=num @parameter-type=num
-to-report logistic-dist [ mu s x ]
-  let ret 0
-  if s = 0 [ report 0 ]
-  carefully [ set ret 1 / ((1 + exp (-1 * (x - mu) / s)) + 0.0000000001) ] [ ]
+;; @EMD @Factor @return-type=dist @parameter-type=num @parameter-type=num
+to-report logistic-dist [ mu s ]
+  let ret [0 0 0 0 0 0 0 0 0 0 0 0]
+  if s = 0 [ report ret ]
+  carefully [ set ret map [x ->
+    1 / ((1 + exp (-1 * (x - mu) / s)) + 0.0000000001)
+    ] [ 0 1 2 3 4 5 6 8 9 10 ]
+  ] []
   report ret
 end
- 
+  
+;;==============================================;;
+;;===================< Casts >==================;;
+;;==============================================;;
+
+;; @EMD @Factor @return-type=num-list @parameter-type=dist
+to-report dist-to-num-list [xs]
+  report xs
+end
+
+
 ;;==============================================;;
 ;;================< Generators >================;;
 ;;==============================================;;
@@ -258,12 +279,10 @@ to-report empty-list
   report []
 end
 
-;; @EMD @Factor @return-type=num
 to-report _random-float
   report random-float 1
 end
 
-;; @EMD @Factor @return-type=num
 to-report random-invest
   report random 11
 end

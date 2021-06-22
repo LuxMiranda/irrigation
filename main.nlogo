@@ -651,7 +651,7 @@ to go
   ask turtles [
     compute-svo-variables
     set invest truncate
-       ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=num
+       ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment
        random 11
     set contribution invest
   ]
