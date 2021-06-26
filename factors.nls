@@ -55,7 +55,9 @@ end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num
 to-report _sqrt [ a ]
-  report sqrt a
+  let ret 0
+  carefully [ set ret sqrt a ] [ ]
+  report ret
 end
 
 ;; @EMD @Factor @return-type=num @parameter-type=num
