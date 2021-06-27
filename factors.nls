@@ -282,8 +282,8 @@ end
 ;;==============================================;;
 
 ;; @EMD @Factor @return-type=invest-extract @parameter-type=num @parameter-type=num
-to-report package [ invest extract ]
-  report [invest extract]
+to-report package [myinvest extract]
+  report lput extract (lput myinvest [])
 end
 
 

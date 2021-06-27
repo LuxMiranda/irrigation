@@ -633,18 +633,18 @@ end
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; Begin code modified for EMD ;
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
- 
-to get-invest-extract
+
+to-report get-invest-extract
   report
     ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=invest-extract
-    [random 11 random pga]
+    [0 0]
 end
 
-to get-invest
+to-report get-invest
   report truncate-invest first get-invest-extract
 end
 
-to get-extract
+to-report get-extract
   report truncate-extract last get-invest-extract
 end
   ;;;;;;;;;;;;;;;;
@@ -985,7 +985,7 @@ meaneco
 meaneco
 0
 1
-0.36
+0.0
 0.01
 1
 NIL
@@ -1000,7 +1000,7 @@ stdeveco
 stdeveco
 0
 1
-0.48
+0.0
 0.01
 1
 NIL
@@ -1015,7 +1015,7 @@ meanalpha
 meanalpha
 -1
 1
-0.83
+0.0
 0.01
 1
 NIL
@@ -1030,7 +1030,7 @@ stdevalpha
 stdevalpha
 0
 1
-0.6
+0.0
 0.01
 1
 NIL
@@ -1045,7 +1045,7 @@ meanlambda
 meanlambda
 0
 5
-2.23
+0.0
 0.01
 1
 NIL
@@ -1060,7 +1060,7 @@ stdevlambda
 stdevlambda
 0
 1
-0.46
+0.0
 0.01
 1
 NIL
@@ -1075,7 +1075,7 @@ meangamma1
 meangamma1
 0
 1
-0.54
+0.0
 0.01
 1
 NIL
@@ -1090,7 +1090,7 @@ stdevgamma1
 stdevgamma1
 0
 1
-0.49
+0.0
 0.01
 1
 NIL
@@ -1122,7 +1122,7 @@ meanbeta
 meanbeta
 -1
 1
-0.22
+0.0
 0.01
 1
 NIL
@@ -1137,7 +1137,7 @@ stdevbeta
 stdevbeta
 0
 1
-0.42
+0.0
 0.01
 1
 NIL
@@ -1163,7 +1163,7 @@ meangamma2
 meangamma2
 0
 1
-0.47
+0.0
 0.01
 1
 NIL
@@ -1178,7 +1178,7 @@ stdevgamma2
 stdevgamma2
 0
 1
-0.54
+0.0
 0.01
 1
 NIL
@@ -1213,7 +1213,7 @@ prand
 prand
 0
 1
-0.52
+0.0
 0.01
 1
 NIL
@@ -1228,7 +1228,7 @@ meaninv
 meaninv
 0
 10
-5.0
+0.0
 1
 1
 NIL
@@ -1243,7 +1243,7 @@ sdinv
 sdinv
 0
 5
-3.0
+0.0
 0.1
 1
 NIL
@@ -1258,7 +1258,7 @@ sdnoise
 sdnoise
 0.01
 5
-4.16
+0.0
 0.01
 1
 NIL
@@ -1273,7 +1273,7 @@ meanimpact
 meanimpact
 0
 10
-4.97
+0.0
 0.01
 1
 NIL
@@ -1288,7 +1288,7 @@ sdimpact
 sdimpact
 0
 5
-1.94
+0.0
 0.01
 1
 NIL
@@ -1303,7 +1303,7 @@ meanwanted
 meanwanted
 -5
 5
-0.1
+0.0
 0.1
 1
 NIL
@@ -1318,7 +1318,7 @@ sdwanted
 sdwanted
 0
 5
-2.93
+0.0
 0.01
 1
 NIL
@@ -1333,7 +1333,7 @@ meantrust
 meantrust
 0
 1
-0.52
+0.0
 0.01
 1
 NIL
@@ -1348,7 +1348,7 @@ sdtrust
 sdtrust
 0
 1
-0.45
+0.0
 0.01
 1
 NIL
@@ -1363,7 +1363,7 @@ sdnoise2
 sdnoise2
 0
 5
-2.64
+0.0
 0.01
 1
 NIL
@@ -1378,7 +1378,7 @@ meaneco2
 meaneco2
 0
 1
-0.58
+0.0
 0.01
 1
 NIL
@@ -1393,7 +1393,7 @@ stdeveco2
 stdeveco2
 0
 1
-0.55
+0.0
 0.01
 1
 NIL
@@ -1408,7 +1408,7 @@ meanalpha2
 meanalpha2
 -1
 1
-0.3
+0.0
 0.1
 1
 NIL
@@ -1423,7 +1423,7 @@ meanbeta2
 meanbeta2
 -1
 1
-0.01
+0.0
 0.01
 1
 NIL
@@ -1438,7 +1438,7 @@ meanlambda2
 meanlambda2
 0
 5
-3.26
+0.0
 0.01
 1
 NIL
@@ -1453,7 +1453,7 @@ meangamma12
 meangamma12
 0
 1
-0.38
+0.0
 0.01
 1
 NIL
@@ -1468,7 +1468,7 @@ meangamma22
 meangamma22
 0
 1
-0.53
+0.0
 0.01
 1
 NIL
@@ -1483,7 +1483,7 @@ stdevalpha2
 stdevalpha2
 0
 1
-0.45
+0.0
 0.01
 1
 NIL
@@ -1498,7 +1498,7 @@ stdevbeta2
 stdevbeta2
 0
 1
-0.45
+0.0
 0.01
 1
 NIL
@@ -1513,7 +1513,7 @@ stdevlambda2
 stdevlambda2
 0
 1
-0.36
+0.0
 0.01
 1
 NIL
@@ -1528,7 +1528,7 @@ stdevgamma12
 stdevgamma12
 0
 1
-0.48
+0.0
 0.01
 1
 NIL
@@ -1543,7 +1543,7 @@ stdevgamma22
 stdevgamma22
 0
 1
-0.53
+0.0
 0.01
 1
 NIL
