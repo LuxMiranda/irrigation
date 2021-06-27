@@ -29,9 +29,6 @@ turtles-own [
   ]
 
 globals [
-  ;;;;;; EMD GLOBAL ;;;;;;;;;;;;;;;;
-  emd-result           ; A two-item list where the first item is the investment amount and the second item is the extraction amount
-  ;;;;;; END EMD GLOBAL ;;;;;;;;;;;;
   invest               ; total level of investment in public fund
   real-invest          ; actual level of investment in public fund
   pga                  ; available level of common resource
@@ -639,7 +636,7 @@ end
  
 to get-invest-extract
   report
-    ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=num
+    ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=invest-extract
     [random 11 random pga]
 end
 
@@ -825,12 +822,20 @@ to compute-svo-extract-variables
 end
 
 
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; Begin code modified for EMD ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 to calcollect [j]
   ask turtle j [
     compute-svo-extract-variables
     set collect get-extract
   ]
 end
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;   End code modified for EMD ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 to-report calpg [inv] ;; with probabilities
 
