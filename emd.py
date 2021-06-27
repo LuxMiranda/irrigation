@@ -1,3 +1,7 @@
+# Fetch the time of first command run
+from datetime import datetime
+timestamp = datetime.now().strftime('%Y-%m-%d_%H:%M:%S')
+
 # EMD, when halted before it is allowed to shutdown, can leave behind temporary
 # files that interfere with future runs. 
 def cleanUpTemporaryFiles():
@@ -85,12 +89,13 @@ def fitness(results):
     return results['fit'].mean()
 
 # Minimal hyperparameters
-emd.set_replications(1)
+emd.set_replications(20)
 emd.set_population_size(20)
 emd.set_mutation_rate(0.6)
 emd.set_crossover_rate(0.8)
-emd.set_generations(1)
-emd.set_depth(2,10)
+emd.set_generations(20)
+emd.set_depth(2,16)
+emd.set_factor_scores_file_name('log/run_{}.csv'.format(timestamp))
 
 
 # Set the objective function
