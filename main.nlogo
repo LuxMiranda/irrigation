@@ -137,6 +137,7 @@ to calibrate
       set listcollpp5 [0]
       set listginicont [0]
       set listginicoll [0]
+      show "Error! meanbeta > meanalpha!"
       stop
     ]
 
@@ -168,6 +169,7 @@ to calibrate
       set listcollpp5 [0]
       set listginicont [0]
       set listginicoll [0]
+      show "Error! meanbeta2 > meanalpha2!"
       stop
     ]
 
