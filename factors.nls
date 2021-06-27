@@ -11,6 +11,7 @@ to-report truncate-invest [ investment ]
 end
 
 ;; Truncate an extraction if it exceeds possible investment boundaries
+;; @EMD @Factor @return-type=num @parameter-type=num
 to-report truncate-extract [ extraction ]
   if extraction < 0 [ report 0 ]
   if extraction > pga [ report pga ]
@@ -277,6 +278,16 @@ to-report random-invest
   report random 11
 end
 
+;; @EMD @Factor @return-type=num
+to-report random-extract
+  report random pga
+end
+
+;; @EMD @Factor @return-type=num
+to-report num-players
+  report 5
+end
+
 ;;==============================================;;
 ;;================<   Casts    >================;;
 ;;==============================================;;
@@ -389,4 +400,54 @@ end
 ;; @EMD @Factor @return-type=num
 to-report _real-invest
   report real-invest
+end
+
+;; @EMD @Factor @return-type=num
+to-report _ticks
+  report ticks
+end
+
+;; @EMD @Factor @return-type=num
+to-report _expcoopothers
+  report expcoopothers
+end
+
+;; @EMD @Factor @return-type=num
+to-report _alpha
+  report alpha
+end
+
+;; @EMD @Factor @return-type=num
+to-report _beta
+  report beta
+end
+
+;; @EMD @Factor @return-type=num
+to-report _lambda
+  report lambda
+end
+
+;; @EMD @Factor @return-type=num
+to-report _gamma1
+  report gamma1
+end
+
+;; @EMD @Factor @return-type=num
+to-report _gamma2
+  report gamma2
+end
+
+;; @EMD @Factor @return-type=num
+to-report _trust
+  report trust
+end
+
+;; @EMD @Factor @return-type=num
+to-report _impact
+  report impact
+end
+
+;; @EMD @Factor @return-type=num
+to-report _wanted
+  report wanted
 end
