@@ -29,6 +29,9 @@ turtles-own [
   ]
 
 globals [
+  ;;;;;; EMD GLOBAL ;;;;;;;;;;;;;;;;
+  emd-result           ; A two-item list where the first item is the investment amount and the second item is the extraction amount
+  ;;;;;; END EMD GLOBAL ;;;;;;;;;;;;
   invest               ; total level of investment in public fund
   real-invest          ; actual level of investment in public fund
   pga                  ; available level of common resource
@@ -630,6 +633,28 @@ to compute-svo-variables
   ]
 end
 
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; Begin code modified for EMD ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+to get-invest-extract
+  report
+    ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=num
+    [random 11 random pga]
+end
+
+to get-invest
+  report truncate-invest first get-invest-extract
+end
+
+to get-extract
+  report truncate-extract last get-invest-extract
+end
+  ;;;;;;;;;;;;;;;;
+  ; End EMD code ;
+  ;;;;;;;;;;;;;;;;
+
+
 to go
   ;;  for calculating returns from investment -> variability as in the data sequences depending on treatment and round.
   if treatment = "nlh"[
@@ -650,9 +675,7 @@ to go
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ask turtles [
     compute-svo-variables
-    set invest truncate
-       ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=num
-       random 11
+    set invest get-invest
     set contribution invest
   ]
   ;;;;;;;;;;;;;;;;
@@ -735,47 +758,7 @@ to go
   tick
 end
 
-to calcollect [j]
-  ask turtle j [
-    if modeltype = "random" [
-      set collect random pga
-    ]
-    if modeltype = "selfish" [
-      set collect pga
-    ]
-    if modeltype = "altruistic" [
-      set collect equalshare
-    ]
-    if modeltype = "pseudorandom" [
-      ifelse pga != 0[
-        set correct 0
-        while [correct = 0]
-        [ let es pga / (5 - [who] of self)
-          set collect es + random-normal 0 sdnoise2
-          if pga - collect >= 0 [
-            set correct 1
-          ]
-        ]
-      ]
-      [set collect pga
-      ]
-    ]
-    if modeltype = "heuristic" [
-      ifelse pga != 0 and (pga -  (1 / (6 - ([who] of self + 1))) ^ wanted) > 0 [
-        set correct 0
-        while [correct = 0]
-        [ let pos [who] of self + 1
-          let base  1 / (6 - pos)
-          set collect base ^ wanted
-          if pga - collect >= 0 [
-            set correct 1
-          ]
-        ]
-      ]
-      [set collect pga
-      ]
-    ]
-    if modeltype = "utilitarian" or modeltype = "utilitarian2" [
+to compute-svo-extract-variables
       ifelse ticks = 0 [
         if pg > 0 [set expshare pga / pg]
         if pg <= 0 [set expshare 0]
@@ -839,8 +822,13 @@ to calcollect [j]
           ifelse rndnr < cump [set found? true][set collect collect + 1]
         ]
       ]
-    ]
+end
 
+
+to calcollect [j]
+  ask turtle j [
+    compute-svo-extract-variables
+    set collect get-extract
   ]
 end
 

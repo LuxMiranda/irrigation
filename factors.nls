@@ -4,10 +4,17 @@
 
 ;; Truncate an investment if it exceeds possible investment boundaries
 ;; @EMD @Factor @return-type=num @parameter-type=num
-to-report truncate [ investment ]
+to-report truncate-invest [ investment ]
   if investment < 0 [ report 0 ]
   if investment > 10 [ report 10 ]
   report investment
+end
+
+;; Truncate an extraction if it exceeds possible investment boundaries
+to-report truncate-extract [ extraction ]
+  if extraction < 0 [ report 0 ]
+  if extraction > pga [ report pga ]
+  report extraction
 end
 
 ;;==============================================;;
