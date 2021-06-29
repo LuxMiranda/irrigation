@@ -268,17 +268,14 @@ to-report empty-list
   report []
 end
 
-;; @EMD @Factor @return-type=num
 to-report _random-float
   report random-float 1
 end
 
-;; @EMD @Factor @return-type=num
 to-report random-invest
   report random 11
 end
 
-;; @EMD @Factor @return-type=num
 to-report random-extract
   report random pga
 end
