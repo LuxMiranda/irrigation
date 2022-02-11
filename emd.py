@@ -89,12 +89,12 @@ def fitness(results):
     return results['fit'].mean()
 
 # Minimal hyperparameters
-emd.set_replications(1)
-emd.set_population_size(100)
+emd.set_replications(100)
+emd.set_population_size(20)
 emd.set_mutation_rate(0.1)
-emd.set_crossover_rate(0.2)
+emd.set_crossover_rate(0.8)
 emd.set_generations(5)
-emd.set_depth(2,16)
+emd.set_depth(8,16)
 emd.set_factor_scores_file_name('log/run_{}.csv'.format(timestamp))
 
 
@@ -102,7 +102,7 @@ emd.set_factor_scores_file_name('log/run_{}.csv'.format(timestamp))
 emd.set_objective_function(fitness)
 
 if __name__ == '__main__':
-    print(emd.evolve(num_procs=6))
+    print(emd.evolve())
    # fi = emd.get_factor_importances_calculator("FactorScores.csv")
    # GI = fi.get_gini_importances(interactions=True)
    # PI = fi.get_permutation_accuracy_importances(interactions=True)
