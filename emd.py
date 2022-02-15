@@ -101,4 +101,4 @@ emd.set_objective_function(fitness)
 
 if __name__ == '__main__':
     print(emd.evolve())
-    emd.shutdown()
+    #emd.shutdown()
