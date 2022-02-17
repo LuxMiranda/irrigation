@@ -89,11 +89,11 @@ def fitness(results):
     return results['fit'].mean()
 
 # Minimal hyperparameters
-emd.set_replications(1)
-emd.set_mutation_rate(0.6)
-emd.set_crossover_rate(0.8)
-emd.set_generations(1)
-emd.set_depth(1,3)
+emd.set_replications(500)
+emd.set_mutation_rate(0.2)
+emd.set_crossover_rate(0.6)
+emd.set_generations(5)
+emd.set_depth(8,16)
 
 
 # Set the objective function
