@@ -39,17 +39,21 @@ plt.rcParams["text.color"] = "black"
 plt.rcParams["axes.labelweight"] = "medium"
 plt.rcParams['axes.linewidth'] = 0.1
 
-data=pd.read_csv("FactorScores.csv")
+inFile = 'fixed.csv'
+
+data=pd.read_csv(inFile)
 #data=data[data.all_potential_farms==1]
 #factor_names=['compare_distance', 'compare_dryness', 'compare_quality','compare_water_availability', 'compare_yeild', 'desire_migration','desire_social_presence', 'homophily_age','homophily_agricultural_productivity']
 factor_names=['consider_altruism','consider_heuristic','consider_pseudorandom','consider_random','consider_relative_income','consider_selfishness','consider_utilitarian','downstream_homophily','upstream_homophily']
+#factor_names=['_alpha','_beta','_exp','_expcoopothers','_expincome','_exppg','_expshare','_gamma1','_gamma2','_impact','_income','_incomeothers','_lambda','_listcollect','_listcontribute','_pg','_pga','_probinvest','_real_invest','_roi','_sqr','_ticks','_trust','_utility','_utillist','_utiltot','_wanted','downstream_neighbors_last_investment','num_players','upstream_neighbors_last_investment']
 x = data[factor_names]
 y = data["Fitness"]
 fig, axs = plt.subplots(nrows=3,ncols=3)
 idx = 0
-sample_size=5
+sample_size=10
 #formula=['$F_{Dist}$','$F_{Dry}$','$F_{Qual}$','$F_{Water}$','$F_{Yield}$','$F_{Mig}$','$F_{Soc}$','$F_{HAge}$','$F_{HAgri}$']
-formula=['altruism','heuristic','pseudorandom','random','relative_income','selfishness','utilitarian','downstream_homophily','upstream_homophily']
+#formula=['altruism','heuristic','pseudorandom','random','relative_income','selfishness','utilitarian','downstream_homophily','upstream_homophily']
+formula=factor_names
 for name in x.columns:
     if name != "considered-farm-plots":
         print(name)
@@ -83,29 +87,28 @@ plt.show()
 ####################################
 #Figure out best number of tree for random forest
 #Do a train test split
-#X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.01, random_state=0)
-##Fit random forest to data. 
-#oob_scores = []
-#all_predictions = []
-#num_trees = list(range(10,1000,10))
-#for n in num_trees:
-#    rf = RandomForestRegressor(n_estimators=n,random_state=0,n_jobs=multiprocessing.cpu_count(),bootstrap=True,oob_score=True)
-#    rf.fit(X_train,y_train)
-#    oob_scores.append(rf.oob_score_)
-#    predictions = rf.predict(X_test)
-#    all_predictions.append(np.array(predictions))
-#preds = []
-#for pred in all_predictions:
-#    preds.append(np.mean( np.abs(pred-y_test) / y_test) )
-#
-#ax=pd.DataFrame(data=[num_trees,preds]).T.rename({0:"Number of Trees",1: "Mean Percentage Error"},axis=1).plot("Number of Trees","Mean Percentage Error",kind="scatter",color="black")
-#vals = ax.get_yticks()
-##ax.set_ylim(0.2875,0.2925)
-#ax.set_yticklabels(["{:,.2%}".format(i) for i in vals])
-#plt.show()
-#exit()
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.01, random_state=0)
+#Fit random forest to data. 
+oob_scores = []
+all_predictions = []
+num_trees = list(range(10,1000,10))
+for n in num_trees:
+    rf = RandomForestRegressor(n_estimators=n,random_state=0,n_jobs=multiprocessing.cpu_count(),bootstrap=True,oob_score=True)
+    rf.fit(X_train,y_train)
+    oob_scores.append(rf.oob_score_)
+    predictions = rf.predict(X_test)
+    all_predictions.append(np.array(predictions))
+preds = []
+for pred in all_predictions:
+    preds.append(np.mean( np.abs(pred-y_test) / y_test) )
+
+ax=pd.DataFrame(data=[num_trees,preds]).T.rename({0:"Number of Trees",1: "Mean Percentage Error"},axis=1).plot("Number of Trees","Mean Percentage Error",kind="scatter",color="black")
+vals = ax.get_yticks()
+#ax.set_ylim(0.2875,0.2925)
+ax.set_yticklabels(["{:,.2%}".format(i) for i in vals])
+plt.show()
 ##########################################
-n=704
+n=394
 rf = RandomForestRegressor(n_estimators=n,random_state=0,n_jobs=multiprocessing.cpu_count(),bootstrap=False)
 rf.fit(x,y)
 #SKLean uses Gini Importance by default
@@ -154,7 +157,6 @@ for label in axs[1].get_yticklabels():
     label.set_fontsize(10)
 
 plt.show()
-exit()
 ##################Joint Contributions Plot############
 data_sorted = data.sort_values("Fitness")
 factors = x.columns.tolist()
@@ -179,7 +181,7 @@ IE = IE.sort_values(by="Contribution")
 TopIE = IE[-20:]
 ax = TopIE.plot("Interaction","Contribution",kind="barh",legend = None,width=0.7,color="royalblue")
 vals = ax.get_yticklabels()
-ax.set_yticklabels([i.get_text().replace("[","{").replace("]","}") for i in vals],fontsize28)
+ax.set_yticklabels([i.get_text().replace("[","{").replace("]","}") for i in vals],fontsize=28)
 ax.set_xlabel("Normalized Contribution to Random Forest Prediction",labelpad=15,fontsize=SMALL_SIZE)
 ax.set_ylabel("Factor Interaction",labelpad=15,fontsize=(SMALL_SIZE + 2))
 plt.show()
@@ -208,7 +210,7 @@ plt.show()
 #########################
 #Plot progress of GP Runs
 #Plotting cumulative minimum of the mean fitness of rules by generation for each GP run
-gp_progress = pd.pivot_table(pd.read_csv("FactorScores.csv")[["Run","Gen","Rule","Fitness"]].groupby(["Run","Gen","Rule"]).apply(lambda x: x.mean()),columns="Run",index="Gen",values="Fitness",aggfunc=np.min).apply(lambda x: x.cummin(),axis=0)
+gp_progress = pd.pivot_table(pd.read_csv(inFile)[["Run","Gen","Rule","Fitness"]].groupby(["Run","Gen","Rule"]).apply(lambda x: x.mean()),columns="Run",index="Gen",values="Fitness",aggfunc=np.min).apply(lambda x: x.cummin(),axis=0)
 gp_progress.columns = gp_progress.columns.astype(int)
 fig, ax = plt.subplots()
 gp_progress.plot(ax=ax)
@@ -217,69 +219,70 @@ ax.set_ylabel("Mean fitness of best so far")
 ax.legend(loc='upper center', bbox_to_anchor=(0.7, 1.05),ncol=5,fancybox=True, framealpha=1, shadow=True, borderpad=1,title="Run")
 plt.show()
 ################Find Best Values for Dryness, Quality, Social Presence, and Migration####################
-fitness_comparisons = {}
-formula={'considered-farm-plots':"$S$", 'compare_quality':'$F_{Qual}$', 'compare_distance':'$F_{Dist}$','homophily_age':'$F_{HAge}$', 'desire_migration':'$F_{Mig}$', 'compare_yeild':'$F_{Yield}$',
-'homophily_agricultural_productivity':'$F_{HAgri}$', 'compare_dryness':'$F_{Dry}$','compare_water_availability':'$F_{Water}$', 'desire_social_presence':'$F_{Soc}$'}
-for name in x.columns:
-    if name != "considered-farm-plots":
-        print(name)
-        fitness_comparisons[name] = []
-        df = pd.pivot_table(data[["Fitness",name]].astype({name:int}).reset_index(),columns=name,index="index",values="Fitness")
-        print(df.head())
-        for subname in df.columns:
-            if df[subname].notna().sum() < 200:
-                df = df.drop(subname,axis=1)
-        for val_i in df.columns:
-            for val_j in df.columns:
-                statistic, pvalue = stats.mannwhitneyu(df[val_i].dropna(),df[val_j].dropna(),alternative="less")
-                fitness_comparisons[name].append([val_i,val_j,pvalue])
-                if pvalue < 0.05:
-                    print(str(val_i) + " < " + str(val_j))
-
-gs = gridspec.GridSpec(2, 6)
-axs=[]
-axs.append(plt.subplot(gs[0, 0:2]))
-axs.append(plt.subplot(gs[0,2:4]))
-axs.append(plt.subplot(gs[0,4:6]))
-axs.append(plt.subplot(gs[1,1:3]))
-axs.append(plt.subplot(gs[1,3:5]))
-flatui=["mediumaquamarine","gainsboro"]
-fig = plt.gcf()
-for idx, col in enumerate(["compare_quality","desire_social_presence","desire_migration","compare_dryness","compare_distance"]):#x.columns:
-    fitness_comparisons_i = pd.pivot_table(pd.DataFrame(fitness_comparisons[col],columns=["A","B","pvalue"]),columns = "B",index="A",values="pvalue")
-    ax = sns.heatmap(fitness_comparisons_i, annot=True, linewidth=2,linecolor="black",center=0.05,cmap=sns.color_palette(flatui), fmt=".1e",cbar=None, annot_kws={"color": "black","size":11 + (2 * 6 - fitness_comparisons_i.columns.size)},ax=axs[idx],xticklabels = 1,yticklabels=1)
-    ax.set_title(formula[col],fontsize=30,pad=15)
-    ax.set_xlabel("B",fontsize=20,labelpad=10)
-    ax.set_ylabel("A",fontsize=20,labelpad=10)
-    ax.tick_params(axis = 'both', which = 'both', labelsize = 20)
-    ax.set_yticklabels(ax.get_yticklabels(), rotation = 0)
-    ax.set_xticklabels(ax.get_xticklabels(), rotation = 0)
-
-plt.show()
-#######################################
-labs=["desire_social_presence","desire_migration"]
-considered_labs=[]
-for xlab in ["compare_quality"]:
-    fig,axs = plt.subplots(ncols=2)
-    for idy,ylab in enumerate(labs):
-        labs_i=[xlab,ylab]
-        labs_i.sort()
-        if xlab!=ylab and (labs_i not in considered_labs):
-            considered_labs.append(labs_i)
-            print(considered_labs)
-            hm_counts=pd.pivot_table(data[[xlab,ylab,"Fitness"]],columns=xlab,index=ylab,values="Fitness",aggfunc=lambda x: x.shape[0])
-            hm_counts=hm_counts.apply(lambda x: x.apply(lambda y: 1 if y >=1 else np.nan))
-            hm_data=pd.pivot_table(data[[xlab,ylab,"Fitness"]],columns=xlab,index=ylab,values="Fitness",aggfunc=np.median)
-            hm_data=(hm_counts*hm_data).round(0)#.astype(int)
-            hm_data.columns=hm_data.columns.astype(int)
-            hm_data.index=hm_data.index.astype(int)            
-            ax=sns.heatmap(hm_data, annot=True,fmt=".0f", vmin=900, vmax=3000, annot_kws={"color": "white","size":12},cbar_kws={'label': 'Median Fitness'},ax=axs[idy])
-            ax.figure.axes[-1].yaxis.label.set_size(20)
-            ax.figure.axes[-1].tick_params(labelsize=20)
-            ax.set_xlabel(formula[xlab],fontsize=24)
-            ax.set_ylabel(formula[ylab],fontsize=24)
-
-plt.show()
+#fitness_comparisons = {}
+##formula={'considered-farm-plots':"$S$", 'compare_quality':'$F_{Qual}$', 'compare_distance':'$F_{Dist}$','homophily_age':'$F_{HAge}$', 'desire_migration':'$F_{Mig}$', 'compare_yeild':'$F_{Yield}$',
+##'homophily_agricultural_productivity':'$F_{HAgri}$', 'compare_dryness':'$F_{Dry}$','compare_water_availability':'$F_{Water}$', 'desire_social_presence':'$F_{Soc}$'}
+#for name in x.columns:
+#    if name != "considered-farm-plots":
+#        print(name)
+#        fitness_comparisons[name] = []
+#        df = pd.pivot_table(data[["Fitness",name]].astype({name:int}).reset_index(),columns=name,index="index",values="Fitness")
+#        print(df.head())
+#        for subname in df.columns:
+#            if df[subname].notna().sum() < 200:
+#                df = df.drop(subname,axis=1)
+#        for val_i in df.columns:
+#            for val_j in df.columns:
+#                statistic, pvalue = stats.mannwhitneyu(df[val_i].dropna(),df[val_j].dropna(),alternative="less")
+#                fitness_comparisons[name].append([val_i,val_j,pvalue])
+#                if pvalue < 0.05:
+#                    print(str(val_i) + " < " + str(val_j))
+#
+#gs = gridspec.GridSpec(2, 6)
+#axs=[]
+#axs.append(plt.subplot(gs[0, 0:2]))
+#axs.append(plt.subplot(gs[0,2:4]))
+#axs.append(plt.subplot(gs[0,4:6]))
+#axs.append(plt.subplot(gs[1,1:3]))
+#axs.append(plt.subplot(gs[1,3:5]))
+#flatui=["mediumaquamarine","gainsboro"]
+#fig = plt.gcf()
+##for idx, col in enumerate(["compare_quality","desire_social_presence","desire_migration","compare_dryness","compare_distance"]):#x.columns:
+#for idx, col in enumerate(factor_names):#x.columns:
+#    fitness_comparisons_i = pd.pivot_table(pd.DataFrame(fitness_comparisons[col],columns=["A","B","pvalue"]),columns = "B",index="A",values="pvalue")
+#    ax = sns.heatmap(fitness_comparisons_i, annot=True, linewidth=2,linecolor="black",center=0.05,cmap=sns.color_palette(flatui), fmt=".1e",cbar=None, annot_kws={"color": "black","size":11 + (2 * 6 - fitness_comparisons_i.columns.size)},ax=axs[idx],xticklabels = 1,yticklabels=1)
+#    ax.set_title(formula[col],fontsize=30,pad=15)
+#    ax.set_xlabel("B",fontsize=20,labelpad=10)
+#    ax.set_ylabel("A",fontsize=20,labelpad=10)
+#    ax.tick_params(axis = 'both', which = 'both', labelsize = 20)
+#    ax.set_yticklabels(ax.get_yticklabels(), rotation = 0)
+#    ax.set_xticklabels(ax.get_xticklabels(), rotation = 0)
+#
+#plt.show()
+########################################
+#labs=["desire_social_presence","desire_migration"]
+#considered_labs=[]
+#for xlab in ["compare_quality"]:
+#    fig,axs = plt.subplots(ncols=2)
+#    for idy,ylab in enumerate(labs):
+#        labs_i=[xlab,ylab]
+#        labs_i.sort()
+#        if xlab!=ylab and (labs_i not in considered_labs):
+#            considered_labs.append(labs_i)
+#            print(considered_labs)
+#            hm_counts=pd.pivot_table(data[[xlab,ylab,"Fitness"]],columns=xlab,index=ylab,values="Fitness",aggfunc=lambda x: x.shape[0])
+#            hm_counts=hm_counts.apply(lambda x: x.apply(lambda y: 1 if y >=1 else np.nan))
+#            hm_data=pd.pivot_table(data[[xlab,ylab,"Fitness"]],columns=xlab,index=ylab,values="Fitness",aggfunc=np.median)
+#            hm_data=(hm_counts*hm_data).round(0)#.astype(int)
+#            hm_data.columns=hm_data.columns.astype(int)
+#            hm_data.index=hm_data.index.astype(int)            
+#            ax=sns.heatmap(hm_data, annot=True,fmt=".0f", vmin=900, vmax=3000, annot_kws={"color": "white","size":12},cbar_kws={'label': 'Median Fitness'},ax=axs[idy])
+#            ax.figure.axes[-1].yaxis.label.set_size(20)
+#            ax.figure.axes[-1].tick_params(labelsize=20)
+#            ax.set_xlabel(formula[xlab],fontsize=24)
+#            ax.set_ylabel(formula[ylab],fontsize=24)
+#
+#plt.show()
 ############################
 ax=sns.boxplot(data=data.sort_values("Fitness").head(25)[factor_names].rename(formula,axis=1),orient="h", color="#AAAAAA")
 ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
@@ -294,6 +297,7 @@ for i,box in enumerate(ax.artists):
 
 ax.set_xlabel("Coefficient of Factor",fontsize=24)
 plt.show()
+exit()
 #################Plot Best Models#############
 plt.rcParams['text.usetex'] = True
 plt.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}',  r'\usepackage{helvet}', r'\usepackage{sansmath}', r'\sansmath',r'\newcommand{\opA}{\mathop{\vphantom{\sum}\mathchoice{\vcenter{\hbox{\Huge \textsf{argmax}}}}{\vcenter{\hbox{\Huge argmax}}}{\mathrm{\textsf{argmax}}}{\mathrm{\textsf{argmax}}}}\displaylimits}']
@@ -347,7 +351,7 @@ for A in df:
 
 pd.DataFrame(S_pvals,columns=df.columns,index=df.columns)
 #################
-ddf=pd.read_csv("FactorScores.csv")[["Fitness","all_potential_farms","potential_family_farms","potential_farms_near_best_performers","potential_neighborhood_farms"]]
+ddf=pd.read_csv(inFile)[["Fitness","all_potential_farms","potential_family_farms","potential_farms_near_best_performers","potential_neighborhood_farms"]]
 ddf=ddf.apply(lambda x: x.iloc[1:].apply(lambda y: x.iloc[0] if y==1 else np.nan),axis=1)
 ddf.columns=['$S_{All}$', '$S_{Fam}$', '$S_{Perf}$', '$S_{Neigh}$']
 fig,ax = plt.subplots()
