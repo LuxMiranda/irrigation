@@ -1,0 +1,853 @@
+Rule,Avg_fitness,n_samples
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( subtract (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( combine (( multiply (( consider-pseudorandom  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.561810559715319,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.5565345988256466,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.5557441168547608,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( combine (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.5535431172451921,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( subtract (( subtract (( downstream-homophily  ) ) (( consider-random  ) )  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.5434240345669193,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.5413142345180568,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( multiply (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.5390364788785129,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) ,0.5351735256402355,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-random  ) ) (( consider-random  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.5341063846660415,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( combine (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( combine (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.5335606880547346,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.5316382241682968,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) ,0.5311374740196901,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.5307636424246563,3
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.529676516761123,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.5292554175380271,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( combine (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.5280408349002006,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-random  ) )  ) )  ) ,0.5253642695235292,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( subtract (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.5251128661615777,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( combine (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.5214197182761773,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( multiply (( multiply (( consider-heuristic  ) ) (( consider-altruism  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.5104297868486409,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-altruism  ) ) (( consider-random  ) )  ) ) (( combine (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.5100260628996065,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.505730201575146,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-random  ) ) (( consider-random  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.5024748984683937,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-random  ) )  ) )  ) ,0.5024508867805579,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-random  ) )  ) )  ) ,0.5021518436805157,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-random  ) )  ) )  ) ,0.5019815600488491,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( downstream-homophily  ) )  ) )  ) ,0.5006064210650523,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-random  ) )  ) )  ) ,0.5002006653271277,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.49984208140577535,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.4993223263425885,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.4990207103669572,1
+( get-min-one-of (( possible-decisions  ) ) (( consider-random  ) )  ) ,0.49858910779602017,106
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( upstream-homophily  ) ) (( consider-random  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.4980205091369764,1
+( get-max-one-of (( possible-decisions  ) ) (( consider-random  ) )  ) ,0.49705013970792106,122
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( multiply (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.4955385143097564,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-random  ) ) (( consider-random  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.490992802491605,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-random  ) ) (( consider-random  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.4904703911831238,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.4901696219699477,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.4882357988745752,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( downstream-homophily  ) ) (( consider-random  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.4861715791801591,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( downstream-homophily  ) )  ) )  ) ,0.4834685968955431,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.4807638787278522,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( downstream-homophily  ) )  ) )  ) ,0.48075787722663943,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.4792786100527488,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-random  ) )  ) )  ) ,0.4785593249219594,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4767371847676795,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.4689653595488461,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( multiply (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.4666197427409484,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) ) (( combine (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.4663602907390048,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4659708623523361,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.4652428320412455,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4597723027942976,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.459696346675717,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( combine (( subtract (( upstream-homophily  ) ) (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.4586580243870708,1
+( get-max-one-of (( possible-decisions  ) ) (( consider-utilitarian  ) )  ) ,0.45649960586955396,135
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4562504785066572,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.4543918415742656,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.45331503691880926,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-random  ) ) (( consider-relative-income  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.4513165104715296,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( combine (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.44599938541817374,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4451285384731055,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) )  ) ,0.4446274592799977,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( multiply (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.4435259163842925,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) ,0.4408296317466394,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( subtract (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.4404718170207122,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( subtract (( consider-pseudorandom  ) ) (( multiply (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) )  ) )  ) ,0.43913788595221065,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-random  ) )  ) )  ) ,0.4389145790688325,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( multiply (( consider-altruism  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.4382918220936729,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.4381217986170401,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) ,0.43751157516519384,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.43724373670684014,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( subtract (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( consider-altruism  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.43667680709034185,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( consider-random  ) ) (( combine (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) ,0.43484203730381504,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( subtract (( combine (( consider-random  ) ) (( upstream-homophily  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.4337840156063828,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.43340235561753093,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( downstream-homophily  ) )  ) )  ) ,0.4328876865740905,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) ,0.4322264952163649,4
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.4317655897027181,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.4305796737240804,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.4300332944596869,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( subtract (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.4244849805640705,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4215380206906264,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( downstream-homophily  ) )  ) )  ) ,0.4184168043707032,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( combine (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.4178836891127754,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.4170469231092421,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.41613542696269284,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.4161228729526539,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4159923363429812,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) ,0.4159616369530292,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.4159002155122891,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-selfishness  ) ) (( consider-altruism  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4158646334765735,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4157758158929747,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( combine (( consider-selfishness  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.41535207791703344,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.4145439318012716,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( combine (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.4137980763956491,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( combine (( consider-random  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.4122808011999078,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.41203317094613245,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( subtract (( consider-altruism  ) ) (( multiply (( multiply (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) )  ) )  ) ,0.4102780785940981,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.4087023107831147,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( subtract (( consider-heuristic  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) ) (( consider-heuristic  ) )  ) )  ) )  ) )  ) ,0.4079075968430216,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-pseudorandom  ) ) (( combine (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.4066246453378764,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) )  ) ,0.4054196782800508,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.405222215382936,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.40397748870416156,3
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-selfishness  ) )  ) )  ) ,0.4019039414891857,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.4016893488838309,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( multiply (( consider-random  ) ) (( consider-selfishness  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.4016561046897745,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.3996527258063977,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( combine (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.3994084856447386,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( combine (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.3977733211862337,1
+( get-min-one-of (( possible-decisions  ) ) (( consider-utilitarian  ) )  ) ,0.3972944981646797,104
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3972028910727752,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) ) (( multiply (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.396636683837177,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) )  ) ,0.3937107046724341,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) ,0.3922058498024432,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.38904852880788143,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.38900370852642263,5
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) ,0.3830014957188256,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( multiply (( consider-altruism  ) ) (( multiply (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) ) (( consider-heuristic  ) )  ) ) (( combine (( downstream-homophily  ) ) (( combine (( consider-heuristic  ) ) (( subtract (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) )  ) )  ) )  ) )  ) ,0.3826192342068404,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.3816600914681579,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( combine (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.37898490221707337,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.3779515716986014,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-random  ) ) (( consider-utilitarian  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.37545207715780143,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( subtract (( consider-pseudorandom  ) ) (( multiply (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) )  ) )  ) )  ) ,0.37542560585203744,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-heuristic  ) )  ) )  ) ,0.375330440939064,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.37308329179494587,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3727189966825314,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.371154115078709,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-altruism  ) ) (( consider-altruism  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.3708869414538016,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( multiply (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.37067111604902186,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ,0.370596622764316,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( multiply (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.3700529261593856,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) ,0.3685539484986464,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.3676185827780796,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.3672255696692649,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( subtract (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.36563636852351744,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) ,0.36498371878320607,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( subtract (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.3635406657707664,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) ,0.36333224323893787,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-random  ) )  ) )  ) ,0.3626120478847356,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( multiply (( consider-random  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.362383926807933,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) ,0.3618116609157835,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( combine (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.3612748767716127,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.35974561408826244,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-random  ) )  ) )  ) ,0.3591558866691809,3
+( get-min-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.35841278972950863,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3558593690363281,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) ,0.3527427680354737,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( multiply (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.35118134008027063,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( combine (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.3509700135263394,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( consider-utilitarian  ) ) (( multiply (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) )  ) )  ) )  ) ,0.3506984068912707,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.3494706475039793,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( subtract (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.348518397093373,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-random  ) )  ) )  ) ,0.3485067401709491,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) ) (( combine (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.3477881160688633,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( combine (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.3462279826562106,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( combine (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.3437700440097557,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) ) (( multiply (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.34306196071576284,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( multiply (( downstream-homophily  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.34264188762310555,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3425341498637406,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.3420071746095397,6
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( subtract (( subtract (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.34171691251343456,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.3406957578780615,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-random  ) ) (( downstream-homophily  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.34014933755639043,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3363268272213871,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) ,0.3327107216525495,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) ,0.33056277199446843,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.3298097537927253,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) ,0.3290815229719403,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) ,0.32879813969551097,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( combine (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.328415401576166,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.32706367983899864,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3263183569227105,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3257979589842039,4
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) )  ) ,0.32543423399352167,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( multiply (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.3253298583323689,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) ,0.3253084385070647,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) ,0.3237797815850592,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-random  ) ) (( consider-altruism  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.3226639007217804,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3197475569449809,2
+( get-max-one-of (( possible-decisions  ) ) (( consider-heuristic  ) )  ) ,0.3185608584938671,146
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.31706271377692413,5
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( combine (( multiply (( consider-random  ) ) (( consider-utilitarian  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.3163292341978121,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-heuristic  ) ) (( multiply (( consider-heuristic  ) ) (( subtract (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.3148291173176429,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-heuristic  ) )  ) )  ) ,0.31427271881094965,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.3142424128122949,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( multiply (( subtract (( multiply (( consider-pseudorandom  ) ) (( consider-selfishness  ) )  ) ) (( consider-altruism  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.314148110378733,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( multiply (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.3096101677176154,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3087634177101214,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) )  ) ,0.30874615541211736,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.3069193497912308,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) ,0.3057184504683141,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ,0.30571269336624163,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3049092350152414,8
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) ,0.30483650381920685,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.30389627800476393,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.30368250551561904,4
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( upstream-homophily  ) )  ) )  ) ,0.3032209350088646,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) ,0.3031877754672285,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.3030922796205646,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) ,0.3029652259877334,4
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.2988123635064304,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.29831747138136977,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.29719764981097163,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-altruism  ) ) (( consider-altruism  ) )  ) ) (( combine (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.29637894078321075,3
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-heuristic  ) ) (( combine (( consider-altruism  ) ) (( consider-random  ) )  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.2959998814282376,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.29318242020199015,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.2902527191195225,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.28768087781652113,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.2864583459530873,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.2852306572629064,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.28421874796990476,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.2840184588132804,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.2769589902905869,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.2764887316624735,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ,0.2760661950759973,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.2757483517464723,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) ,0.2748085275266031,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) ) (( combine (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.2745880025992923,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) ,0.27457289446303706,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( combine (( subtract (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) ) (( multiply (( consider-pseudorandom  ) ) (( multiply (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ) (( consider-relative-income  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.2727593262167412,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.2726047752045575,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( subtract (( consider-random  ) ) (( consider-relative-income  ) )  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.2721194720507862,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( combine (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.2719473645273789,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) ,0.27144668872745953,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) ,0.2714433150121838,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ,0.2657088407145175,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.2632745993094276,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( combine (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( consider-random  ) ) (( downstream-homophily  ) )  ) )  ) )  ) )  ) ,0.2614895347319036,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.2604200174226464,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( multiply (( consider-heuristic  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.2603672348523317,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.25715934127001355,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.25715747540349304,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( subtract (( consider-altruism  ) ) (( consider-altruism  ) )  ) ) (( downstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.2569220543099149,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) ,0.2567867882377705,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) ,0.2555376167628556,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.25475403841206595,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( multiply (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.2535103977295315,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.2481875920848912,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( multiply (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.24619742577097226,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( combine (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.2460838844073581,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-selfishness  ) ) (( consider-utilitarian  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.24588230702547265,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( subtract (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.245721613951432,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( combine (( consider-utilitarian  ) ) (( multiply (( consider-altruism  ) ) (( subtract (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ) (( combine (( multiply (( consider-pseudorandom  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.2451635122889284,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-altruism  ) ) (( consider-heuristic  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.2440585691248445,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-utilitarian  ) ) (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) ) (( combine (( downstream-homophily  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.2425506590453725,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.2394713579127421,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) )  ) ,0.23894892167588644,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.23865949893747584,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( multiply (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.23843616891486516,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( subtract (( consider-random  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.2358343530254321,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.2342538301891233,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) ) (( multiply (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.2307748982009712,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.2305210978386727,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( multiply (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.22865622737705354,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) )  ) ,0.2246545313023683,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.22206246977269828,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( multiply (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.2208139402609984,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( subtract (( subtract (( combine (( consider-random  ) ) (( consider-altruism  ) )  ) ) (( consider-random  ) )  ) ) (( upstream-homophily  ) )  ) ) (( downstream-homophily  ) )  ) ) (( combine (( multiply (( combine (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) ) (( combine (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ) (( multiply (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) )  ) )  ) ,0.21825771275365924,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( downstream-homophily  ) )  ) )  ) ,0.21415324198118488,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( upstream-homophily  ) )  ) )  ) ,0.21354465458252975,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.21340953056513742,3
+( get-min-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.2114232238662079,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( subtract (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) ) (( consider-selfishness  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.2065346993858551,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( combine (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.1921947164537309,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) ,0.19156922014859806,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( subtract (( consider-relative-income  ) ) (( multiply (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-random  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.1898250426015508,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) )  ) ,0.18681805615951647,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.18672855519647602,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( combine (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.185777218356725,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-altruism  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.18426680805859272,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.18354894000787864,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-heuristic  ) )  ) )  ) ,0.18311695309020493,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) ,0.18258962789770225,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( subtract (( combine (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.17991714404089126,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( multiply (( subtract (( multiply (( consider-pseudorandom  ) ) (( consider-selfishness  ) )  ) ) (( consider-altruism  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.1797333200975947,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.17885253104248564,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) )  ) ,0.17883331402633051,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( combine (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.17821156437254876,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) )  ) ,0.1779088331311004,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( combine (( consider-altruism  ) ) (( multiply (( consider-relative-income  ) ) (( multiply (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) )  ) )  ) )  ) ,0.17680809586972845,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) ,0.1754288170831544,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) ,0.17467027183571426,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( subtract (( consider-altruism  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.17309478701548894,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( multiply (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.17296407143336057,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) ,0.17081736797659308,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) ) (( combine (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.17045280007356164,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-heuristic  ) ) (( consider-random  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.16786591751755722,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.16754764534358174,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) ,0.16732318635699311,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) )  ) ,0.16650303014257425,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( combine (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.1662494756227524,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) ,0.16506934509789453,3
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.16463803202456326,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.1626179719479096,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) ,0.15997758930178932,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) ,0.1552805521885208,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( combine (( consider-altruism  ) ) (( combine (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) ) (( multiply (( consider-pseudorandom  ) ) (( subtract (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) )  ) ) (( combine (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.15489700946748525,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ,0.15457173305075503,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-random  ) ) (( consider-heuristic  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.15185157659154155,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( multiply (( consider-random  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.15113844429395756,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-altruism  ) ) (( multiply (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.15078031007561962,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( upstream-homophily  ) ) (( multiply (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.15072863767063352,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.15047420343621035,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-pseudorandom  ) ) (( consider-utilitarian  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.15011734003551833,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( combine (( combine (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( consider-selfishness  ) )  ) ) (( combine (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.14986486133199817,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( subtract (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.14968562959767498,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-utilitarian  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.14962614416117173,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) ,0.14936561613362315,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.1489794079708566,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) ,0.1485805150093405,4
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( combine (( consider-pseudorandom  ) ) (( multiply (( subtract (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ) (( consider-altruism  ) )  ) ) (( combine (( consider-utilitarian  ) ) (( multiply (( subtract (( consider-relative-income  ) ) (( consider-random  ) )  ) ) (( consider-heuristic  ) )  ) )  ) )  ) )  ) ,0.147012132785221,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) ) (( combine (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.14587031204677867,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( combine (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) ) (( multiply (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.1456526149021106,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-altruism  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) ) (( combine (( multiply (( consider-altruism  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.14519268457064202,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( multiply (( subtract (( multiply (( consider-pseudorandom  ) ) (( combine (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) ) (( consider-altruism  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.1450888168495616,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.1442886083050746,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-altruism  ) ) (( upstream-homophily  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.14396709469613547,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.14394308577534448,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.14391841322221166,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.1438703913318095,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-random  ) ) (( consider-utilitarian  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.1437826500249492,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-heuristic  ) ) (( combine (( consider-random  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.14370767664073675,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-random  ) )  ) )  ) ,0.14310414014007372,2
+( get-min-one-of (( possible-decisions  ) ) (( upstream-homophily  ) )  ) ,0.1422865179015174,151
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.14200690956628945,3
+( get-min-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.14200173279963407,5
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) )  ) ,0.1418946281970411,3
+( get-min-one-of (( possible-decisions  ) ) (( downstream-homophily  ) )  ) ,0.14187508473074373,149
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( subtract (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-random  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.14144704524312424,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.1407599674257114,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.1406077007693684,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-heuristic  ) )  ) )  ) ,0.1400819546884311,4
+( get-min-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.13949312670177116,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-heuristic  ) )  ) )  ) ,0.13903662223394894,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.13835477481511652,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-relative-income  ) ) (( multiply (( downstream-homophily  ) ) (( combine (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.13799859443148169,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-random  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.13783257863500314,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-heuristic  ) )  ) )  ) ,0.1323127554722667,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( subtract (( consider-altruism  ) ) (( consider-random  ) )  ) ) (( upstream-homophily  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.1310711885124129,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( consider-random  ) )  ) )  ) ,0.12940820412125464,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ,0.12927791929816115,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ,0.12926417292451794,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-random  ) ) (( multiply (( multiply (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.12922020435498952,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( combine (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.12874998555705347,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( subtract (( upstream-homophily  ) ) (( subtract (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) )  ) )  ) )  ) ,0.1277170293579312,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-random  ) )  ) )  ) ,0.12292162286401082,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-selfishness  ) )  ) )  ) ,0.12132774251465768,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-altruism  ) )  ) )  ) ,0.12118349762829625,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-utilitarian  ) ) (( consider-random  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.12111382363833108,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) )  ) ,0.12057216898675423,3
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-random  ) )  ) )  ) ,0.1190232039417264,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.11808759527366185,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) )  ) ,0.11554534501409028,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-random  ) )  ) )  ) ,0.1144432371295917,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( combine (( upstream-homophily  ) ) (( combine (( downstream-homophily  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) )  ) )  ) )  ) ,0.11385953648934198,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-relative-income  ) ) (( consider-random  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.11298639733021595,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-selfishness  ) )  ) )  ) ,0.11247905720681833,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( subtract (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.11233618833988107,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-selfishness  ) )  ) )  ) ,0.11198522286289435,4
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-random  ) )  ) )  ) ,0.11109329809265285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-random  ) )  ) )  ) ,0.1104404065912033,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-random  ) )  ) )  ) ,0.110431966622625,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-altruism  ) )  ) )  ) ,0.11041077636212296,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.10941879841868322,6
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.10826432070227288,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( multiply (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.10752101698872671,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) ,0.10724511056658127,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) ,0.1068488628692686,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.10662731473028934,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( downstream-homophily  ) ) (( consider-random  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.1061951711798827,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ,0.10381120237808289,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) ,0.1037237028923792,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.10360236549957332,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-heuristic  ) )  ) )  ) ,0.10358613684894044,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) ,0.10331352990649272,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.1029156854372732,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( combine (( consider-random  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.10079457245666716,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( subtract (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.10017676363869192,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.10003975218546336,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) ,0.09998820025289737,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( subtract (( multiply (( consider-altruism  ) ) (( consider-selfishness  ) )  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.09925792619357723,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( combine (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.09783972176079313,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-random  ) ) (( consider-relative-income  ) )  ) ) (( subtract (( upstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.09767684566039296,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( subtract (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.09675093794600301,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( combine (( consider-random  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.09557071110941942,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) )  ) ,0.09549216443671216,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( combine (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.09421009672530853,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( combine (( combine (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.09413557463080588,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) ,0.09366000465190907,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( combine (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( multiply (( combine (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( combine (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) )  ) )  ) ,0.0926548478695786,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.0921341070343167,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( multiply (( combine (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.091526802707977,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( multiply (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.0912643239586638,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( combine (( subtract (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.09079360620637013,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.09064490089963334,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.08881773669372635,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( downstream-homophily  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.08795470814009275,1
+( get-min-one-of (( possible-decisions  ) ) (( consider-relative-income  ) )  ) ,0.08750788103048472,173
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.08639575138452744,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.08634545020811556,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.08632228987294938,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) ,0.08573502617730114,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) )  ) ,0.08569972939354384,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.08567712912394106,7
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.08418476854576515,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.08340803304499114,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.0830426932359445,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-random  ) ) (( subtract (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.0823089625767413,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) ) (( consider-relative-income  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.08139898833221808,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.07998294844494959,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.07981898563487053,15
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.07981724500264817,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.07980021845012884,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.07939153641725978,4
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.07867032893717525,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( combine (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.07844632588210759,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) ,0.0782941122496699,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( upstream-homophily  ) ) (( consider-altruism  ) )  ) ) (( multiply (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.07829076454354364,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( multiply (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.0782597723941082,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.07818981959360362,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( subtract (( consider-random  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) ,0.07789004007402034,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.07787693602024606,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.07743705303144816,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.07739479922391683,3
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07736703158763426,8
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( multiply (( consider-selfishness  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.07733006431449148,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.07704068702081561,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( upstream-homophily  ) )  ) )  ) ,0.07689419975757307,7
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.07688562581497714,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) ,0.07673313935949692,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.07664600159287022,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) ,0.07653432390113414,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) ,0.07652111552448912,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) ,0.0764638309956548,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.07601903982772519,1
+( get-min-one-of (( possible-decisions  ) ) (( consider-pseudorandom  ) )  ) ,0.07576236320671798,217
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) ,0.07575618693826384,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07573485988569477,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( subtract (( consider-random  ) ) (( upstream-homophily  ) )  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.07559386570578767,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.07549430153680392,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) ,0.07549240236293042,2
+( get-max-one-of (( possible-decisions  ) ) (( consider-altruism  ) )  ) ,0.07537952597848184,260
+( get-min-one-of (( possible-decisions  ) ) (( consider-selfishness  ) )  ) ,0.07527716714027127,150
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07483406643532178,5
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.07481870101009519,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) ,0.07470097300160743,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) ,0.07467863652347553,10
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) ,0.07450740822932887,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) ,0.07450450113680049,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) ,0.0745033541476622,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) ,0.07405918493257004,11
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07400647301679718,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.0736801763792973,4
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.07367882741644663,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.0736781773714168,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-selfishness  ) ) (( consider-altruism  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.07367504283016547,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.07367268785543869,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-selfishness  ) )  ) )  ) ,0.07366595188353475,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07366383672251062,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.07365692001771008,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07365146091432596,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07364782565369896,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-relative-income  ) ) (( consider-altruism  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.07364489938850736,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) )  ) ,0.07363606962471607,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.07363594141114813,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( combine (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.07363556981047721,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07362393946448735,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07361346879202113,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.0736113031203106,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.0736034940598007,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.07338935192370301,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( subtract (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.07338399418688385,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.07315344178797692,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) ,0.0731349771276523,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) ,0.07292566312917753,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-selfishness  ) ) (( consider-altruism  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.07177599044409881,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) ,0.07171091153562849,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-random  ) )  ) )  ) ,0.07147272784850783,3
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( combine (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.06583735959789581,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) ) (( combine (( consider-altruism  ) ) (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) )  ) )  ) ,0.0657125940489897,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( subtract (( consider-random  ) ) (( downstream-homophily  ) )  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.06559573701911146,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( combine (( consider-utilitarian  ) ) (( multiply (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ) (( consider-random  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.06411479889252512,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) ,0.06176393670115669,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.059893432575416065,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) ,0.05832828221692469,9
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.058249338975560276,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( combine (( subtract (( consider-altruism  ) ) (( consider-relative-income  ) )  ) ) (( combine (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.05797408538692,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.057616324498811884,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.05673925941420677,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.05673825663874358,18
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) ,0.05556214587265236,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-heuristic  ) )  ) )  ) ,0.05183142991965035,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.05163574319451879,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( upstream-homophily  ) ) (( consider-random  ) )  ) ) (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.051428764307274985,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) )  ) ,0.04857865680723695,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( upstream-homophily  ) ) (( consider-altruism  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.04818527882455828,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( multiply (( consider-altruism  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.04817597231252498,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( subtract (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.046070267609359485,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) ,0.04576476912940932,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( combine (( multiply (( combine (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.04555684092524858,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( combine (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.0453837161208736,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-random  ) )  ) )  ) ,0.045338064155758695,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ,0.04529783786229717,5
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( consider-random  ) )  ) )  ) ,0.04518665047947747,5
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( multiply (( combine (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( multiply (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) )  ) )  ) ,0.043785240960455586,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( combine (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.043703158617575566,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( downstream-homophily  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) )  ) )  ) ,0.042655115874186265,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( downstream-homophily  ) ) (( consider-altruism  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.042365831817941436,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.04181418672335298,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) ,0.04177369847217074,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( combine (( multiply (( combine (( consider-random  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.040290438227364764,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) )  ) ,0.03988283596132553,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( subtract (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) ) (( downstream-homophily  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.039222744382849103,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( combine (( consider-utilitarian  ) ) (( consider-random  ) )  ) )  ) )  ) ,0.037964098661034576,5
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.037483403400280876,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) ) (( multiply (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.03687930319197285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( upstream-homophily  ) )  ) )  ) ,0.03680421739785362,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.036731429351151805,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-random  ) )  ) )  ) ,0.03604285241559911,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( downstream-homophily  ) )  ) )  ) ,0.03598430617352059,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) ,0.035357264444773044,6
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-random  ) ) (( consider-altruism  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.0352993498615951,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.03480283677536549,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) ,0.034726559393360217,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) ,0.03462831905169099,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.034407517509788814,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) ) (( multiply (( downstream-homophily  ) ) (( subtract (( consider-selfishness  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) )  ) ,0.03240148076249188,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-random  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.032116044338887394,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( combine (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.030954608309764167,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.03074655778068171,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( multiply (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( multiply (( downstream-homophily  ) ) (( subtract (( consider-selfishness  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) )  ) ,0.03042417114224245,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-relative-income  ) ) (( consider-random  ) )  ) ) (( combine (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.02989164758432385,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( multiply (( consider-random  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.028687218613548032,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.02864752478346736,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.028488747772306654,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.02848874777230665,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.02848874777230665,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( subtract (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.02848874777230665,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.02848874777230665,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.02848874777230665,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-selfishness  ) )  ) )  ) ,0.02848874777230665,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) ,0.02848874777230665,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.028363629878553905,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( combine (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.028198754338229326,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( multiply (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.028170958325870736,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( combine (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.028004723740654013,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( combine (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.027814287889785242,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.027814287889785242,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.027814287889785242,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ,0.02744475734058674,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) ,0.027411252401614294,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.027243557302293626,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.02722199154901464,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.026962745781327697,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-relative-income  ) ) (( consider-random  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.026951287682473225,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-relative-income  ) )  ) )  ) ,0.02694278034357344,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-random  ) )  ) )  ) ,0.02691479868140244,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ,0.026847765844433467,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.02682662159974941,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-altruism  ) )  ) )  ) ,0.02676844196015652,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-random  ) )  ) )  ) ,0.026761823637639827,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( subtract (( consider-random  ) ) (( consider-utilitarian  ) )  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.026759953594197108,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( combine (( consider-heuristic  ) ) (( consider-altruism  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.026483138315277543,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) )  ) ,0.02628302114555827,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.026172858318465823,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( subtract (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.025987300234667984,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-random  ) ) (( upstream-homophily  ) )  ) ) (( combine (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.025761262901604128,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( multiply (( multiply (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.02560215797321523,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) )  ) ,0.02530949490892323,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( multiply (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.0244006871374642,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-random  ) )  ) )  ) ,0.02296287094990462,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-random  ) )  ) )  ) ,0.022940597036297045,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-altruism  ) )  ) )  ) ,0.02293805868920702,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-random  ) ) (( consider-altruism  ) )  ) )  ) ,0.02292308791031349,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( consider-selfishness  ) )  ) )  ) ,0.022919311954114844,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.022667665708874234,21
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( multiply (( consider-relative-income  ) ) (( consider-random  ) )  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.021604434515182337,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( subtract (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.02132685936249085,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( subtract (( subtract (( consider-random  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) )  ) ) (( subtract (( combine (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-altruism  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.020818777737882408,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( combine (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) ) (( consider-altruism  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.02081606816999635,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-random  ) ) (( combine (( consider-relative-income  ) ) (( consider-random  ) )  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.020377715205981715,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( multiply (( combine (( downstream-homophily  ) ) (( consider-random  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.01962637847929266,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( downstream-homophily  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) ,0.019070780333624682,3
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-random  ) ) (( combine (( consider-altruism  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.01894477437453522,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( subtract (( consider-relative-income  ) ) (( consider-random  ) )  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.018912191469610703,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-random  ) ) (( consider-altruism  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.018613810402389533,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.01851380403313721,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.017605345535859674,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( combine (( subtract (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-altruism  ) )  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) ,0.01730701820644413,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) ,0.017279115268606447,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.01699775601742785,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( subtract (( subtract (( consider-random  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) )  ) ) (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-altruism  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.016963622428710474,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.0167122679445711,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.0159451641920062,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.0159208828065714,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( combine (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.015112430835767738,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.015017117987784953,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( consider-random  ) )  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.014964050725922757,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( combine (( consider-random  ) ) (( consider-random  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.014495190009992148,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.01407075719371366,5
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( combine (( consider-utilitarian  ) ) (( multiply (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ) (( combine (( multiply (( consider-pseudorandom  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ) (( consider-random  ) )  ) )  ) ,0.013383661218257247,13
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( combine (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) ) (( multiply (( consider-altruism  ) ) (( downstream-homophily  ) )  ) )  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.013303350192422595,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( multiply (( consider-random  ) ) (( downstream-homophily  ) )  ) )  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) ,0.013257211615315454,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( combine (( consider-random  ) ) (( multiply (( subtract (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012709404321602892,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.012653187771691641,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.01260101965611255,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.012600671416427471,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012599496742548334,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-utilitarian  ) ) (( combine (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.01259523870719882,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( combine (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012594436030943951,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) )  ) ,0.01259429234503335,5
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.012594268541041051,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-utilitarian  ) ) (( subtract (( consider-utilitarian  ) ) (( subtract (( multiply (( consider-random  ) ) (( consider-random  ) )  ) ) (( combine (( consider-altruism  ) ) (( upstream-homophily  ) )  ) )  ) )  ) )  ) )  ) )  ) ,0.012594263034081931,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012594102173989279,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( subtract (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012594006518144128,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( subtract (( subtract (( downstream-homophily  ) ) (( consider-altruism  ) )  ) ) (( multiply (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) )  ) ) (( multiply (( upstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.012593276571506764,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.012592844994130126,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-utilitarian  ) ) (( combine (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) )  ) )  ) ,0.012592721686308232,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397292,45
+( get-max-one-of (( possible-decisions  ) ) (( consider-relative-income  ) )  ) ,0.012592660032397287,786
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,5
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,18
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,14
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,12
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) ) (( consider-random  ) )  ) )  ) )  ) )  ) ,0.012592660032397285,15
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,6
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( combine (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,5
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,10
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( subtract (( subtract (( consider-altruism  ) ) (( consider-heuristic  ) )  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,16
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( subtract (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( combine (( upstream-homophily  ) ) (( combine (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,29
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,31
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( combine (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.012592660032397285,6
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,19
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,23
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( combine (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.012592660032397285,9
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( combine (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( subtract (( subtract (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( subtract (( multiply (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( combine (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,10
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( multiply (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-altruism  ) ) (( consider-altruism  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-altruism  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-altruism  ) ) (( upstream-homophily  ) )  ) ) (( multiply (( consider-random  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-altruism  ) ) (( upstream-homophily  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,3
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,14
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,39
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,5
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( subtract (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) ) (( upstream-homophily  ) )  ) ) (( subtract (( consider-heuristic  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,17
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,6
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( combine (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-pseudorandom  ) ) (( upstream-homophily  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,19
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( combine (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) ) (( subtract (( subtract (( consider-altruism  ) ) (( consider-heuristic  ) )  ) ) (( consider-selfishness  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,4
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) ) (( subtract (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-altruism  ) )  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,20
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,13
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,8
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( subtract (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,23
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( consider-relative-income  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.012592660032397285,8
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( multiply (( consider-heuristic  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,22
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-utilitarian  ) ) (( consider-heuristic  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,15
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,7
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,6
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-pseudorandom  ) ) (( combine (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-relative-income  ) ) (( consider-altruism  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( combine (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( subtract (( multiply (( consider-selfishness  ) ) (( consider-altruism  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( multiply (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,4
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) ) (( multiply (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( downstream-homophily  ) )  ) ,0.012592660032397285,958
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) ) (( multiply (( subtract (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) ) (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,7
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-selfishness  ) ) (( consider-utilitarian  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,7
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( combine (( consider-utilitarian  ) ) (( consider-relative-income  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( combine (( consider-random  ) ) (( multiply (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,6
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( combine (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,7
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( consider-pseudorandom  ) )  ) ,0.012592660032397285,687
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( consider-altruism  ) ) (( consider-altruism  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,28
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( multiply (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( consider-altruism  ) )  ) ,0.012592660032397285,934
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( multiply (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-heuristic  ) ) (( consider-altruism  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,6
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,23
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,14
+( get-min-one-of (( possible-decisions  ) ) (( combine (( combine (( consider-heuristic  ) ) (( consider-utilitarian  ) )  ) ) (( subtract (( consider-altruism  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,10
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,8
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,18
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-heuristic  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,12
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,16
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,29
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( subtract (( upstream-homophily  ) ) (( consider-altruism  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,15
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( upstream-homophily  ) )  ) ,0.012592660032397285,633
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( multiply (( consider-pseudorandom  ) ) (( combine (( consider-utilitarian  ) ) (( consider-selfishness  ) )  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,8
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,21
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( upstream-homophily  ) ) (( combine (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( subtract (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-utilitarian  ) ) (( multiply (( subtract (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) ) (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,12
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,11
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( multiply (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( multiply (( combine (( subtract (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-random  ) )  ) )  ) ) (( consider-relative-income  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,17
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-selfishness  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( subtract (( consider-relative-income  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,18
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,8
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,30
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( combine (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( multiply (( multiply (( multiply (( upstream-homophily  ) ) (( consider-altruism  ) )  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( combine (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,6
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( combine (( downstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( downstream-homophily  ) ) (( combine (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,9
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( multiply (( subtract (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( consider-heuristic  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,7
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( subtract (( upstream-homophily  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( multiply (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,12
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) ) (( multiply (( subtract (( consider-heuristic  ) ) (( consider-heuristic  ) )  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-relative-income  ) )  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( downstream-homophily  ) ) (( upstream-homophily  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( multiply (( multiply (( multiply (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) ) (( consider-altruism  ) )  ) ) (( downstream-homophily  ) )  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( consider-selfishness  ) ) (( consider-heuristic  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( combine (( consider-utilitarian  ) ) (( downstream-homophily  ) )  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( combine (( consider-utilitarian  ) ) (( upstream-homophily  ) )  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-pseudorandom  ) ) (( consider-utilitarian  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,20
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-pseudorandom  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-selfishness  ) ) (( consider-altruism  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,5
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( consider-selfishness  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-altruism  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,2
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( combine (( combine (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-altruism  ) ) (( consider-altruism  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-relative-income  ) ) (( consider-heuristic  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( subtract (( consider-relative-income  ) ) (( consider-altruism  ) )  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,12
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( upstream-homophily  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-heuristic  ) ) (( consider-selfishness  ) )  ) ) (( multiply (( consider-heuristic  ) ) (( upstream-homophily  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) ) (( combine (( upstream-homophily  ) ) (( consider-heuristic  ) )  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( downstream-homophily  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-pseudorandom  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,7
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) ) (( combine (( upstream-homophily  ) ) (( multiply (( combine (( consider-utilitarian  ) ) (( consider-altruism  ) )  ) ) (( consider-utilitarian  ) )  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ,0.012592660032397285,6
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,12
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-selfishness  ) ) (( consider-relative-income  ) )  ) ) (( consider-relative-income  ) )  ) )  ) ,0.012592660032397285,2
+( get-max-one-of (( possible-decisions  ) ) (( subtract (( downstream-homophily  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,4
+( get-max-one-of (( possible-decisions  ) ) (( combine (( multiply (( consider-relative-income  ) ) (( consider-pseudorandom  ) )  ) ) (( consider-pseudorandom  ) )  ) )  ) ,0.012592660032397285,3
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( subtract (( consider-relative-income  ) ) (( consider-relative-income  ) )  ) ) (( downstream-homophily  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( consider-heuristic  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-max-one-of (( possible-decisions  ) ) (( multiply (( upstream-homophily  ) ) (( combine (( consider-pseudorandom  ) ) (( consider-pseudorandom  ) )  ) )  ) )  ) ,0.012592660032397285,1
+( get-min-one-of (( possible-decisions  ) ) (( multiply (( consider-relative-income  ) ) (( consider-altruism  ) )  ) )  ) ,0.012592660032397285,5
+( get-max-one-of (( possible-decisions  ) ) (( consider-selfishness  ) )  ) ,0.012592660032397285,939
+( get-min-one-of (( possible-decisions  ) ) (( consider-heuristic  ) )  ) ,0.012592660032397283,680
