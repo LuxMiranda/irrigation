@@ -1,5 +1,7 @@
 import nl4py
 from numpy.random import default_rng; rng = default_rng()
+import numpy as np
+import pandas as pd
 
 # Return a NetLogo set command for the specified hyperparameter,
 # randomly initialized about ±5% of the specified optimal value
@@ -10,7 +12,8 @@ def paramCommand(param, value):
     return 'set {} {}'.format(param, nudgedValue)
 
 # Setup commands
-setup = [
+def newSetup():
+    setup = [
     # Randomly initialize hyperparameters to a set nudge about
     # their optimal values reported in Baggio & Jannsen 2013, Table 3
     # --- pseudorandom ---
@@ -26,8 +29,7 @@ setup = [
     paramCommand('sdimpact',        0.00), # w_i
     paramCommand('meanwanted',     -1.40), # w_e
     paramCommand('sdwanted',        0.00), # w_e
-    # --- utilitarian ----
-    paramCommand('pself-utilitarian', 0.00), # p_s
+    # --- utilitarian ---- paramCommand('pself-utilitarian', 0.00), # p_s
     paramCommand('meanalpha',         0.96), # alpha
     paramCommand('stdevalpha',        0.00), # alpha
     paramCommand('meanbeta',          0.57), # beta
@@ -48,29 +50,66 @@ setup = [
     'set best False',
     'setup',
     'calibrate'
-]
+    ]
+    print('Made setup')
+    return setup
+
+def insertModel(modelLine='random 11'):
+    lines = open('main.nlogo','r').readlines()
+    outFile = open('model_test.nlogo','w')
+    tab = '       '
+    for i in range(len(lines)):
+        if '@EMD' in lines[i]:
+            lines[i+1] = '{}{}\n'.format(tab,modelLine)
+    outFile.writelines(lines)
+
+def runModel(model, workspaces, samples_per_workspace):
+    # Set the model 
+    insertModel(model)
+    # Fitness result list
+    results = []
+    # For each workspace
+    print('Running {}'.format(model))
+    for workspace in workspaces:
+        # Open the model
+        print('Opening model...')
+        workspace.open_model('model_test.nlogo')
+        # for samples_per_workspace:
+        for i in range(samples_per_workspace):
+            # Run the setup commands
+            print('New setup...')
+            for command in newSetup():
+                print(command)
+                workspace.command(command)
+            print('Commands sent...')
+            # Report the fitness
+            print('Fitness:')
+            fit = workspace.report('fit')
+            print(fit)
+            results.append(fit)
+    return results
 
 def main():
-    concurrent_runs = 1
-    n_samples = 3
+    concurrent_workspaces = 1
+    samples_per_workspace = 1
     nlogo_path = '/home/lux/netlogo-6.0.2/'
     model_path = './main.nlogo'
 
+    # Open the top models file
+    resultsFile = open('topModels.csv','a')
+    # Initialize nl4py 
     nl4py.initialize(nlogo_path)
-    workspaces = []
-    for i in range(concurrent_runs):
-        print('Creating workspace {}'.format(i))
-        workspaces.append(nl4py.create_headless_workspace())
-        workspaces[i].open_model(model_path)
-
-    for i in range(n_samples):
-        for workspace in workspaces:
-            for command in setup:
-                workspace.command(command)
-
-        for workspace in workspaces:
-            print(workspace.report('fit'))
+    # Create n concurrent workspaces
+    workspaces = [nl4py.create_headless_workspace() for i in range(concurrent_workspaces)]
+    # Read in the top 100 models
+    models = pd.read_csv('analysis/Top.csv').head(1)['Rule']
+    # For each model
+    for model in models:
+        # Run it!
+        results = runModel(model, workspaces, samples_per_workspace)
+        resultsFile.write('{},{}\n'.format(model,results))
+    resultsFile.close()
 
 if __name__ == '__main__':
-    #main()
+    main()
     exit(0)
