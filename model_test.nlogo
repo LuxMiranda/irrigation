@@ -672,7 +672,7 @@ to go
     compute-svo-variables
     set invest
        ; @EMD @EvolveNextLine @Factors-File="factors.nls" @return-type=investment-amount
-       ( get-min-one-of (( possible-decisions  ) ) (( subtract (( subtract (( subtract (( upstream-homophily  ) ) (( consider-utilitarian  ) )  ) ) (( combine (( multiply (( consider-pseudorandom  ) ) (( combine (( consider-utilitarian  ) ) (( consider-utilitarian  ) )  ) )  ) ) (( upstream-homophily  ) )  ) )  ) ) (( consider-random  ) )  ) )  ) 
+       ( get-max-one-of (( possible-decisions  ) ) (( subtract (( consider-utilitarian  ) ) (( subtract (( consider-heuristic  ) ) (( multiply (( combine (( consider-relative-income  ) ) (( consider-selfishness  ) )  ) ) (( consider-heuristic  ) )  ) )  ) )  ) )  ) 
     set contribution invest
   ]
   ;;;;;;;;;;;;;;;;

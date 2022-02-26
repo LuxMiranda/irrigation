@@ -122,10 +122,9 @@ def main():
     models = pd.read_csv('analysis/Top.csv')['Rule'].head(100)
     # For each model
     for model in models:
-        # Collect 10 samples
-        for i in range(10):
+        # Collect 30 samples
+        for i in range(30):
             dispatchRun(model)
-        exit()
 
 if __name__ == '__main__':
     main()
