@@ -42,6 +42,8 @@ data.loc['Utilitarian'] = utilitarian.iloc[0]
 print(data['Samples'])
 
 ax = sns.boxplot(data=data['Samples'], orient='h')
+ax.set_yticklabels(['Lux Model {}'.format(i) for i in range(5)] + ['Random model', 'Original model'])
+ax.set_xlabel('Fitness ($f_{mlt}$)')
 plt.show()
 
    
