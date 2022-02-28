@@ -25,12 +25,13 @@ random = data[data['Model'].apply(lambda x : x == '( get-max-one-of (( possible-
 
 data = data[data['Mean_fit'].apply(lambda x : x >= 0.5)]
 # This hist plot suggests that >0.54 is a decent cut off for the "best" models
-#sns.histplot(data['Mean_fit'], bins=5)
-#plt.show()
+sns.histplot(data['Mean_fit'], bins=10)
+plt.show()
+
+data = data[data['Mean_fit'].apply(lambda x : x >= 0.525)]
+data.to_csv('FinalTopModels.csv')
 
 data = data[data['Mean_fit'].apply(lambda x : x >= 0.54)]
-#data.to_csv('Top5ByMean.csv')
-
 data = data.reset_index()
 
 # Maybe name them something funner than just numbers
