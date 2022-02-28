@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns; sns.set_style('white')
 
-data = pd.read_csv('topModelRuns2.csv')
+data = pd.read_csv('topModelRuns.csv')
 
 data = data.groupby('Model')['Fitness'].apply(list).reset_index(name='Samples')
 

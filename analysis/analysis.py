@@ -55,160 +55,160 @@ sample_size=10
 #formula=['altruism','heuristic','pseudorandom','random','relative_income','selfishness','utilitarian','downstream_homophily','upstream_homophily']
 #formula=factor_names
 formula=['$F_{alt}$','$F_{heur}$','$F_{pseu}$','$F_{rand}$','$F_{inc}$','$F_{self}$','$F_{util}$','$F_{down}$','$F_{up}$']
-for name in x.columns:
-    if name != "considered-farm-plots":
-        print(name)
-        df = pd.pivot_table(data[["Fitness",name]].astype({name:int}).reset_index(),columns=name,index="index",values="Fitness")
-        for subname in df.columns:
-            if df[subname].notna().sum() < sample_size:
-                df = df.drop(subname,axis=1)#
-            #elif df[subname].notna().sum() > sample_size:
-                #df1 = df[df[subname].notna()].sample((df[subname].notna().sum()-sample_size))
-                #print(df[subname].notna().sum())
-                #df = df[~df.index.isin(df1.index)]
-        bp = df.boxplot(ax=axs[math.floor(idx/3),idx%3],showfliers=False, showmeans=False, notch=False,return_type="dict", patch_artist=True)
-        for element in ['boxes','whiskers', 'fliers', 'means', 'medians', 'caps']:
-            plt.setp(bp[element], color="black",linewidth=2)
-        for patch in bp['boxes']:
-            patch.set(facecolor="silver")
-        plt.setp(bp["medians"],color="dodgerblue",linewidth=5)
-        plt.setp(bp["means"],color="dodgerblue",linewidth=5)
-        plt.setp(bp["whiskers"],color="black",linewidth=3)
-        plt.setp(bp["caps"],color="black",linewidth=3)
-        axs[math.floor(idx/3),idx%3].grid(None)
-        axs[math.floor(idx/3),idx%3].set_title(formula[idx],pad=15,fontdict={"fontsize":28,"fontweight":"roman"})
-        axs[math.floor(idx/3),idx%3].set_ylim((0,0.6))
-        if idx%3 != 0:
-            plt.setp(axs[math.floor(idx/3),idx%3].get_yticklabels(),visible=False)
-        idx += 1
-
-plt.subplots_adjust(left  = 0.1, right =0.9, top=0.9,bottom=0.1,hspace=0.4,wspace=0.1)
-fig.text(0.5, 0.02, 'Factor Presence', ha='center',fontsize=32)
-fig.text(0.02, 0.5, 'Fitness', va='center', rotation='vertical',fontsize=32)
-plt.show()
-#####################################
-##Figure out best number of tree for random forest
-##Do a train test split
-#X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.01, random_state=0)
-##Fit random forest to data. 
-#oob_scores = []
-#all_predictions = []
-#num_trees = list(range(10,1000,10))
-#for n in num_trees:
-#    rf = RandomForestRegressor(n_estimators=n,random_state=0,n_jobs=multiprocessing.cpu_count(),bootstrap=True,oob_score=True)
-#    rf.fit(X_train,y_train)
-#    oob_scores.append(rf.oob_score_)
-#    predictions = rf.predict(X_test)
-#    all_predictions.append(np.array(predictions))
-#preds = []
-#for pred in all_predictions:
-#    preds.append(np.mean( np.abs(pred-y_test) / y_test) )
+#for name in x.columns:
+#    if name != "considered-farm-plots":
+#        print(name)
+#        df = pd.pivot_table(data[["Fitness",name]].astype({name:int}).reset_index(),columns=name,index="index",values="Fitness")
+#        for subname in df.columns:
+#            if df[subname].notna().sum() < sample_size:
+#                df = df.drop(subname,axis=1)#
+#            #elif df[subname].notna().sum() > sample_size:
+#                #df1 = df[df[subname].notna()].sample((df[subname].notna().sum()-sample_size))
+#                #print(df[subname].notna().sum())
+#                #df = df[~df.index.isin(df1.index)]
+#        bp = df.boxplot(ax=axs[math.floor(idx/3),idx%3],showfliers=False, showmeans=False, notch=False,return_type="dict", patch_artist=True)
+#        for element in ['boxes','whiskers', 'fliers', 'means', 'medians', 'caps']:
+#            plt.setp(bp[element], color="black",linewidth=2)
+#        for patch in bp['boxes']:
+#            patch.set(facecolor="silver")
+#        plt.setp(bp["medians"],color="dodgerblue",linewidth=5)
+#        plt.setp(bp["means"],color="dodgerblue",linewidth=5)
+#        plt.setp(bp["whiskers"],color="black",linewidth=3)
+#        plt.setp(bp["caps"],color="black",linewidth=3)
+#        axs[math.floor(idx/3),idx%3].grid(None)
+#        axs[math.floor(idx/3),idx%3].set_title(formula[idx],pad=15,fontdict={"fontsize":28,"fontweight":"roman"})
+#        axs[math.floor(idx/3),idx%3].set_ylim((0,0.6))
+#        if idx%3 != 0:
+#            plt.setp(axs[math.floor(idx/3),idx%3].get_yticklabels(),visible=False)
+#        idx += 1
 #
-#ax=pd.DataFrame(data=[num_trees,preds]).T.rename({0:"Number of Trees",1: "Mean Percentage Error"},axis=1).plot("Number of Trees","Mean Percentage Error",kind="scatter",color="black")
-#vals = ax.get_yticks()
-##ax.set_ylim(0.2875,0.2925)
-#ax.set_yticklabels(["{:,.2%}".format(i) for i in vals])
+#plt.subplots_adjust(left  = 0.1, right =0.9, top=0.9,bottom=0.1,hspace=0.4,wspace=0.1)
+#fig.text(0.5, 0.02, 'Factor Presence', ha='center',fontsize=32)
+#fig.text(0.02, 0.5, 'Fitness', va='center', rotation='vertical',fontsize=32)
 #plt.show()
-###########################################
-n=394
-rf = RandomForestRegressor(n_estimators=n,random_state=0,n_jobs=multiprocessing.cpu_count(),bootstrap=False)
-rf.fit(x,y)
-#SKLean uses Gini Importance by default
-GI = pd.DataFrame(data=[tree.feature_importances_ for tree in rf.estimators_],columns = x.columns)
-### Using eli5 to compute permutation accuracy importance on fitted random forest
-perm = PermutationImportance(rf,cv="prefit",n_iter=10).fit(x.values,y.values)
-# Permutation Accuracy Importance
-PI = pd.DataFrame(data=perm.results_,columns = x.columns)
-#Rename columns to conform to formulae used in paper
-#formula={'considered-farm-plots':"$S$", 'compare_quality':'$F_{Qual}$', 'compare_distance':'$F_{Dist}$','homophily_age':'$F_{HAge}$', 'desire_migration':'$F_{Mig}$', 'compare_yeild':'$F_{Yield}$',
-#'homophily_agricultural_productivity':'$F_{HAgri}$', 'compare_dryness':'$F_{Dry}$','compare_water_availability':'$F_{Water}$', 'desire_social_presence':'$F_{Soc}$'}
+######################################
+#Figure out best number of tree for random forest
+#Do a train test split
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.01, random_state=0)
+#Fit random forest to data. 
+oob_scores = []
+all_predictions = []
+num_trees = list(range(10,1000,10))
+for n in num_trees:
+    rf = RandomForestRegressor(n_estimators=n,random_state=0,n_jobs=multiprocessing.cpu_count(),bootstrap=True,oob_score=True)
+    rf.fit(X_train,y_train)
+    oob_scores.append(rf.oob_score_)
+    predictions = rf.predict(X_test)
+    all_predictions.append(np.array(predictions))
+preds = []
+for pred in all_predictions:
+    preds.append(np.mean( np.abs(pred-y_test) / y_test) )
+
+ax=pd.DataFrame(data=[num_trees,preds]).T.rename({0:"Number of Trees",1: "Mean Percentage Error"},axis=1).plot("Number of Trees","Mean Percentage Error",kind="scatter",color="black")
+vals = ax.get_yticks()
+#ax.set_ylim(0.2875,0.2925)
+ax.set_yticklabels(["{:,.2%}".format(i) for i in vals])
+plt.show()
+############################################
+#n=394
+#rf = RandomForestRegressor(n_estimators=n,random_state=0,n_jobs=multiprocessing.cpu_count(),bootstrap=False)
+#rf.fit(x,y)
+##SKLean uses Gini Importance by default
+#GI = pd.DataFrame(data=[tree.feature_importances_ for tree in rf.estimators_],columns = x.columns)
+#### Using eli5 to compute permutation accuracy importance on fitted random forest
+#perm = PermutationImportance(rf,cv="prefit",n_iter=10).fit(x.values,y.values)
+## Permutation Accuracy Importance
+#PI = pd.DataFrame(data=perm.results_,columns = x.columns)
+##Rename columns to conform to formulae used in paper
+##formula={'considered-farm-plots':"$S$", 'compare_quality':'$F_{Qual}$', 'compare_distance':'$F_{Dist}$','homophily_age':'$F_{HAge}$', 'desire_migration':'$F_{Mig}$', 'compare_yeild':'$F_{Yield}$',
+##'homophily_agricultural_productivity':'$F_{HAgri}$', 'compare_dryness':'$F_{Dry}$','compare_water_availability':'$F_{Water}$', 'desire_social_presence':'$F_{Soc}$'}
 formula = { key : item for (key,item) in zip(factor_names, formula) }
-PI.columns = [formula[col] for col in PI.columns]
-GI.columns = [formula[col] for col in GI.columns]
-PI=PI[PI.sum().sort_values(ascending=True).index]
-GI=GI[PI.sum().sort_values(ascending=True).index]
-#Generate Main Effects plot
-fig,axs = plt.subplots(ncols=2)
-bps = []
-bp = GI.boxplot(ax=axs[0],vert=False, notch=True,return_type="dict", patch_artist=True)
-axs[0].set_title("Gini Importance",fontdict={"fontweight":"roman"},pad=15)
-bps.append(bp)
-bp = PI.boxplot(ax=axs[1],vert=False, notch=False,return_type="dict", patch_artist=True)
-axs[1].set_title("Permutation Accuracy Importance",fontdict={"fontweight":"roman"},pad=15)
-bps.append(bp)
-for bpi in bps:
-    for element in ['boxes','whiskers', 'fliers', 'means', 'medians', 'caps']:
-        plt.setp(bpi[element], color="black")
-    for patch in bpi['boxes']:
-        patch.set(facecolor="silver")    
-    plt.setp(bpi["medians"],color="dodgerblue",linewidth=2)
-
-axs[0].set_xlim(0,0.6)
-axs[1].set_xlim(0,0.6)
-axs[0].grid(None)
-axs[0].invert_xaxis()
-axs[0].yaxis.tick_right()
-#axs[0].set_yticks(axs[0].get_yticks,[])
-axs[1].grid(None)
-axs[0].tick_params(axis='y',labelright='off')
-axs[0].set_yticklabels([])
-axs[1].tick_params(axis='y', which='major', pad=100)
-for label in axs[1].get_yticklabels():
-    label.set_horizontalalignment('center')
-    label.set_fontweight("bold")
-    label.set_fontsize(20)
-
-plt.show()
-###################Joint Contributions Plot############
-data_sorted = data.sort_values("Fitness")
-factors = x.columns.tolist()
-data_sorted = data_sorted[factors].join(data_sorted["Fitness"]).sort_values("Fitness")
-x_sorted = data_sorted.iloc[:,:-1]
-y_sorted = data_sorted.iloc[:,-1]
-ds1 = x_sorted.values
-print (np.mean(rf.predict(ds1)))
-prediction1, bias1, contributions1 = ti.predict(rf, ds1, joint_contribution=True)
-aggregated_contributions1 = utils.aggregated_contribution(contributions1)
-res = []
-for k in set(aggregated_contributions1.keys()):
-    if len(k) <=3 :
-        res.append(([x.columns.tolist()[index] for index in k] , aggregated_contributions1.get(k, 0)))   
-
-IE = pd.DataFrame(res)
-IE.columns = ["Interaction","Contribution"]
-IE["Contribution"]  = IE.Contribution.apply(lambda k: k[0]).abs()
-IE["Contribution"] = IE["Contribution"]/IE["Contribution"].max()
-IE["Interaction"] = IE["Interaction"].apply(lambda key: str(list([formula[f] for f in key])))
-IE = IE.sort_values(by="Contribution")
-TopIE = IE[-20:]
-ax = TopIE.plot("Interaction","Contribution",kind="barh",legend = None,width=0.7,color="royalblue")
-vals = ax.get_yticklabels()
-ax.set_yticklabels([i.get_text().replace("[","{").replace("]","}") for i in vals],fontsize=28)
-ax.set_xlabel("Normalized Contribution to Random Forest Prediction",labelpad=15,fontsize=SMALL_SIZE)
-ax.set_ylabel("Factor Interaction",labelpad=15,fontsize=(SMALL_SIZE + 2))
-plt.show()
-##########################
-##Statistical test comparing PI
-mwu = []
-for A in PI.columns:
-    mwu_A = []
-    for B in PI.columns:
-        statistic, pvalue = stats.mannwhitneyu(PI[A].dropna(),PI[B].dropna(),alternative="greater")
-        mwu_A.append(pvalue)
-        if pvalue < 0.05:
-            print(str(A) + " > " + str(B))
-    mwu.append(mwu_A)
-
-mwu=pd.DataFrame(mwu,columns=PI.columns,index=PI.columns).iloc[::-1]
-flatui=["mediumaquamarine","gainsboro"]
-sns.palplot(sns.color_palette(flatui))
-ax = sns.heatmap(mwu, annot=True, linewidth=2,linecolor="black",center=0.05,cmap=sns.color_palette(flatui), fmt=".1e",cbar=None, annot_kws={"color": "black","size":16},xticklabels=1,yticklabels=1)
-ax.set_xlabel("B",fontsize=28,labelpad=10)
-ax.set_ylabel("A",fontsize=28,labelpad=10)
-ax.tick_params(axis = 'both', which = 'major', labelsize = 28)
-ax.xaxis.tick_top()
-ax.xaxis.set_label_position('top') 
-plt.show()
+#PI.columns = [formula[col] for col in PI.columns]
+#GI.columns = [formula[col] for col in GI.columns]
+#PI=PI[PI.sum().sort_values(ascending=True).index]
+#GI=GI[PI.sum().sort_values(ascending=True).index]
+##Generate Main Effects plot
+#fig,axs = plt.subplots(ncols=2)
+#bps = []
+#bp = GI.boxplot(ax=axs[0],vert=False, notch=True,return_type="dict", patch_artist=True)
+#axs[0].set_title("Gini Importance",fontdict={"fontweight":"roman"},pad=15)
+#bps.append(bp)
+#bp = PI.boxplot(ax=axs[1],vert=False, notch=False,return_type="dict", patch_artist=True)
+#axs[1].set_title("Permutation Accuracy Importance",fontdict={"fontweight":"roman"},pad=15)
+#bps.append(bp)
+#for bpi in bps:
+#    for element in ['boxes','whiskers', 'fliers', 'means', 'medians', 'caps']:
+#        plt.setp(bpi[element], color="black")
+#    for patch in bpi['boxes']:
+#        patch.set(facecolor="silver")    
+#    plt.setp(bpi["medians"],color="dodgerblue",linewidth=2)
+#
+#axs[0].set_xlim(0,0.6)
+#axs[1].set_xlim(0,0.6)
+#axs[0].grid(None)
+#axs[0].invert_xaxis()
+#axs[0].yaxis.tick_right()
+##axs[0].set_yticks(axs[0].get_yticks,[])
+#axs[1].grid(None)
+#axs[0].tick_params(axis='y',labelright='off')
+#axs[0].set_yticklabels([])
+#axs[1].tick_params(axis='y', which='major', pad=100)
+#for label in axs[1].get_yticklabels():
+#    label.set_horizontalalignment('center')
+#    label.set_fontweight("bold")
+#    label.set_fontsize(20)
+#
+#plt.show()
+####################Joint Contributions Plot############
+#data_sorted = data.sort_values("Fitness")
+#factors = x.columns.tolist()
+#data_sorted = data_sorted[factors].join(data_sorted["Fitness"]).sort_values("Fitness")
+#x_sorted = data_sorted.iloc[:,:-1]
+#y_sorted = data_sorted.iloc[:,-1]
+#ds1 = x_sorted.values
+#print (np.mean(rf.predict(ds1)))
+#prediction1, bias1, contributions1 = ti.predict(rf, ds1, joint_contribution=True)
+#aggregated_contributions1 = utils.aggregated_contribution(contributions1)
+#res = []
+#for k in set(aggregated_contributions1.keys()):
+#    if len(k) <=3 :
+#        res.append(([x.columns.tolist()[index] for index in k] , aggregated_contributions1.get(k, 0)))   
+#
+#IE = pd.DataFrame(res)
+#IE.columns = ["Interaction","Contribution"]
+#IE["Contribution"]  = IE.Contribution.apply(lambda k: k[0]).abs()
+#IE["Contribution"] = IE["Contribution"]/IE["Contribution"].max()
+#IE["Interaction"] = IE["Interaction"].apply(lambda key: str(list([formula[f] for f in key])))
+#IE = IE.sort_values(by="Contribution")
+#TopIE = IE[-20:]
+#ax = TopIE.plot("Interaction","Contribution",kind="barh",legend = None,width=0.7,color="royalblue")
+#vals = ax.get_yticklabels()
+#ax.set_yticklabels([i.get_text().replace("[","{").replace("]","}") for i in vals],fontsize=28)
+#ax.set_xlabel("Normalized Contribution to Random Forest Prediction",labelpad=15,fontsize=SMALL_SIZE)
+#ax.set_ylabel("Factor Interaction",labelpad=15,fontsize=(SMALL_SIZE + 2))
+#plt.show()
+###########################
+###Statistical test comparing PI
+#mwu = []
+#for A in PI.columns:
+#    mwu_A = []
+#    for B in PI.columns:
+#        statistic, pvalue = stats.mannwhitneyu(PI[A].dropna(),PI[B].dropna(),alternative="greater")
+#        mwu_A.append(pvalue)
+#        if pvalue < 0.05:
+#            print(str(A) + " > " + str(B))
+#    mwu.append(mwu_A)
+#
+#mwu=pd.DataFrame(mwu,columns=PI.columns,index=PI.columns).iloc[::-1]
+#flatui=["mediumaquamarine","gainsboro"]
+#sns.palplot(sns.color_palette(flatui))
+#ax = sns.heatmap(mwu, annot=True, linewidth=2,linecolor="black",center=0.05,cmap=sns.color_palette(flatui), fmt=".1e",cbar=None, annot_kws={"color": "black","size":16},xticklabels=1,yticklabels=1)
+#ax.set_xlabel("B",fontsize=28,labelpad=10)
+#ax.set_ylabel("A",fontsize=28,labelpad=10)
+#ax.tick_params(axis = 'both', which = 'major', labelsize = 28)
+#ax.xaxis.tick_top()
+#ax.xaxis.set_label_position('top') 
+#plt.show()
 #########################
 #Plot progress of GP Runs
 #Plotting cumulative minimum of the mean fitness of rules by generation for each GP run
@@ -231,11 +231,11 @@ for name in x.columns:
         df = pd.pivot_table(data[["Fitness",name]].astype({name:int}).reset_index(),columns=name,index="index",values="Fitness")
         print(df.head())
         for subname in df.columns:
-            if df[subname].notna().sum() < 200:
+            if df[subname].notna().sum() < 10:
                 df = df.drop(subname,axis=1)
         for val_i in df.columns:
             for val_j in df.columns:
-                statistic, pvalue = stats.mannwhitneyu(df[val_i].dropna(),df[val_j].dropna(),alternative="less")
+                statistic, pvalue = stats.mannwhitneyu(df[val_i].dropna(),df[val_j].dropna(),alternative="greater")
                 fitness_comparisons[name].append([val_i,val_j,pvalue])
                 if pvalue < 0.05:
                     print(str(val_i) + " < " + str(val_j))
@@ -245,13 +245,14 @@ axs=[]
 axs.append(plt.subplot(gs[0, 0:2]))
 axs.append(plt.subplot(gs[0,2:4]))
 axs.append(plt.subplot(gs[0,4:6]))
-axs.append(plt.subplot(gs[1,1:3]))
-axs.append(plt.subplot(gs[1,3:5]))
+axs.append(plt.subplot(gs[1,0:2]))
+axs.append(plt.subplot(gs[1,2:4]))
+axs.append(plt.subplot(gs[1,4:6]))
 flatui=["mediumaquamarine","gainsboro"]
 fig = plt.gcf()
 #for idx, col in enumerate(["compare_quality","desire_social_presence","desire_migration","compare_dryness","compare_distance"]):#x.columns:
 #for idx, col in enumerate(factor_names):#x.columns:
-for idx, col in enumerate(['consider_random','consider_utilitarian','consider_heuristic','consider_altruism','consider_relative_income']):
+for idx, col in enumerate(['consider_random','consider_utilitarian','consider_heuristic','consider_altruism','consider_relative_income','consider_pseudorandom']):
     fitness_comparisons_i = pd.pivot_table(pd.DataFrame(fitness_comparisons[col],columns=["A","B","pvalue"]),columns = "B",index="A",values="pvalue")
     ax = sns.heatmap(fitness_comparisons_i, annot=True, linewidth=2,linecolor="black",center=0.05,cmap=sns.color_palette(flatui), fmt=".1e",cbar=None, annot_kws={"color": "black","size":11 + (2 * 6 - fitness_comparisons_i.columns.size)},ax=axs[idx],xticklabels = 1,yticklabels=1)
     ax.set_title(formula[col],fontsize=30,pad=15)
