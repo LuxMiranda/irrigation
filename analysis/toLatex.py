@@ -36,4 +36,7 @@ for row in models.iterrows():
     m = m.replace('))',')')
     m = m.replace('-','_')
     m = eval(m)
+    if '*' not in m and '/' not in m:
+        m = m.replace('(','')
+        m = m.replace(')','')
     print(m + ' & {:0.4f}\\\\'.format(fit))
